@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Registra Camocim</title>
+  
+    <link rel="stylesheet" href="estilo/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="shortcut icon" href="icon/icon.png" type="image/x-icon">
+  
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Registra Camocim">
+    <meta name="keywords" content="Camocim, ceara, noticias, turismo, jericoacoara, passeios, Camocim online, policia 24 horas, Registra Camocim ">
+    <meta name="author" content="Tiago viana da cruz">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-------------------------Site agencia-------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> 
+  <link rel="stylesheet" href="css/cssnovo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+<!----------------------------------Site agencia-->
+    <!--scripto dos anuncios -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609846937178820"
+     crossorigin="anonymous"></script>
+
+     
+    <style>
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white; /* Cor da tela branca */
+        z-index: 9999; /* Para garantir que a tela branca esteja sempre na parte superior */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      #logo {
+        width: 100px; /* ajuste conforme necessário */
+        height: auto;
+        margin-bottom: 20px;
+      }
+      
+      #loading-bar {
+        width: 80%; /* Largura da barra de carregamento */
+        height: 5px; /* Altura da barra de carregamento */
+        background-color: #f0f0f0; /* Cor de fundo da barra de carregamento */
+      }
+      
+      #loading-progress {
+        height: 100%;
+        background-color: #007bff; /* Cor da barra de progresso */
+        width: 0; /* Inicialmente, a barra de progresso tem largura zero */
+      }
+      
+      #content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0077FF;
+       
+       
+      }
+      
+     
+      
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: -41px;
+      }
+      
+      .product {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        margin-top: 0px;
+        flex: 1 0 calc(50% - 20px);
+        box-sizing: border-box;
+        text-align: center;
+        padding: 36px;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+      }
+      
+
+      
+      .slick-next {
+        right: 4px;
+      }
+      
+      .slick-prev {
+        left: 4px;
+        
+      }
+      
+      .perfil {
+        max-width: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: auto;
+        flex-wrap: wrap;
+        background-image: url();
+      }
+      
+      .logomarca {
+        padding-top: 5px;
+        max-width: 100px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: -55px;
+      }
+
+      .logomarca-flutuante{
+        padding: 9px;
+        padding-top: 4px;
+        max-width: 152px;
+        /* width: 117%; */
+        text-align: center;
+        /* margin-bottom: -95px; */
+        margin: auto;
+      }
+      
+      .logomarca img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 73px;
+      }
+      
+      @media only screen and (max-width: 490px) {
+        .logomarca {
+          padding: 9px;
+          max-width: 212px;
+          margin-bottom: -20px;
+          
+      }
+
+        .menu {
+          text-align: center;
+          
+        }
+        header {
+          background-color: #0077FF;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+          display: flex;
+          /* justify-items: center; */
+          /* flex-wrap: wrap; */
+          flex-direction: column-reverse;
+          align-items: center;
+      }
+      }
+    
+  
+      #search-box {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        flex: 1;
+        outline: none;
+      }
+  
+      #search-button {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #007bff;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+  
+      #search-button:hover {
+        background-color: #0056b3;
+        color: #fff;
+      }
+  
+      #search-results {
+        padding-right: 17px;
+        text-align: end;
+        max-width: 100%;
+        margin: 0;
+        height: auto;
+        background-color: #007bff;
+        color: white;
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+        margin-top: 70px;
+        padding-left: 16px;
+    }
+
+
+
+.empresas{
+  text-align: center;
+  color: #ffffff;
+  font-family: var(--destaque);
+  font-size: 16px;
+  background-color: var(--cor1);
+  margin: 0px auto 0px auto;
+}
+:root {
+  --cor1: #042940;
+  --cor2: #005C53;
+  --cor3: #9FC131;
+  --cor4: #DBF227;
+  --cor5: #D6D58E;
+  --cor6: #0077ff;
+  --cor7: #8bd6f1;
+  --cor8: #00425c;
+
+
+  --normal: "Qureah", Verdana, Helvetica,sans-serif ;
+  --principal: 'GABRWFFR', Verdana, Helvetica,sans-serif ;
+  --destaque: 'KGRedHands', Verdana, Helvetica,sans-serif ;
+}
+  
+      #search-results a {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+  
+      #search-results a:hover {
+        background-color: #0056b3;
+        color: #fff;
+      }
+      @media only screen and (max-width: 600px) {
+      
+        /* Adiciona estilo para exibir os resultados da pesquisa em telas menores que 600px */
+        #search-results {
+          display: contents !important;
+        }
+
+       
+
+
+        #search-results {
+          padding-right: 17px;
+          text-align: end;
+          max-width: 100%;
+          margin: 0;
+          height: auto;
+          /* background-color: #007bff; */
+          color: white;
+          display: flex;
+          flex-direction: column-reverse;
+          /* position: absolute; */
+          /* margin-top: 70px; */
+          padding-left: 16px;
+      }
+      
+        /* Esconde a div "icon2" em telas menores que 600px */
+        .icon2 {
+          display: none;
+        }
+      
+        /* Ajusta o estilo do botão "Lojas" em telas menores que 600px */
+        .mobile-only {
+          display: block;
+        }
+      }
+      
+        #search-box {
+          #search-box {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            
+        }
+        }
+  
+        #search-button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        #search-results a {
+          text-decoration: none;
+          color: white;
+          padding: 0px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        
+
+        
+
+    
+
+    .menu{
+      display: flex;
+      text-align: left;
+      justify-content: center;
+      padding-left: 8px;
+      padding-top: 27px;
+      margin-bottom: 10px;
+  }
+
+  main {
+    background-color: white;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination button {
+    max-width: 43px;  
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 24px;
+}
+.pagination button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+
+#to-news-btn {
+  right: -7px;
+  top: 20px;
+  z-index: 1000;
+  transform: scale(0); /* Inicia com escala zero para a animação */
+}
+
+#content {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+#Botao {
+  
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #150061;
+  text-decoration: none;
+}
+
+#Botao:hover{
+  color: #ff8800;
+}
+
+#empresas{
+  text-align: center;
+  color: #ffffff;
+  font-family: var(--destaque);
+  font-size: 13px;
+  background-color: var(--cor1);
+  margin: 0px auto 0px auto;
+  max-width: 948px;
+  margin: 10px;
+}
+
+
+  </style>
+  </head>
+<body>
+<!-------------------------------------->
+
+<style>
+  ol, ul {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+  nav {
+      position: relative;
+      background-color: var(--cor1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+  }
+
+  .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #ffffff;
+      transition: transform 0.3s ease;
+      padding: 10px 15px;
+  }
+
+  .menu-toggle:hover {  
+      color: #0077FF;
+    
+  }
+
+  nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+     
+      transition: all 0.3s ease;
+  }
+
+  nav ul li a {
+      display: flex;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+      align-items: center;
+      justify-content: space-between;
+      align-content: space-between;
+      flex-direction: column;
+    }
+
+  nav ul li a:hover {
+      color: #ffffff;
+      background-color: #0077FF;
+      text-decoration: none;
+  }
+  .show {
+  display: contents !important;
+  }
+  @media (max-width: 768px) {
+      nav ul {
+          flex-direction: column;
+          display: none; /* Oculta o menu inicialmente */
+          background-color: #ffffff;
+          position: fixed;
+          top: 60px;
+          left: 0; /* Mantenha o menu à esquerda */
+          width: 250px; /* Largura fixa para o menu lateral */
+          height: calc(100% - 60px); /* Altura total, menos a altura do menu */
+         
+          border-radius: 0 40px 40px 0; /* Arredondar o canto inferior direito */
+          z-index: 100;
+          box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+          transform: translateX(-100%); /* Inicialmente fora da tela */
+          transition: transform 0.3s ease; /* Transição suave */
+      }
+
+      nav ul.show {
+          display: flex; /* Mostra o menu quando ativo */
+          transform: translateX(0); /* Move para a posição original */
+
+
+      }
+
+      .menu-toggle {
+          display: block; /* Exibe o botão de menu em telas pequenas */
+      }
+  }
+  html {
+    scroll-behavior: smooth; /* Adiciona rolagem suave */
+}
+</style>
+</head>
+<body>
+
+
+
+
+  <header>
+
+
+    <div class="logomarca">
+      <img  id="logomarca-flutuante" src="https://i.ibb.co/TR4cdPy/logo-da-pagina.png" alt="logo-da-pagina">
+    </div>
+
+
+    
+  </header>
+<!---------------------------------------------------------------------->
+<nav id="menu">
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <ul>
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#Planos">Planos</a></li>
+    <li><a href="#Trabalhos">Trabalhos</a></li>
+  </ul>
+  </nav>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu').querySelector('ul');
+    let isMenuOpen = false;
+  
+    toggleButton.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      menu.classList.toggle('show', isMenuOpen); // Usa uma classe para exibir o menu
+      toggleButton.classList.toggle('open', isMenuOpen);
+    });
+  });
+  
+  
+  </script>
+
+<!-----------------  hover do lojas-------------------------------------->
+<style>
+  .mobile-only {
+    display: none;
+    background-color: var(--cor1);
+    color: #fff;
+    padding: 10px 20px;
+  font-size: 16px;
+    border: none;
+    border-radius: 0px 5px 0px 0px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    box-shadow: -15px 15px 20px 18px #ffffff;
+    font-weight: 600;
+    max-width: 100px;
+}
+
+.mobile-only:hover {
+    display: none;
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+  font-size: 16px;
+    border: none;
+    border-radius: 0px 5px 0px 0px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    box-shadow: -15px 15px 20px 18px #ffffff;
+    font-weight: 600;
+    max-width: 100px;
+}
+
+
+
+  .mobile-only {
+    display: none;
+  }
+
+  .icon2 {
+    display: none; /* Inicialmente oculta */
+  }
+
+  @media only screen and (max-width: 600px) {
+    .mobile-only {
+      display: block;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .icon2 {
+      display: block;
+    }
+  }
+
+
+  
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var lojasBtn = document.getElementById("lojasBtn");
+    var icon2 = document.querySelector(".icon2");
+    var searchResults = document.getElementById("search-results");
+  
+    lojasBtn.addEventListener("click", function () {
+      // Alternar a visibilidade da classe "icon2" ao clicar no botão "Lojas"
+      if (icon2.style.display === "none" || icon2.style.display === "") {
+        icon2.style.display = "block";
+      } else {
+        icon2.style.display = "none";
+      }
+    });
+  
+    function handleResize() {
+      var isMobile = window.innerWidth <= 600;
+  
+      // Exibe ou oculta o botão "Lojas" com base na largura da tela
+      lojasBtn.style.display = isMobile ? "block" : "none";
+  
+      // Ajusta a visibilidade dos resultados da pesquisa com base na largura da tela
+      searchResults.style.display = isMobile ? "block" : "block";
+  
+      // Se a tela for maior que 600px, exibe a div "icon2"
+      icon2.style.display = window.innerWidth > 600 ? "block" : "none";
+    }
+  
+    // Adiciona um ouvinte para lidar com alterações no tamanho da janela
+    window.addEventListener("resize", handleResize);
+  
+    // Inicializa o estado quando a página é carregada
+    handleResize();
+  });
+  
+</script>
+
+<style>
+
+
+
+  .music-display {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    transition: 0.3s;
+    margin-bottom: -89px;
+    margin-top: 50px;
+  }
+
+  .bar {
+      width: 10px;
+      margin: 0 4px;
+      background: linear-gradient(to top, #ff0000, #f80000,#ff0000);
+      border-radius: 5px 5px 0 0;
+      animation: musicAnimation 0.5s ease-in-out infinite alternate;
+      margin-top: 30px;
+  }
+
+  .bar:nth-child(2n) {
+      animation-delay: 0.1s;
+  }
+
+  .bar:nth-child(3n) {
+      animation-delay: 0.2s;
+  }
+
+  .bar:nth-child(4n) {
+      animation-delay: 0.3s;
+  }
+
+  .bar:nth-child(5n) {
+      animation-delay: 0.4s;
+  }
+
+  @keyframes musicAnimation {
+      0%, 100% {
+          height: 50%;
+      }
+      50% {
+          height: 80%;
+      }
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    
+
+    .music-display {
+      display: flex;
+      height: 80%;
+      width: 100%;
+      justify-content: center;
+      align-items: flex-end;
+      transition: 0.3s;
+      margin-bottom: -89px;
+      margin-top: 50px;
+      
+    }
+    
+  
+    #img-fm{
+      display: block;
+      width: 260px;
+      height: 60px;
+      margin-top: 60px;
+      border-radius: 20px 20px 0px 0px;
+      margin-top: 30px;
+    
+    }
+    
+  }
+
+  #fm {
+    height: 30px;
+    width: 300px;
+    padding-bottom: 10px;
+  }
+  #img-fm{
+    display: block;
+    width: 260px;
+    height: 60px;
+    margin-top: 86px;
+  
+  }
+
+
+  .radio-fm{
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+  
+}
+
+  
+</style>
+<!--
+<div class="music-display">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+<section class="radio-fm">
+  <a href="https://www.socialcreator.com/radiowebjesuseavida" target="_blank"><img src="icon/banner-fm.jpg"alt="159615-208318" id="img-fm"></a>
+  <audio controls id="fm">
+    <source src="https://encurtador.com.br/vzIN1" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
+</section>
+
+<button id="lojasBtn" class="mobile-only">Lojas</button>
+
+<div class="icon2">
+  <div class="icon">
+    <div class="hoteis-cor">
+      <abbr title="Hotel"><a href="hoteis.html"><img src="https://i.ibb.co/5csDH46/hotel.png" alt="hotel"></a></abbr>
+    </div>
+
+    <div class="passeio-cor">
+      <abbr title="passeios"><a href="passeios.html"><img src="icon/turismo.png" alt="gpasseios"></a></abbr>
+    </div>
+
+    <div class="academia-cor">
+      <abbr title="passeios"><a href="academias.html"><img src="icon/academia.png" alt="gpasseios"></a></abbr>
+    </div>
+ 
+    <div class="beleza-cor1">
+      <abbr title="beleza-icon"><a href="beleza.html"><img src="https://i.ibb.co/GtZGHN3/beleza.png" alt="moda"></a></abbr>
+    </div>
+
+  
+  <div class="roupas-cor">
+      <abbr title="Moda Mascolino"><a href="roupas.html"><img src="https://i.ibb.co/2t4qc02/roupa.png" alt="roupa"></a></abbr>
+    </div>
+    <div class="gasolina-cor">
+      <abbr title="Postos de Gasolina"><a href="gasolina.html"><img src="https://i.ibb.co/kGSMYZS/gasolina.png" alt="gasolina"></a></abbr>
+    </div>
+
+  
+    <div class="mercadinho-cor">
+      <abbr title="Super Mercados"><a href="mercado.html"><img src="https://i.ibb.co/vQZVPf6/mercado.png" alt="mercado"></a></abbr>
+    </div >
+    <div class="grafica-cor">
+      <abbr title="Graficas"><a href="grafica.html"><img src="https://i.ibb.co/YB1nkJB/grafica.png" alt="grafica"></a></abbr>
+    </div >
+    <div class="construçao-cor">
+      <abbr title="Construção"><a href="construçao.html"><img src="https://i.ibb.co/tLM1TSm/constru-ao.png" alt="constru-ao"></a></abbr>
+    </div >
+    <div class="prefeitura-cor">
+      <abbr title="festa"><a href="Festa.html"><img src="icon/festa.png" alt="festa"></a></abbr>
+    </div >
+    <div class="restaurante-cor">
+      <abbr title="restaurantes"><a href="restaurante.html"><img src="https://i.ibb.co/pbSc3bz/restaurante.png" alt="restaurante"></a></abbr>
+    </div >
+  
+    <div class="sorveteria-cor">
+      <abbr title="Confeitaria"><a href="confeitaria.html"><img src="https://i.ibb.co/SNS15Tj/sorveteria.png" alt="sorveteria"></a></abbr>
+    </div >
+
+    <div class="padaria-cor">
+      <abbr title="Padaria"><a href="padaria.html"><img src="https://i.ibb.co/Ct7T6Wh/padaria.png" alt="padaria"></a></abbr>
+    </div >
+    
+    <div class="farmacia-cor">
+      <abbr title="farmacias"><a href="farmacia.html"><img src="https://i.ibb.co/YTZ2NGc/farmacia.png" alt="farmacia"></a></abbr>
+    </div >
+    <div class="banco-cor">
+        <abbr title="Bancos"><a href="bancos.html"><img src="https://i.ibb.co/gD1z4kr/banco.png" alt="banco"></a></abbr>
+    </div >
+    <div class="adulto-cor">
+      <abbr title="Sex Shop"><a href="sex-shop.html"><img src="https://i.ibb.co/VvnCCWy/18.png" alt="18" ></a></abbr>
+  </div >
+</div>
+  
+
+  <style>
+    .icon2 {
+      display: block; /* Ícone visível por padrão */
+    }
+
+    @media only screen and (max-width: 600px) {
+      .icon2 {
+        display: none; /* Oculta o ícone em telas menores que 600 pixels */
+      }
+    }
+
+    #preços{
+      margin: auto;
+      font-size: larger;
+    }
+
+    .conteudo{
+      max-width:100vw ;
+      padding: 15px;
+    }
+    
+  
+  </style>
+-->
+    <!------------------------------
+    
+   
+   
+  </div>
+  <div id="overlay">
+    <img src="icon/logo da pagina.png" alt="Logo" id="logo">
+    <div id="loading-bar">
+      <div id="loading-progress"></div>
+    </div>
+  </div>
+  <!-- Conteúdo da sua página aqui 
+  <div id="content">
+    <p></p>
+  </div>
+  <script src="script.js"></script>
+
+
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="img/bannar 1.jpg" alt="Suplemento">
+      </div>
+     
+      <div class="mySlides">
+        <img src="img/bannar 2.jpg" alt="vilage">
+      </div>
+
+      <div class="mySlides">
+        <img src="img/bannar 3.jpg" alt="banner-novo">
+      </div>
+
+      <div class="mySlides">
+        <img src="img/bannar 4.jpg" alt="Suplemento">
+      </div>
+     
+      <div class="mySlides">
+        <img src="img/bannar 5.jpg" alt="Suplemento">
+      </div>
+     
+
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+------------------------------->
+    
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      autoSlide(); // Inicia o slideshow automático
+    
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+    
+      function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+    
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+    
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+    
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+    
+        slides[slideIndex - 1].style.display = "block";
+      }
+    
+      function autoSlide() {
+        setInterval(function() {
+          plusSlides(1);
+        }, 4000); // Avança para o próximo slide a cada 2 segundos
+      }
+    </script>
+
+    </div>
+
+    
+    <!--------------------------------------------------->
+    
+  <main>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        .somos{
+        text-align: center;
+        }
+
+        .container1 {
+          position: relative;
+          text-align: center;
+          width: 100%;
+          margin-right: auto;
+          margin-left: auto;
+      }
+
+
+      .imagem-topo {
+        position: relative;
+        background-image: url('img/01.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0; /* Ajuste conforme necessário */
+        width: 100%;
+        height: auto;
+      }
+
+      .imagem-topo h1 {
+        font-size: 3em;
+      }
+
+      .imagem-topo h2 {
+        font-size: 7em;
+        color: #0077FF; /* Cor amarela */
+      }
+
+      
+      .imagem-topo p {
+        font-size: 1em;
+        color: white;
+      }
+
+      /* Ajuste para dispositivos grandes (PC) */
+      @media only screen and (min-width: 768px) {
+        .imagem-topo {
+          padding: 100px 0; /* Ajuste conforme necessário */
+        }
+        .imagem-topo p {
+          font-size: 2em;
+          color: white;
+          margin-top: -34px;
+        }
+        
+
+      }
+
+      /* Ajuste para dispositivos pequenos (celulares) */
+      @media only screen and (max-width: 768px) {
+        .imagem-topo {
+          padding: 100px 0; /* Ajuste conforme necessário */
+        }
+        .imagem-topo h2 {
+          font-size: 5em;
+          color: #0077FF; /* Cor amarela */
+        }
+       
+      }
+      .titulo{
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+      }
+      
+</style>
+
+<div class="container1">
+  <div class="imagem-topo">
+    <h2 class="titulo">Social Midia</h2>
+    <p class="paragrafo">Saiba o que podemos fazer por você</p>
+  </div>
+</div>
+
+
+  <!-- ------------------------------------------QUEM SOMOS -->
+  <section id="quem-somos" class="somos">
+    <div class="container">
+        <div class="row">
+            <!-- Texto Sobre a Empresa -->
+            <div class="col-md-12">
+                <div class="box-mg">
+                    <h2 id="sobre">Sobre - Registra Camocim</h2>
+                    <h3>Nossa Missão</h3>
+                    <p>O Registra Camocim é uma agência especializada em gerenciamento e criação de conteúdos para mídias sociais. Nosso objetivo é construir uma forte conexão entre sua marca e seu público, promovendo um engajamento significativo. Utilizamos canais digitais estratégicos para comunicar sua mensagem da forma mais eficaz com a sua persona.</p>
+                    
+                    <h3>Nossos Valores</h3>
+                    <p>Valorizamos o respeito e a transparência com nossos clientes e parceiros. Cumprimos rigorosamente o que é estipulado em contrato, visando sempre a satisfação completa das partes envolvidas. Nosso compromisso é entregar resultados que superem as expectativas.</p>
+                    
+                    <h3>Nossa Visão</h3>
+                    <p>A nossa visão é impulsionar a presença digital de empresas, gerando resultados tangíveis e satisfatórios. A Registra Camocim se dedica a ajudar pequenas e médias empresas a fortalecerem sua marca, melhorarem seu posicionamento e aumentarem o engajamento, o que resulta em mais vendas e sucesso.</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Estilos -->
+    <style>
+        .container {
+            margin-top: 40px;
+        }
+
+        .row {
+            margin-bottom: 30px;
+        }
+
+        .box-mg {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-mg h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .box-mg h3 {
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .box-mg p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+    </style>
+</section>
+
+
+<!-------------------------------------------------------------->
+<style>
+   .body1 {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50; /* Fundo escuro */
+            margin: 0;
+            padding: 0;
+            color: #ecf0f1; /* Texto claro para contraste */
+        }
+        .header {
+            background-color: #1abc9c; /* Azul claro no topo */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .header img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 34px;
+            margin: 0;
+        }
+        .container5 {
+            max-width: 1100px;
+            margin: 0 auto;
+          
+        }
+        .planos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: -40px;
+        }
+        .plano {
+            background-color: #34495e; /* Plano em tom escuro */
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .plano:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .plano h2 {
+            font-size: 26px;
+            color: #ecf0f1; /* Texto claro */
+        }
+        .plano p {
+            color: #00ffce;
+            margin: 10px 0;
+            font-size: 26px;
+        }
+        .preco {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2ecc71; /* Preço em tom verde intenso */
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #48c9b0;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #1abc9c;
+        }
+        .btn i {
+            margin-right: 8px;
+        }
+        .plano .benefits {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .plano .benefits li {
+            list-style: none;
+            font-size: 15px;
+            padding: 5px 0;
+        }
+        .plano .benefits li i {
+            color: #48c9b0;
+            margin-right: 8px;
+        }
+        .restricted-area {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 16px;
+            color: #ecf0f1;
+        }
+        .restricted-area .btn-restricted {
+            background-color: #1abc9c;
+     
+        }
+        .restricted-area .btn-restricted:hover {
+            background-color: #16a085;
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        .whatsapp-float i {
+            margin-top: 15px;
+        }
+        /* Estilo do Modal */
+        
+        
+        .close-btn, .submit-btn {
+
+            background-color: #e74c3c;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .close-btn:hover, .submit-btn:hover {
+            background-color: #c0392b;
+        }
+        .confirmation-modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+        .confirmation-content {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: #ecf0f1;
+        }
+        .confirmation-content button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #48c9b0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .confirmation-content button:hover {
+            background-color: #1abc9c;
+        }
+        .confirmation-content button.cancel-btn {
+            background-color: #e74c3c;
+        }
+        .confirmation-content button.cancel-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .payment-content {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: #ecf0f1;
+        }
+        .payment-content img {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .payment-content button {
+            background-color: #48c9b0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .payment-content button:hover {
+            background-color: #1abc9c;
+        }
+
+        .back-btn {
+            position: fixed;
+            bottom: 40px;
+            left: 40px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1000;
+        }
+        .back-btn:hover {
+            background-color: #c0392b;
+        }
+        .planos5{
+          padding-bottom: 20px;
+          margin: 12px;
+          padding-top: 1px;
+        }
+       
+</style>
+
+
+<script>
+  let inputPassword = '';
+  const validPasswords = ['123', '456', '789']; // Lista de senhas válidas
+
+  function openConfirmationModal() {
+      document.getElementById('confirmation-modal').style.display = 'flex';
+  }
+
+  function closeConfirmationModal() {
+      document.getElementById('confirmation-modal').style.display = 'none';
+  }
+
+  function openPasswordModal() {
+      closeConfirmationModal();
+      document.getElementById('modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      inputPassword = ''; // Limpa a senha ao fechar o modal
+  }
+
+  function addNumber(num) {
+      inputPassword += num;
+  }
+
+  function submitPassword() {
+      if (inputPassword.length === 3) { // Considera a senha com 3 dígitos
+          if (validPasswords.includes(inputPassword)) { // Verifica se a senha está na lista
+              window.location.href = 'plano.html';
+          } else {
+              alert('Senha incorreta!');
+              closeModal();
+          }
+      } else {
+          alert('Por favor, insira a senha completa.');
+      }
+  }
+
+  function openPaymentModal() {
+      document.getElementById('payment-modal').style.display = 'flex';
+  }
+
+  function closePaymentModal() {
+      document.getElementById('payment-modal').style.display = 'none';
+  }
+
+  function copyPixKey() {
+      const pixKey = "registracamocim@gmail.com";
+      navigator.clipboard.writeText(pixKey).then(() => {
+          alert('Chave Pix copiada para a área de transferência!');
+      });
+  }
+</script>
+
+<div class="body1">
+
+  <div class="planos5" id="Planos">
+    <h1>Nossos Planos de Social Media</h1>
+</div>
+
+<div class="container5">
+  <div class="planos">
+
+      <div class="plano">
+          <h2>Pacote Básico</h2>
+          <ul class="benefits">
+              <li><i class="fas fa-check"></i> 3 posts semanais</li>
+              <li><i class="fas fa-check"></i> 3 stories semanais</li>
+              <li><i class="fas fa-times"></i> Carrosséis não inclusos</li>
+          </ul>
+          <p class="preco">R$ 200,00</p>
+          <!--<button id="button1" class="btn" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Adquirir Agora</button>-->
+      </div>
+
+      <div class="plano">
+          <h2>Pacote Júnior</h2>
+          <ul class="benefits">
+              <li><i class="fas fa-check"></i> 3 posts semanais</li>
+              <li><i class="fas fa-check"></i> 3 stories semanais</li>
+              <li><i class="fas fa-check"></i> 1 carrossel incluído (substitui um post)</li>
+          </ul>
+          <p class="preco">R$ 250,00</p>
+          <!--<button id="button1" class="btn" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Adquirir Agora</button>-->
+      </div>
+
+      <div class="plano">
+          <h2>Plano Master</h2>
+          <ul class="benefits">
+              <li><i class="fas fa-check"></i> 4 posts semanais</li>
+              <li><i class="fas fa-check"></i> 4 stories semanais</li>
+              <li><i class="fas fa-check"></i> 2 carrosséis inclusos (substituem dois posts)</li>
+              <li><i class="fas fa-check"></i> Descrições personalizadas</li>
+          </ul>
+          <p class="preco">R$ 350,00</p>
+          <!--<button id="button1" class="btn" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Adquirir Agora</button>-->
+      </div>
+
+      <div class="plano">
+          <h2>Plano Prêmio</h2>
+          <ul class="benefits">
+              <li><i class="fas fa-check"></i> 5 posts semanais</li>
+              <li><i class="fas fa-check"></i> 5 stories semanais</li>
+              <li><i class="fas fa-check"></i> 2 carrosséis inclusos (substituem dois posts)</li>
+              <li><i class="fas fa-check"></i> Descrições personalizadas</li>
+              <li><i class="fas fa-check"></i> Criação e publicação automática</li>
+          </ul>
+          <p class="preco">R$ 450,00</p>
+          <!--<button id="button1" class="btn" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Adquirir Agora</button>-->
+      </div>
+
+  </div>
+
+<!--
+  <div class="restricted-area">
+     <button class="btn btn-restricted" onclick="openConfirmationModal()"><i class="fas fa-lock"></i> Área Restrita</button>
+     <p>Área restrita apenas para contratantes.</p>
+
+  </div>
+</div>
+-->
+<!-- Botão flutuante do WhatsApp -->
+<a href="https://wa.me/88993464285" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Modal de Confirmação -->
+<div id="confirmation-modal" class="confirmation-modal">
+  <div class="confirmation-content">
+      <h3>Você é contratante?</h3>
+      <button onclick="openPasswordModal()">Sim</button>
+      <button class="cancel-btn" onclick="closeConfirmationModal()">Não</button>
+  </div>
+</div>
+
+<!-- Modal para senha -->
+ <style>
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #ff0000;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#password-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-size: 16px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.number-pad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #34495e;
+}
+
+.number-pad button {
+    background-color: #00ffce;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.number-pad button:hover {
+    background-color: #27ae60;
+}
+
+.submit-btn, .close-btn {
+    background-color: #00ffce;
+    border: none;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.close-btn {
+    background-color: #e74c3c;
+}
+
+/* Overlay para mensagem de boas-vindas */
+.welcome-overlay, .loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 1.5s ease, transform 1s ease;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.welcome-message, .loading-message {
+    background-color: #2ecc71;
+    padding: 30px 40px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 26px;
+    animation: bounceIn 1s ease forwards;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyframes para bounce (rebote) */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Efeito loader (carregando) */
+.loader {
+    border: 5px solid #000000;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+.vali{
+  color: white;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animação fade-out */
+.welcome-overlay.fade-out, .loading-overlay.fade-out {
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+
+ </style>
+
+
+ <script>
+let allowedPasswords = {
+    'tiago': 'Tiago',
+    '1234': 'Sr.Tiago - Criador'
+};
+
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password-input");
+    var eyeIcon = document.getElementById("eye-icon");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.textContent = "🙈";  // Ícone muda quando a senha está visível
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.textContent = "👁️";  // Ícone muda quando a senha está oculta
+    }
+}
+
+function addNumber(number) {
+    var passwordInput = document.getElementById("password-input");
+    passwordInput.value += number;
+}
+
+function clearPassword() {
+    document.getElementById("password-input").value = "";
+    clearError();
+}
+
+function submitPassword() {
+    var password = document.getElementById("password-input").value;
+    var userName = allowedPasswords[password];
+    
+    clearError();
+
+    if (userName) {
+        showWelcomeOverlay(userName);
+    } else {
+        showError("Senha incorreta.");
+    }
+}
+
+function showError(message) {
+    var errorMessage = document.getElementById("error-message");
+    errorMessage.textContent = message;
+    errorMessage.style.display = "block";
+
+    document.getElementById("password-input").classList.add("error");
+}
+
+function clearError() {
+    var errorMessage = document.getElementById("error-message");
+    errorMessage.textContent = "";
+    errorMessage.style.display = "none";
+    document.getElementById("password-input").classList.remove("error");
+}
+
+function showWelcomeOverlay(userName) {
+    var welcomeOverlay = document.getElementById("welcome-overlay");
+    var accessText = document.getElementById("access-text");
+    var welcomeText = document.getElementById("welcome-text");
+
+    welcomeOverlay.style.display = "flex";
+    accessText.textContent = "Acesso liberado";
+    welcomeText.textContent = `Bem-vindo, ${userName}!`;
+
+    // Animação fade-in
+    setTimeout(function() {
+        welcomeOverlay.style.opacity = 1;
+    }, 10);
+
+    // Inicia o processo de validação
+    setTimeout(function() {
+        showLoadingOverlay();
+    }, 5000);
+}
+
+function showLoadingOverlay() {
+    var loadingOverlay = document.getElementById("loading-overlay");
+    loadingOverlay.style.display = "flex";
+
+    // Animação fade-in
+    setTimeout(function() {
+        loadingOverlay.style.opacity = 1;
+    }, 10);
+
+    // Redireciona após 4 segundos
+    setTimeout(function() {
+        window.location.href = "plano.html";
+    }, 7000);
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+
+ </script>
+
+
+
+<!-- Modal para Senha -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <h3>Digite a Senha</h3>
+      <div class="input-container">
+          <input type="password" id="password-input" placeholder="Senha" />
+          <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+              <span id="eye-icon">👁️</span>
+          </button>
+      </div>
+
+      <!-- Teclado Numérico -->
+      <div class="number-pad">
+          <button onclick="addNumber('1')">1</button>
+          <button onclick="addNumber('2')">2</button>
+          <button onclick="addNumber('3')">3</button>
+          <button onclick="addNumber('4')">4</button>
+          <button onclick="addNumber('5')">5</button>
+          <button onclick="addNumber('6')">6</button>
+          <button onclick="addNumber('7')">7</button>
+          <button onclick="addNumber('8')">8</button>
+          <button onclick="addNumber('9')">9</button>
+          <button onclick="addNumber('0')">0</button>
+          <button onclick="clearPassword()">Limpar</button>
+      </div>
+
+      <div id="error-message" class="error-message"></div>
+
+      <button class="submit-btn" onclick="submitPassword()">Entrar</button>
+      <button class="btn close-btn" onclick="closeModal()">Cancelar</button>
+  </div>
+</div>
+
+<!-- Overlay para a mensagem de boas-vindas -->
+<div id="welcome-overlay" class="welcome-overlay">
+    <div class="welcome-message">
+        <h2 class="vali" id="access-text">Acesso liberado</h2>
+        <h3  class="vali" id="welcome-text"></h3>
+    </div>
+</div>
+
+<!-- Overlay para validação do acesso -->
+<div id="loading-overlay" class="loading-overlay">
+    <div class="loading-message">
+        <h2  class="vali" class="vali">Validando seu acesso exclusivo...</h2>
+        <div class="loader"></div>
+    </div>
+</div>
+
+
+
+<!--------------------------------------------------------------->
+
+<!-- SECTION CLIENTES -->
+<section id="clientes">
+  <div class="container boxBt02 box" id="Trabalhos">
+      <h2>O que já fizemos</h2>
+      <h3>Trabalhamos com os mais diferentes nichos de mercado</h3>
+
+      <!--------------------------------------------------------------->
+
+      <style>
+        
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .client-folder {
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .client-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #00ffce;
+        }
+        .carousel-container {
+            position: relative;
+            max-width: 95%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            padding: 10px;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel img {
+            width: calc(50% - 10px);
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            scroll-snap-align: start;
+            cursor: pointer;
+        }
+        @media (min-width: 768px) {
+          .carousel img {
+                width: calc(25% - 10px);
+            }
+          }
+     
+  
+        .carousel img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 80%;
+            
+            border-radius: 10px;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .counter {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        #total-counter {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <h1 style="text-align: center;">Meu Portfólio</h1>
+    <h2 id="total-counter">Total de Artes: 0</h2>
+    <div id="portfolio" class="portfolio-container"></div>
+    <div id="lightbox" class="lightbox" onclick="this.classList.remove('active')">
+        <img id="lightbox-img" src="" alt="Imagem Ampliada">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const portfolio = document.getElementById("portfolio");
+            const totalCounter = document.getElementById("total-counter");
+            let totalArts = 0;
+
+            const clients = [
+                "@eulaliaangelim", "@Jociklejacome", "@raquelsiqueira", "@centromedico", 
+                "@psi.renataleão", "@Psicocenter", "@cobrão_centro", "@furinho_byandreia", 
+                "@escolamagiadosaber", "@Zehostilio96"
+            ];
+            
+            clients.forEach(client => {
+                const clientSection = document.createElement("div");
+                clientSection.classList.add("client-folder");
+                clientSection.innerHTML = `<h2 class="client-title">${client}</h2>`;
+                
+                const carouselContainer = document.createElement("div");
+                carouselContainer.classList.add("carousel-container");
+                
+                const carousel = document.createElement("div");
+                carousel.classList.add("carousel");
+                
+                let imageCount = 0;
+                for (let i = 1; i <= 50; i++) {
+                    let img = new Image();
+                    img.src = `imagens/${client}/imagem${i}.jpg`;
+                    img.onload = function() {
+                        let newImg = document.createElement("img");
+                        newImg.src = this.src;
+                        newImg.alt = `Imagem ${i} de ${client}`;
+                        newImg.onclick = function() {
+                            document.getElementById("lightbox-img").src = this.src;
+                            document.getElementById("lightbox").classList.add("active");
+                        };
+                        carousel.appendChild(newImg);
+                        imageCount++;
+                        counter.textContent = `Contador de Artes: ${imageCount}`;
+                        totalArts++;
+                        totalCounter.textContent = `Total de Artes: ${totalArts}`;
+                    };
+                }
+                
+                const counter = document.createElement("p");
+                counter.classList.add("counter");
+                counter.textContent = `Contador de Artes: ${imageCount}`;
+                
+                carouselContainer.appendChild(carousel);
+                clientSection.appendChild(carouselContainer);
+                clientSection.appendChild(counter);
+                portfolio.appendChild(clientSection);
+            });
+        });
+    </script>
+      <!--------------------------------------------------------------
+
+      <!-- Menu Horizontal com Scroll Suave 
+      <div class="menu-horizontal">
+          <button class="btn btn-sm" data-category="imobiliarias">Imobiliárias</button>
+          <button class="btn btn-sm" data-category="bares">Bares</button>
+          <button class="btn btn-sm" data-category="restaurantes">Restaurantes</button>
+          <button class="btn btn-sm" data-category="pizzarias">Pizzarias</button>
+          <button class="btn btn-sm" data-category="academias">Academias</button>
+          <button class="btn btn-sm" data-category="clinicas">Clínicas</button>
+          <button class="btn btn-sm" data-category="lojas">Lojas</button>
+      </div>
+
+      <!-- Carrossel de Imagens 
+      <div class="carousel-container">
+          <div class="carousel" id="image-carousel"></div>
+          <div class="carousel-controls">
+              <div class="prev">&#10094;</div>
+              <div class="next">&#10095;</div>
+          </div>
+      </div>
+
+      <!-- Estilos -
+      <style>
+          /* Menu Horizontal */
+          .menu-horizontal {
+              display: flex;
+              overflow-x: auto;
+              white-space: nowrap;
+              border-bottom: -1px solid #ffffff;
+              scrollbar-width: thin;
+              scrollbar-color: #1abc9c #ffffff;
+          }
+
+          .menu-horizontal::-webkit-scrollbar {
+              height: 8px;
+          }
+
+          .menu-horizontal::-webkit-scrollbar-track {
+              background: #ddd;
+          }
+
+          .menu-horizontal::-webkit-scrollbar-thumb {
+              background-color: #333;
+              border-radius: 10px;
+              border: 3px solid transparent;
+          }
+
+          .menu-horizontal button {
+              margin-right: -2px;
+              background-color: rgb(51, 51, 51);
+              color: #fff;
+              border: none;
+              border-radius: 7px;
+              cursor: pointer;
+              font-size: 16px;
+              transition: background-color 0.3s ease;
+              margin-bottom: 19px;
+          }
+
+          .menu-horizontal button:hover {
+              background-color: #1abc9c;
+          }
+
+          /* Container do Carrossel */
+          .carousel-container {
+              position: relative;
+              width: 100%;
+              max-width: 100%;
+              margin: 20px auto;
+              overflow: hidden;
+          }
+
+          /* Carrossel */
+          .carousel {
+              display: flex;
+              transition: transform 0.5s ease-in-out;
+              will-change: transform;
+          }
+
+          .carousel img {
+              width: 100%;
+              max-width: 500px;
+              max-height: 300px;
+              object-fit: cover;
+              border-radius: 10px;
+              margin-right: 10px;
+          }
+
+          /* Botões de Navegação */
+          .carousel-controls .prev,
+          .carousel-controls .next {
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              padding: 16px;
+              color: white;
+              font-weight: bold;
+              font-size: 20px;
+              background-color: rgba(0, 0, 0, 0.5);
+              border-radius: 50%;
+              transform: translateY(-50%);
+          }
+
+          .carousel-controls .prev {
+              left: 10px;
+          }
+
+          .carousel-controls .next {
+              right: 10px;
+          }
+
+          .carousel-controls .prev:hover,
+          .carousel-controls .next:hover {
+              background-color: rgba(0, 0, 0, 0.8);
+          }
+
+          /* Estilos responsivos para celular */
+          @media (max-width: 768px) {
+              .carousel img {
+                  max-width: 100%;
+                  max-height: 400px;
+              }
+              .carousel-controls {
+                  display: none; /* Oculta os controles de carrossel no celular */
+              }
+          }
+      </style>
+  </div>
+</section>
+
+<!-- Script 
+<script>
+  const imageCarousel = document.getElementById('image-carousel');
+  const categories = {
+      imobiliarias: ['image/Imobiliaria.jpg', 'image/Imobiliaria1.jpg', 'image/Imobiliaria2.jpg'],
+      bares: ['image/bar.jpg', 'image/bar1.jpg', 'image/bar2.jpg'],
+      restaurantes: ['image/restaurante.jpg', 'image/restaurante1.jpg', 'image/restaurante2.jpg'],
+      pizzarias: ['image/pizzaria.jpg', 'image/pizzaria1.jpg', 'image/pizzaria2.jpg'],
+      academias: ['image/academia.jpg', 'image/academia1.jpg', 'image/academia2.jpg'],
+      clinicas: ['image/Clinica1.jpg', 'image/Clinica.jpg', 'image/Clinica2.jpg'],
+      lojas: ['image/Loja.jpg', 'image/Loja1.jpg', 'image/Loja2.jpg']
+  };
+
+  let currentCategory = 'imobiliarias';
+  let currentIndex = 0;
+
+  document.querySelectorAll('.menu-horizontal button').forEach(button => {
+      button.addEventListener('click', () => {
+          currentCategory = button.getAttribute('data-category');
+          currentIndex = 0;
+          loadImages(currentCategory);
+      });
+  });
+
+  function loadImages(category) {
+      imageCarousel.innerHTML = ''; // Limpa o carrossel
+      categories[category].forEach(imgSrc => {
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          imageCarousel.appendChild(img);
+      });
+      updateCarousel();
+  }
+
+  function updateCarousel() {
+      const images = document.querySelectorAll('#image-carousel img');
+      const totalImages = images.length;
+      const carouselWidth = imageCarousel.clientWidth;
+
+      if (totalImages > 0) {
+          imageCarousel.style.transform = `translateX(${-currentIndex * carouselWidth}px)`;
+      }
+  }
+
+  document.querySelector('.prev').addEventListener('click', () => {
+      const totalImages = document.querySelectorAll('#image-carousel img').length;
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+      }
+  });
+
+  document.querySelector('.next').addEventListener('click', () => {
+      const totalImages = document.querySelectorAll('#image-carousel img').length;
+      if (currentIndex < totalImages - 1) {
+          currentIndex++;
+          updateCarousel();
+      }
+  });
+
+  // Inicializa o carrossel com a categoria padrão
+  loadImages(currentCategory);
+
+  // Atualiza a visualização quando a tela é redimensionada
+  window.addEventListener('resize', updateCarousel);
+
+  // Função para auto passar as imagens no celular
+  function autoSlide() {
+      const totalImages = document.querySelectorAll('#image-carousel img').length;
+      if (totalImages > 0) {
+          currentIndex = (currentIndex + 1) % totalImages;
+          updateCarousel();
+      }
+  }
+
+  // Ativa o auto slide a cada 3 segundos apenas para celulares
+  setInterval(() => {
+      if (window.innerWidth <= 768) {
+          autoSlide();
+      }
+  }, 3000);
+</script>
+-->
+<!-------------------------------------------------------------------->
+<!-- Artigo sobre a importância de ter um parceiro de mídias sociais -->
+<section class="article-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="article">
+                  <h2>Por Que Ter um Parceiro de Mídias Sociais É Importante para Sua Marca</h2>
+                  <p>Em um mundo digital competitivo, destacar-se é fundamental. Estou aqui para ajudar você a criar uma presença online marcante por meio de **artes exclusivas** que seguem paletas de cores personalizadas, **descrições envolventes** e **publicação automática**. Veja como posso ajudar:</p>
+                  <ul>
+                      <li><strong>Artes Exclusivas:</strong> Desenvolvo peças gráficas únicas que refletem a identidade da sua marca, utilizando paletas de cores que atraem e cativam seu público.</li>
+                      <li><strong>Conteúdo Personalizado:</strong> Crio descrições que capturam a essência da sua mensagem, aumentando o engajamento e a conexão com seu público-alvo.</li>
+                      <li><strong>Publicação Planejada:</strong> Ofereço serviços de automação para garantir que suas postagens sejam publicadas nos momentos ideais, mantendo sua marca ativa e visível.</li>
+                      <li><strong>Identidade Visual Coesa:</strong> Desenvolvo um estilo visual consistente que destaca sua marca e ajuda a fidelizar clientes.</li>
+                      <li><strong>Acompanhamento de Resultados:</strong> Monitoro o desempenho das postagens, oferecendo insights e ajustes estratégicos para maximizar seus resultados.</li>
+                  </ul>
+                  <p>Escolher trabalhar comigo é investir na construção de uma presença digital única e impactante. Deixe que eu cuido da criação das artes e da publicação, enquanto você se concentra no crescimento do seu negócio.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+<!-- Estilos -->
+<style>
+
+    .article {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .article h2 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .article h3 {
+        font-size: 2rem;
+        color: #666;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .article p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #444;
+        margin-bottom: 15px;
+    }
+
+    .article ul {
+        margin: 20px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .article ul li {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .article ul li strong {
+        color: #007bff;
+    }
+
+    @media (max-width: 768px) {
+        .article h2 {
+            font-size: 1.75rem;
+        }
+
+        .article p, .article ul li {
+            font-size: 1.3rem;
+        }
+    }
+</style>
+
+<!-------------------------------------------------------------------->
+<!-- Footer -->
+<footer class="">
+<div class="container">
+  <div class="">
+    <h3>Siga-nos nas Mídias Sociais</h3>
+    <ul class="midias-sociais">
+
+      
+      <li><a href="https://www.instagram.com/registracamocim/"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://api.whatsapp.com/send?phone=5588993464285" ><i class="fab fa-whatsapp"></i></a></li>
+  </ul>
+  <p>E-mail: registracamocim@gmail.com</p>
+  <p>Tel : 88 99346-4285</p>
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <p><a href="https://www.registracamocim.shop" data-toggle="tooltip" title="Visit Registra midia digital">www.registracamocim.shop</a></p> 
+ <p>© 2024 Todos os direitos reservados - Orgulhosamente por tiago viana da cruz.</p>
+  </div>
+
+  </footer>
+<script src="js/script.js"></script>
+<script src="js/anima_pagina.js"></script>
+
+
+</body>
+<script>
+$().ready(function(){
+$('.hb').click(function(){
+    $('#navtop').toggle();
+})
+})
+</script>
+
+</main>
+
+</body>
+
+</html>
