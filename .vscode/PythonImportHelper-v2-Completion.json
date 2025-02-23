@@ -1,0 +1,386 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "urljoin",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "urljoin",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
+        "documentation": {}
+    },
+    {
+        "label": "Keys",
+        "importPath": "selenium.webdriver.common.keys",
+        "description": "selenium.webdriver.common.keys",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.keys",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "VideoFileClip",
+        "importPath": "moviepy.editor",
+        "description": "moviepy.editor",
+        "isExtraImport": true,
+        "detail": "moviepy.editor",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "VideosSearch",
+        "importPath": "youtubesearchpython",
+        "description": "youtubesearchpython",
+        "isExtraImport": true,
+        "detail": "youtubesearchpython",
+        "documentation": {}
+    },
+    {
+        "label": "ler_usuarios",
+        "kind": 2,
+        "importPath": "construçao.login.app.app",
+        "description": "construçao.login.app.app",
+        "peekOfCode": "def ler_usuarios():\n    usuarios = {}\n    with open(os.path.join(os.path.dirname(__file__), 'usuarios.txt'), 'r') as arquivo:\n        for linha in arquivo:\n            usuario, senha = linha.strip().split(':')\n            usuarios[usuario] = senha\n    return usuarios\n# Usuários e senhas definidos\nusuarios = ler_usuarios()\n@app.route('/')",
+        "detail": "construçao.login.app.app",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "construçao.login.app.app",
+        "description": "construçao.login.app.app",
+        "peekOfCode": "def index():\n    return render_template('login.html')\n@app.route('/autenticar', methods=['POST'])\ndef autenticar():\n    usuario = request.form['usuario']\n    senha = request.form['senha']\n    if usuario in usuarios and usuarios[usuario] == senha:\n        return render_template('acesso_permitido.html', usuario=usuario)\n    else:\n        return render_template('acesso_negado.html')",
+        "detail": "construçao.login.app.app",
+        "documentation": {}
+    },
+    {
+        "label": "autenticar",
+        "kind": 2,
+        "importPath": "construçao.login.app.app",
+        "description": "construçao.login.app.app",
+        "peekOfCode": "def autenticar():\n    usuario = request.form['usuario']\n    senha = request.form['senha']\n    if usuario in usuarios and usuarios[usuario] == senha:\n        return render_template('acesso_permitido.html', usuario=usuario)\n    else:\n        return render_template('acesso_negado.html')\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "detail": "construçao.login.app.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "construçao.login.app.app",
+        "description": "construçao.login.app.app",
+        "peekOfCode": "app = Flask(__name__, template_folder=os.path.abspath('templates'))\n# Função para ler usuários e senhas do arquivo\ndef ler_usuarios():\n    usuarios = {}\n    with open(os.path.join(os.path.dirname(__file__), 'usuarios.txt'), 'r') as arquivo:\n        for linha in arquivo:\n            usuario, senha = linha.strip().split(':')\n            usuarios[usuario] = senha\n    return usuarios\n# Usuários e senhas definidos",
+        "detail": "construçao.login.app.app",
+        "documentation": {}
+    },
+    {
+        "label": "usuarios",
+        "kind": 5,
+        "importPath": "construçao.login.app.app",
+        "description": "construçao.login.app.app",
+        "peekOfCode": "usuarios = ler_usuarios()\n@app.route('/')\ndef index():\n    return render_template('login.html')\n@app.route('/autenticar', methods=['POST'])\ndef autenticar():\n    usuario = request.form['usuario']\n    senha = request.form['senha']\n    if usuario in usuarios and usuarios[usuario] == senha:\n        return render_template('acesso_permitido.html', usuario=usuario)",
+        "detail": "construçao.login.app.app",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_html_conteudo",
+        "kind": 2,
+        "importPath": "ferramentas.rot de pesquisa.gera-html",
+        "description": "ferramentas.rot de pesquisa.gera-html",
+        "peekOfCode": "def gerar_html_conteudo(titulo, conteudo, imagem_url, data):\n    # Substitua os espaços e caracteres especiais no título para criar um identificador único\n    identificador = titulo.lower().replace(' ', '_')\n    # Monta o HTML para a notícia\n    html = f\"\"\"\n    <article id=\"{identificador}\">\n        <img src=\"{imagem_url}\" alt=\"{titulo}\">\n        <div class=\"content\">\n            <h2>{titulo}</h2>\n            <p class=\"description ellipsis\"></p>",
+        "detail": "ferramentas.rot de pesquisa.gera-html",
+        "documentation": {}
+    },
+    {
+        "label": "ler_arquivos_noticias",
+        "kind": 2,
+        "importPath": "ferramentas.rot de pesquisa.gera-html",
+        "description": "ferramentas.rot de pesquisa.gera-html",
+        "peekOfCode": "def ler_arquivos_noticias(pasta):\n    noticias = []\n    for arquivo in os.listdir(pasta):\n        if arquivo.endswith(\".txt\"):\n            path_arquivo = os.path.join(pasta, arquivo)\n            with open(path_arquivo, 'r', encoding='utf-8') as f:\n                conteudo = f.read().strip()\n                noticias.append({'titulo': os.path.splitext(arquivo)[0], 'conteudo': conteudo})\n    return noticias\ndef main():",
+        "detail": "ferramentas.rot de pesquisa.gera-html",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ferramentas.rot de pesquisa.gera-html",
+        "description": "ferramentas.rot de pesquisa.gera-html",
+        "peekOfCode": "def main():\n    pasta_noticias = os.path.join(os.path.expanduser(\"~/Desktop\"), \"Noticias_G1\")\n    pasta_html = os.path.join(pasta_noticias, \"html\")\n    # Cria a pasta \"html\" se ela não existir\n    os.makedirs(pasta_html, exist_ok=True)\n    # Substitua pela data desejada\n    data = '10:40   31/12/2023'\n    for subpasta in os.listdir(pasta_noticias):\n        subpasta_path = os.path.join(pasta_noticias, subpasta)\n        # Verifica se é uma pasta",
+        "detail": "ferramentas.rot de pesquisa.gera-html",
+        "documentation": {}
+    },
+    {
+        "label": "obter_noticias_g1",
+        "kind": 2,
+        "importPath": "ferramentas.rot de pesquisa.pega-antigo",
+        "description": "ferramentas.rot de pesquisa.pega-antigo",
+        "peekOfCode": "def obter_noticias_g1():\n    url = 'https://g1.globo.com/'\n    # Faz a requisição HTTP para a página do G1\n    response = requests.get(url)\n    if response.status_code != 200:\n        print(f\"Erro ao acessar o site. Código de status: {response.status_code}\")\n        return None\n    # Parseia o HTML da página\n    soup = BeautifulSoup(response.text, 'html.parser')\n    # Encontra as manchetes no HTML",
+        "detail": "ferramentas.rot de pesquisa.pega-antigo",
+        "documentation": {}
+    },
+    {
+        "label": "salvar_noticias",
+        "kind": 2,
+        "importPath": "ferramentas.rot de pesquisa.pega-antigo",
+        "description": "ferramentas.rot de pesquisa.pega-antigo",
+        "peekOfCode": "def salvar_noticias(noticias):\n    diretorio_destino = os.path.join(os.path.expanduser(\"~/Desktop\"), \"Noticias_G1\")\n    os.makedirs(diretorio_destino, exist_ok=True)\n    for i, noticia in enumerate(noticias):\n        pasta = os.path.join(diretorio_destino, f'noticia_{i + 1}')\n        os.makedirs(pasta, exist_ok=True)\n        if noticia['titulo']:\n            with open(os.path.join(pasta, 'titulo.txt'), 'w', encoding='utf-8') as f:\n                f.write(noticia['titulo'])\n        if noticia['conteudo']:",
+        "detail": "ferramentas.rot de pesquisa.pega-antigo",
+        "documentation": {}
+    },
+    {
+        "label": "obter_noticias_g1",
+        "kind": 2,
+        "importPath": "ferramentas.rot de pesquisa.pega",
+        "description": "ferramentas.rot de pesquisa.pega",
+        "peekOfCode": "def obter_noticias_g1():\n    url = 'https://g1.globo.com/'\n    # Faz a requisição HTTP para a página do G1\n    response = requests.get(url)\n    if response.status_code != 200:\n        print(f\"Erro ao acessar o site. Código de status: {response.status_code}\")\n        return None\n    # Parseia o HTML da página\n    soup = BeautifulSoup(response.text, 'html.parser')\n    # Encontra as manchetes no HTML",
+        "detail": "ferramentas.rot de pesquisa.pega",
+        "documentation": {}
+    },
+    {
+        "label": "salvar_noticias",
+        "kind": 2,
+        "importPath": "ferramentas.rot de pesquisa.pega",
+        "description": "ferramentas.rot de pesquisa.pega",
+        "peekOfCode": "def salvar_noticias(noticias):\n    diretorio_destino = os.path.join(os.path.expanduser(\"~/Desktop\"), \"Noticias_G1\")\n    os.makedirs(diretorio_destino, exist_ok=True)\n    for i, noticia in enumerate(noticias):\n        pasta = os.path.join(diretorio_destino, f'noticia_{i + 1}')\n        os.makedirs(pasta, exist_ok=True)\n        if noticia['titulo']:\n            with open(os.path.join(pasta, 'titulo.txt'), 'w', encoding='utf-8') as f:\n                f.write(noticia['titulo'])\n        if noticia['conteudo']:",
+        "detail": "ferramentas.rot de pesquisa.pega",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_html_conteudo",
+        "kind": 2,
+        "importPath": "ferramentas.rot de pesquisa.pega",
+        "description": "ferramentas.rot de pesquisa.pega",
+        "peekOfCode": "def gerar_html_conteudo(titulo, conteudo, imagem_url, data):\n    # Substitua os espaços e caracteres especiais no título para criar um identificador único\n    identificador = titulo.lower().replace(' ', '_')\n    # Monta o HTML para a notícia\n    html = f\"\"\"\n    <section class=\"bloco-noticias\">\n        <article>\n            <img src=\"{imagem_url}\" alt=\"{titulo}\">\n            <div class=\"content\">\n                <h2>{titulo}</h2>",
+        "detail": "ferramentas.rot de pesquisa.pega",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ferramentas.rot de pesquisa.pega",
+        "description": "ferramentas.rot de pesquisa.pega",
+        "peekOfCode": "def main():\n    pasta_noticias = os.path.join(os.path.expanduser(\"~/Desktop\"), \"Noticias_G1\")\n    pasta_html = os.path.join(pasta_noticias, \"html\")\n    # Cria a pasta \"html\" se ela não existir\n    os.makedirs(pasta_html, exist_ok=True)\n    # Substitua pela data desejada\n    data = '10:40   31/12/2023'\n    # Inicia o arquivo HTML com a estrutura inicial\n    html_total = \"\"\"<!DOCTYPE html>\n<html lang=\"pt-BR\">",
+        "detail": "ferramentas.rot de pesquisa.pega",
+        "documentation": {}
+    },
+    {
+        "label": "generate_username",
+        "kind": 2,
+        "importPath": "ferramentas.bot contas",
+        "description": "ferramentas.bot contas",
+        "peekOfCode": "def generate_username(length=8):\n    letters = string.ascii_lowercase\n    return ''.join(random.choice(letters) for i in range(length))\n# Função para gerar uma senha aleatória\ndef generate_password(length=10):\n    characters = string.ascii_letters + string.digits + string.punctuation\n    return ''.join(random.choice(characters) for i in range(length))\n# Número de contas que você deseja criar\nnum_accounts = 10\n# Inicializa o navegador",
+        "detail": "ferramentas.bot contas",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password",
+        "kind": 2,
+        "importPath": "ferramentas.bot contas",
+        "description": "ferramentas.bot contas",
+        "peekOfCode": "def generate_password(length=10):\n    characters = string.ascii_letters + string.digits + string.punctuation\n    return ''.join(random.choice(characters) for i in range(length))\n# Número de contas que você deseja criar\nnum_accounts = 10\n# Inicializa o navegador\nchrome_driver_path = \"C:/Users/mocob/Desktop/PASTAS/chromedriver_win32.exe\"  # Caminho para o ChromeDriver\ndriver = webdriver.Chrome(executable_path=chrome_driver_path)\n# Lista para armazenar os detalhes das contas\naccount_details = []",
+        "detail": "ferramentas.bot contas",
+        "documentation": {}
+    },
+    {
+        "label": "num_accounts",
+        "kind": 5,
+        "importPath": "ferramentas.bot contas",
+        "description": "ferramentas.bot contas",
+        "peekOfCode": "num_accounts = 10\n# Inicializa o navegador\nchrome_driver_path = \"C:/Users/mocob/Desktop/PASTAS/chromedriver_win32.exe\"  # Caminho para o ChromeDriver\ndriver = webdriver.Chrome(executable_path=chrome_driver_path)\n# Lista para armazenar os detalhes das contas\naccount_details = []\nfor _ in range(num_accounts):\n    # Gera um nome de usuário e senha aleatórios\n    username = generate_username()\n    password = generate_password()",
+        "detail": "ferramentas.bot contas",
+        "documentation": {}
+    },
+    {
+        "label": "chrome_driver_path",
+        "kind": 5,
+        "importPath": "ferramentas.bot contas",
+        "description": "ferramentas.bot contas",
+        "peekOfCode": "chrome_driver_path = \"C:/Users/mocob/Desktop/PASTAS/chromedriver_win32.exe\"  # Caminho para o ChromeDriver\ndriver = webdriver.Chrome(executable_path=chrome_driver_path)\n# Lista para armazenar os detalhes das contas\naccount_details = []\nfor _ in range(num_accounts):\n    # Gera um nome de usuário e senha aleatórios\n    username = generate_username()\n    password = generate_password()\n    # Abre a página de registro do Instagram\n    driver.get(\"https://www.instagram.com/accounts/emailsignup/\")",
+        "detail": "ferramentas.bot contas",
+        "documentation": {}
+    },
+    {
+        "label": "driver",
+        "kind": 5,
+        "importPath": "ferramentas.bot contas",
+        "description": "ferramentas.bot contas",
+        "peekOfCode": "driver = webdriver.Chrome(executable_path=chrome_driver_path)\n# Lista para armazenar os detalhes das contas\naccount_details = []\nfor _ in range(num_accounts):\n    # Gera um nome de usuário e senha aleatórios\n    username = generate_username()\n    password = generate_password()\n    # Abre a página de registro do Instagram\n    driver.get(\"https://www.instagram.com/accounts/emailsignup/\")\n    # Preenche o nome de usuário e a senha",
+        "detail": "ferramentas.bot contas",
+        "documentation": {}
+    },
+    {
+        "label": "account_details",
+        "kind": 5,
+        "importPath": "ferramentas.bot contas",
+        "description": "ferramentas.bot contas",
+        "peekOfCode": "account_details = []\nfor _ in range(num_accounts):\n    # Gera um nome de usuário e senha aleatórios\n    username = generate_username()\n    password = generate_password()\n    # Abre a página de registro do Instagram\n    driver.get(\"https://www.instagram.com/accounts/emailsignup/\")\n    # Preenche o nome de usuário e a senha\n    driver.find_element_by_name(\"username\").send_keys(username)\n    driver.find_element_by_name(\"password\").send_keys(password)",
+        "detail": "ferramentas.bot contas",
+        "documentation": {}
+    },
+    {
+        "label": "converter_mkv_para_mp4",
+        "kind": 2,
+        "importPath": "ferramentas.conversor de video",
+        "description": "ferramentas.conversor de video",
+        "peekOfCode": "def converter_mkv_para_mp4(input_file, output_file):\n    # Carregar o vídeo\n    video_clip = VideoFileClip(input_file)\n    # Salvar o vídeo no formato MP4\n    video_clip.write_videofile(output_file, codec='libx264', audio_codec='aac')\nif __name__ == \"__main__\":\n    # Substitua 'input_video.mkv' pelo caminho do seu vídeo MKV de entrada\n    input_video = 'C:\\\\Users\\\\mocob\\\\Videos\\\\Nova pasta'\n    # Substitua 'output_video.mp4' pelo nome desejado para o vídeo de saída\n    output_video = 'C:\\\\Users\\\\mocob\\\\Videos\\\\Nova pasta'",
+        "detail": "ferramentas.conversor de video",
+        "documentation": {}
+    },
+    {
+        "label": "diretorio_jpg",
+        "kind": 5,
+        "importPath": "ferramentas.conversor",
+        "description": "ferramentas.conversor",
+        "peekOfCode": "diretorio_jpg = \"C:\\\\Users\\\\mocob\\\\Desktop\\\\formatos\"\n# Caminho para o diretório de destino das imagens WebP\ndiretorio_webp = \"C:\\\\Users\\\\mocob\\\\Desktop\\\\formatos\"\n# Garanta que o diretório de destino exista\nif not os.path.exists(diretorio_webp):\n    os.makedirs(diretorio_webp)\n# Lista todos os arquivos no diretório JPEG\narquivos_jpg = [arquivo for arquivo in os.listdir(diretorio_jpg) if arquivo.lower().endswith('.jpg')]\n# Itera sobre cada arquivo JPEG\nfor arquivo_jpg in arquivos_jpg:",
+        "detail": "ferramentas.conversor",
+        "documentation": {}
+    },
+    {
+        "label": "diretorio_webp",
+        "kind": 5,
+        "importPath": "ferramentas.conversor",
+        "description": "ferramentas.conversor",
+        "peekOfCode": "diretorio_webp = \"C:\\\\Users\\\\mocob\\\\Desktop\\\\formatos\"\n# Garanta que o diretório de destino exista\nif not os.path.exists(diretorio_webp):\n    os.makedirs(diretorio_webp)\n# Lista todos os arquivos no diretório JPEG\narquivos_jpg = [arquivo for arquivo in os.listdir(diretorio_jpg) if arquivo.lower().endswith('.jpg')]\n# Itera sobre cada arquivo JPEG\nfor arquivo_jpg in arquivos_jpg:\n    caminho_jpg = os.path.join(diretorio_jpg, arquivo_jpg)\n    # Abre a imagem JPEG",
+        "detail": "ferramentas.conversor",
+        "documentation": {}
+    },
+    {
+        "label": "arquivos_jpg",
+        "kind": 5,
+        "importPath": "ferramentas.conversor",
+        "description": "ferramentas.conversor",
+        "peekOfCode": "arquivos_jpg = [arquivo for arquivo in os.listdir(diretorio_jpg) if arquivo.lower().endswith('.jpg')]\n# Itera sobre cada arquivo JPEG\nfor arquivo_jpg in arquivos_jpg:\n    caminho_jpg = os.path.join(diretorio_jpg, arquivo_jpg)\n    # Abre a imagem JPEG\n    imagem = Image.open(caminho_jpg)\n    # Gera o caminho para o arquivo WebP no diretório de destino\n    caminho_webp = os.path.join(diretorio_webp, os.path.splitext(arquivo_jpg)[0] + '.webp')\n    # Salva a imagem como WebP\n    imagem.save(caminho_webp, 'WEBP')",
+        "detail": "ferramentas.conversor",
+        "documentation": {}
+    },
+    {
+        "label": "obter_links_incorporacao_ultimas_noticias",
+        "kind": 2,
+        "importPath": "ferramentas.links-new",
+        "description": "ferramentas.links-new",
+        "peekOfCode": "def obter_links_incorporacao_ultimas_noticias(query, max_resultados, arquivo_saida):\n    videos_search = VideosSearch(query, limit=max_resultados)\n    results = videos_search.result()\n    # Extrai os links de incorporação dos vídeos\n    links_incorporacao = [f\"'https://www.youtube.com/embed/{video['id']}',\" for video in results['result']]\n    # Salva os links em um arquivo TXT\n    with open(arquivo_saida, 'w') as arquivo:\n        for link in links_incorporacao:\n            arquivo.write(link + '\\n')\n    print(f'Links de incorporação das últimas notícias do YouTube foram salvos em {arquivo_saida}')",
+        "detail": "ferramentas.links-new",
+        "documentation": {}
+    },
+    {
+        "label": "QUERY",
+        "kind": 5,
+        "importPath": "ferramentas.links-new",
+        "description": "ferramentas.links-new",
+        "peekOfCode": "QUERY = 'noticia 06/02/2024'  #Curiosidades ou 'noticia br 15/01/2024' |  Pode ser ajustado conforme necessário\n# Substitua 'MAX_RESULTADOS' pelo número máximo de vídeos que você deseja obter\nMAX_RESULTADOS = 20\n# Nome do arquivo de saída\nARQUIVO_SAIDA = 'links_incorporacao_noticias_youtube.txt'\nobter_links_incorporacao_ultimas_noticias(QUERY, MAX_RESULTADOS, ARQUIVO_SAIDA)",
+        "detail": "ferramentas.links-new",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_RESULTADOS",
+        "kind": 5,
+        "importPath": "ferramentas.links-new",
+        "description": "ferramentas.links-new",
+        "peekOfCode": "MAX_RESULTADOS = 20\n# Nome do arquivo de saída\nARQUIVO_SAIDA = 'links_incorporacao_noticias_youtube.txt'\nobter_links_incorporacao_ultimas_noticias(QUERY, MAX_RESULTADOS, ARQUIVO_SAIDA)",
+        "detail": "ferramentas.links-new",
+        "documentation": {}
+    },
+    {
+        "label": "ARQUIVO_SAIDA",
+        "kind": 5,
+        "importPath": "ferramentas.links-new",
+        "description": "ferramentas.links-new",
+        "peekOfCode": "ARQUIVO_SAIDA = 'links_incorporacao_noticias_youtube.txt'\nobter_links_incorporacao_ultimas_noticias(QUERY, MAX_RESULTADOS, ARQUIVO_SAIDA)",
+        "detail": "ferramentas.links-new",
+        "documentation": {}
+    }
+]
