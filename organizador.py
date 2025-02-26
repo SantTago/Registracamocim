@@ -18,5 +18,5 @@ def renomear_imagens(pasta):
         print(f"{imagem} -> {novo_nome}")
 
 # Exemplo de uso
-pasta_imagens = "@centromedico"  # Substitua pelo caminho real
+pasta_imagens = "imagens/@ph_fono"  # Substitua pelo caminho real
 renomear_imagens(pasta_imagens)
