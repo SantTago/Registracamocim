@@ -1459,154 +1459,203 @@
       </div>
     </div>
   </div>
+<!----------------------------------------------------------------------------------------------->
 
-
-  <!----------------------------------------------------------------------------------------------->
-<style>
-  .subtitulo{
-   padding: 50px;
-   color: #6495ED;
-  }
-
-   .plan-title {
-       color: #6495ED;
-   }
-   .plan-table {
-       width: 100%;
-       border-collapse: collapse;
-       margin-top: 10px;
-   }
-   .plan-table th, .plan-table td {
-       padding: 10px;
-       border-bottom: 1px solid #ddd;
-       text-align: center;
-   }
-   .plan-table th {
-       background-color: #6495ED;
-       color: white;
-   }
-   .plan-input {
-       width: 50px;
-       text-align: center;
-       color: #000000;
-   }
-   .plan-total {
-       font-size: 1.2em;
-       font-weight: bold;
-       margin-top: 10px;
-   }
-   .plan-button {
-       background-color: #6495ED;
-       color: white;
-       border: none;
-       padding: 10px 15px;
-       border-radius: 5px;
-       cursor: pointer;
-       margin-top: 15px;
-   }
-   .plan-button:hover {
-       background-color: #4169E1;
-   }
-   .plan-info {
-       font-size: 0.9em;
-       color: #555;
-       margin-top: 10px;
-   }
+ <style>
+    .subtitulo {
+        padding: 50px;
+        color: #6495ED;
+    }
+    .plan-title {
+        color: #6495ED;
+    }
+    .plan-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    .plan-table th, .plan-table td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+    }
+    .plan-table th {
+        background-color: #6495ED;
+        color: white;
+    }
+    .plan-input {
+        width: 50px;
+        text-align: center;
+        color: #000000;
+    }
+    .plan-input::-webkit-inner-spin-button, 
+    .plan-input::-webkit-outer-spin-button {
+        height: 30px;
+        width: 30px;
+        background-color: #6495ED;
+        border-radius: 5px;
+        border: none;
+    }
+    .plan-total {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .plan-button {
+        background-color: #6495ED;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+    .plan-info {
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 10px;
+    }
 </style>
 
 <body class="custom-plan-container">
-<div class="plan-box">
-   <h2 class="plan-title">Monte seu Plano Personalizado</h2>
-   <table class="plan-table">
-       <tr>
-           <th>Item</th>
-           <th>Quantidade</th>
-           <th>Frequência</th>
-           <th>Preço Unitário</th>
-       </tr>
-       <tr>
-           <td>Post Simples</td>
-           <td><input type="number" class="plan-input" id="quantPostSimples" value="0" min="0" onchange="calcularPreco()"></td>
-           <td id="freqPostSimples">0 por semana</td>
-           <td>R$ 50,00</td>
-       </tr>
-       <tr>
-           <td>Post Simples + Stories</td>
-           <td><input type="number" class="plan-input" id="quantPostSimplesStories" value="0" min="0" onchange="calcularPreco()"></td>
-           <td id="freqPostSimplesStories">0 por semana</td>
-           <td>R$ 70,00</td>
-       </tr>
-       <tr>
-           <td>Carrossel</td>
-           <td><input type="number" class="plan-input" id="quantCarrossel" value="0" min="0" onchange="calcularPreco()"></td>
-           <td id="freqCarrossel">0 por semana</td>
-           <td>R$ 80,00</td>
-       </tr>
-       <tr>
-           <td>Post Animado</td>
-           <td><input type="number" class="plan-input" id="quantPostAnimado" value="0" min="0" onchange="calcularPreco()"></td>
-           <td id="freqPostAnimado">0 por semana</td>
-           <td>R$ 120,00</td>
-       </tr>
-       <tr>
-           <td>Gravação e Edição de Vídeo</td>
-           <td><input type="number" class="plan-input" id="quantVideo" value="0" min="0" onchange="calcularPreco()"></td>
-           <td id="freqVideo">0 por mês</td>
-           <td>R$ 200,00</td>
-       </tr>
-       <tr>
-           <td>Descrição Personalizada</td>
-           <td><input type="number" class="plan-input" id="quantDescricao" value="0" min="0" onchange="calcularPreco()"></td>
-           <td id="freqDescricao">0 por semana</td>
-           <td>R$ 30,00</td>
-       </tr>
-       <tr>
-           <td>Tráfego Pago</td>
-           <td><input type="number" class="plan-input" id="quantTrafego" value="0" min="0" onchange="calcularPreco()"></td>
-           <td id="freqTrafego">0 por mês</td>
-           <td>R$ 300,00</td>
-       </tr>
-       <tr>
-           <td>Criação de Conteúdo</td>
-           <td><input type="number" class="plan-input" id="quantCriacaoConteudo" value="0" min="0" onchange="calcularPreco()"></td>
-           <td id="freqCriacaoConteudo">0 por mês</td>
-           <td>R$ 150,00</td>
-       </tr>
-       <tr>
-           <td>Publicação Automática</td>
-           <td><input type="number" class="plan-input" id="quantPublicacao" value="0" min="0" onchange="calcularPreco()"></td>
-           <td id="freqPublicacao">0 por mês</td>
-           <td>R$ 100,00</td>
-       </tr>
-   </table>
-   <p class="plan-info"> Cada item corresponde à frequência especificada durante o período selecionado.</p>
-   <p class="plan-total">Total: R$ <span id="totalPreco">0,00</span></p>
-   <button class="plan-button" onclick="enviarWhatsApp()">Enviar para o WhatsApp</button>
-</div>
-
-<script>
-   function calcularPreco() {
-       let total = 0;
-       let precos = {
-           quantPostSimples: 50,
-           quantPostSimplesStories: 70,
-           quantCarrossel: 80,
-           quantPostAnimado: 120,
-           quantVideo: 200,
-           quantDescricao: 30,
-           quantTrafego: 300,
-           quantCriacaoConteudo: 150,
-           quantPublicacao: 100
-       };
-       for (let id in precos) {
-           let quantidade = document.getElementById(id).value;
-           total += quantidade * precos[id];
-           document.getElementById('freq' + id.charAt(5).toUpperCase() + id.slice(6)).innerText = quantidade + " por " + (id.includes("Video") || id.includes("Trafego") || id.includes("CriacaoConteudo") || id.includes("Publicacao") ? "mês" : "semana");
-       }
-       document.getElementById("totalPreco").innerText = total.toFixed(2);
-   }
-</script>
-<!----------------------------------------------------------------------------------------------->
+  <div class="plan-box">
+      <h2 class="plan-title">Monte seu Plano Personalizado</h2>
+      <table class="plan-table">
+          <tr>
+              <th>Item</th>
+              <th>Quantidade</th>
+              <th>Frequência</th>
+              <th>Preço Unitário</th>
+          </tr>
+          <tr>
+              <td>Post Simples</td>
+              <td><input type="number" class="plan-input" id="quantPostSimples" value="0" min="0" onchange="calcularPreco()"></td>
+              <td id="freqPostSimples">0 por semana</td>
+              <td>R$ 50,00</td>
+          </tr>
+          <tr>
+              <td>Post Simples + Stories</td>
+              <td><input type="number" class="plan-input" id="quantPostSimplesStories" value="0" min="0" onchange="calcularPreco()"></td>
+              <td id="freqPostSimplesStories">0 por semana</td>
+              <td>R$ 90,00</td>
+          </tr>
+          <tr>
+              <td>Carrossel</td>
+              <td><input type="number" class="plan-input" id="quantCarrossel" value="0" min="0" onchange="calcularPreco()"></td>
+              <td id="freqCarrossel">0 por semana</td>
+              <td>R$ 80,00</td>
+          </tr>
+          <tr>
+              <td>Post Animado</td>
+              <td><input type="number" class="plan-input" id="quantPostAnimado" value="0" min="0" onchange="calcularPreco()"></td>
+              <td id="freqPostAnimado">0 por semana</td>
+              <td>R$ 120,00</td>
+          </tr>
+          <tr>
+              <td>Gravação e Edição de Vídeo</td>
+              <td><input type="number" class="plan-input" id="quantVideo" value="0" min="0" onchange="calcularPreco()"></td>
+              <td id="freqVideo">0 por mês</td>
+              <td>R$ 65,00</td>
+          </tr>
+          <tr>
+              <td>Descrição Personalizada</td>
+              <td><input type="number" class="plan-input" id="quantDescricao" value="0" min="0" onchange="calcularPreco()"></td>
+              <td id="freqDescricao">0 por semana</td>
+              <td>R$ 40,00</td>
+          </tr>
+          <tr>
+              <td>Tráfego Pago</td>
+              <td><input type="number" class="plan-input" id="quantTrafego" value="0" min="0" onchange="calcularPreco()"></td>
+              <td id="freqTrafego">0 por mês</td>
+              <td>R$ 300,00</td>
+          </tr>
+          <tr>
+              <td>Criação de Conteúdo</td>
+              <td><input type="number" class="plan-input" id="quantCriacaoConteudo" value="0" min="0" onchange="calcularPreco()"></td>
+              <td id="freqCriacaoConteudo">0 por mês</td>
+              <td>R$ 150,00</td>
+          </tr>
+          <tr>
+              <td>Publicação Automática</td>
+              <td><input type="number" class="plan-input" id="quantPublicacao" value="0" min="0" onchange="calcularPreco()"></td>
+              <td id="freqPublicacao">0 por mês</td>
+              <td>R$ 100,00</td>
+          </tr>
+      </table>
+      <p class="plan-info">Cada item corresponde à frequência especificada durante o período selecionado.</p>
+      <p class="plan-total">Total: R$ <span id="totalPreco">0,00</span></p>
+      <button class="plan-button" onclick="finalizarPlano()">Finalizar Plano</button>
+      <div id="comanda" style="display: none; margin-top: 20px;">
+          <h3>Resumo do Pedido</h3>
+          <table class="plan-table">
+              <tr>
+                  <th>Item</th>
+                  <th>Quantidade</th>
+                  <th>Frequência</th>
+                  <th>Preço Unitário</th>
+                  <th>Total</th>
+              </tr>
+              <tbody id="resumoPedido"></tbody>
+          </table>
+          <p class="plan-total">Total: R$ <span id="totalComanda">0,00</span></p>
+          
+          <button class="plan-button" onclick="enviarWhatsApp()">Enviar para o WhatsApp</button>
+      </div>
+      
+      <script>
+          function finalizarPlano() {
+              let total = 0;
+              let itens = [
+                  { id: "quantPostSimples", nome: "Post Simples", preco: 50, freq: "por semana" },
+                  { id: "quantPostSimplesStories", nome: "Post Simples + Stories", preco: 90, freq: "por semana" },
+                  { id: "quantCarrossel", nome: "Carrossel", preco: 80, freq: "por semana" },
+                  { id: "quantPostAnimado", nome: "Post Animado", preco: 120, freq: "por semana" },
+                  { id: "quantVideo", nome: "Gravação e Edição de Vídeo", preco: 65, freq: "por mês" },
+                  { id: "quantDescricao", nome: "Descrição Personalizada", preco: 40, freq: "por semana" },
+                  { id: "quantTrafego", nome: "Tráfego Pago", preco: 300, freq: "por mês" },
+                  { id: "quantCriacaoConteudo", nome: "Criação de Conteúdo", preco: 150, freq: "por mês" },
+                  { id: "quantPublicacao", nome: "Publicação Automática", preco: 100, freq: "por mês" }
+              ];
+              
+              let tabelaResumo = document.getElementById("resumoPedido");
+              tabelaResumo.innerHTML = "";
+      
+              itens.forEach(item => {
+                  let quantidade = document.getElementById(item.id).value;
+                  if (quantidade > 0) {
+                      let precoTotalItem = quantidade * item.preco;
+                      total += precoTotalItem;
+                      let row = `<tr>
+                          <td>${item.nome}</td>
+                          <td>${quantidade}</td>
+                          <td>${item.freq}</td>
+                          <td>R$ ${item.preco.toFixed(2)}</td>
+                          <td>R$ ${precoTotalItem.toFixed(2)}</td>
+                      </tr>`;
+                      tabelaResumo.innerHTML += row;
+                  }
+              });
+              
+              document.getElementById("totalComanda").innerText = total.toFixed(2);
+              document.getElementById("comanda").style.display = "block";
+          }
+          
+          function enviarWhatsApp() {
+              let numeroWhatsApp = "+558893464285"; // Substitua pelo seu número
+              let mensagem = "Segue minha comanda:\n";
+              document.querySelectorAll("#resumoPedido tr").forEach(row => {
+                  let colunas = row.querySelectorAll("td");
+                  if (colunas.length > 0) {
+                      mensagem += `\n- ${colunas[0].innerText}: ${colunas[1].innerText} ${colunas[2].innerText} - R$ ${colunas[4].innerText}`;
+                  }
+              });
+              mensagem += `\n\nTotal: R$ ${document.getElementById("totalComanda").innerText}`;
+              
+              let link = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
+              window.open(link, "_blank");
+          }
+      </script>
+<!---------------------------------------------------------------------------------------------------------->
 <!--
   <div class="restricted-area">
      <button class="btn btn-restricted" onclick="openConfirmationModal()"><i class="fas fa-lock"></i> Área Restrita</button>
