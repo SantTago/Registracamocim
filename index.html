@@ -2042,13 +2042,13 @@ function closeModal() {
             display: none;
         }
         .carousel img {
-            width: calc(50% - 10px);
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-            scroll-snap-align: start;
-            cursor: pointer;
+            height: 300px; /* Defina a altura desejada */
+            width: auto; /* Mantém a proporção original */
+            object-fit: cover; /* Ajusta a exibição sem distorcer */
+            display: block;
+            margin: 0 auto;
+        
+
         }
         @media (min-width: 768px) {
           .carousel img {
