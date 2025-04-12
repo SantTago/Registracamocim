@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Li-Closet</title>
+  <!-- Adicione o link para o arquivo CSS do Fancybox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <!-- Importe o jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Adicione o link para o arquivo JavaScript do Fancybox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <style>
+    /* Estilos CSS para tornar a página mais bonita e responsiva */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative; /* Importante para o posicionamento dos botões flutuantes */
+      
+    }
+    header {
+      background-color: #FB5B8F;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    .profile-img {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-img img {
+      width: 150px;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      box-shadow: 0px 0px 10px #b12a57;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex; /* Exibir produtos lado a lado */
+      flex-wrap: wrap; /* Permitir que os produtos quebrem linha conforme necessário */
+      justify-content: space-between; /* Espaço igual entre os produtos */
+    }
+    .product {
+      width: calc(50% - 10px); /* Definir largura de cada produto */
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%; /* Imagem ocupa todo o espaço disponível */
+      height: auto;
+      cursor: pointer; /* Alterar o cursor ao passar por cima da imagem */
+    }
+    .product-info {
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center; /* Centralizar as informações dos produtos */
+    }
+    .product-info h2 {
+      margin-top: 0;
+    }
+    .contact-buttons {
+      position: fixed; /* Torna os botões flutuantes */
+      bottom: 20px; /* Distância do fundo */
+      right: 20px; /* Distância da direita */
+      text-align: center;
+      display: flex; /* Para os botões ficarem lado a lado */
+      justify-content: space-between; /* Distribuir o espaço entre os botões */
+      width: 200px; /* Largura dos botões */
+    }
+    .contact-buttons a {
+      display: inline-block;
+      background-color: #8E0030;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 0; /* Espaçamento vertical dentro do botão */
+      margin: 10px 0; /* Espaçamento vertical entre os botões */
+      border-radius: 5px;
+      width: 45%; /* Largura dos botões */
+      transition: background-color 0.3s ease;
+    }
+    .contact-buttons a:hover {
+      background-color: #b12a57;
+    }
+    .back-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back-button a {
+      display: inline-block;
+      background-color: #8E0030;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .back-button a:hover {
+      background-color: #b90441;
+    }
+   
+    @media only screen and (max-width: 600px) {
+      .product {
+        width: 100%; /* Full width for products on smaller screens */
+        padding-top: 10px;
+        
+      }
+      .product-info {
+        text-align: center; /* Centralizar as informações dos produtos em telas menores */
+      }
+      .contact-buttons {
+        width: 100%; /* Full width for contact buttons on smaller screens */
+        bottom: 0; /* Align the buttons to the bottom */
+        left: 0; /* Align the buttons to the left */
+        text-align: center;
+        justify-content: center; /* Centralizar os botões */
+      }
+      .contact-buttons a {
+        width: 100%; /* Largura total para botões em telas menores */
+         margin: 20px;
+      }
+    }
+
+    /* Estilo para as miniaturas */
+    .thumbnails {
+      margin-top: 10px;
+      white-space: nowrap; /* Impede que as miniaturas quebrem */
+      overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+      text-align: center; /* Centraliza as miniaturas */
+    }
+    .thumbnails img {
+      max-width: 50px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .titu{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        color: #8E0030;
+    }
+    .para{
+        margin: auto;
+        text-align: justify;
+        padding: 15px;
+        max-width: 600px;
+    }
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+       
+      }
+    }
+    main{
+        max-width: 700px;
+        margin: auto;
+    }
+    .profile-img {
+      margin-bottom: 20px;
+      border-radius: 50%; /* Deixa a imagem redonda */
+      overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a borda */
+      width: 150px; /* Defina o tamanho desejado para a imagem do perfil */
+      height: 150px;
+      margin: 0 auto; /* Centraliza a imagem */
+    }
+    .profile-img {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .profile-img img {
+        width: 140px;
+        border-radius: 50%;
+        border: 5px solid #ffffff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+    .tip {
+      margin-bottom: 30px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px #ff025788;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center; /* Centralizar imagens */
+    }
+    .tip img {
+        width: 100%; /* Definir largura total */
+        height: auto; /* Manter proporção */
+      }
+    .tip-info {
+      padding: 20px;
+    }
+    .tip-info h2 {
+      margin-top: 0;
+    }
+    .tip-info p {
+      margin-bottom: 10px;
+    }
+    .para{
+      margin: auto;
+      text-align: justify;
+      padding: 15px;
+      max-width: 600px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="profile-img">
+      <img src="li-looks.jpg" alt="Imagem do Perfil">
+    </div>
+  
+    <div class="back-button">
+      <a href="principal.html">Voltar</a>
+    </div>
+  </header>
+  <main>
+    <!--<p class="para">Na Li Closet, a moda fitness é cuidadosamente curada para oferecer uma combinação perfeita de estilo, funcionalidade e conforto. A coleção de produtos da Li Closet é projetada para inspirar e elevar sua jornada de atividade física, proporcionando não apenas roupas para exercícios, mas peças que oferecem suporte, durabilidade e uma dose extra de confiança.</p> -->
+
+    <div class="container">
+      <div class="tip">
+        <img src="001.jpg" alt="Imagem da Dica 1">
+        <div class="tip-info">
+          <h2>Estilo Elegante:</h2>
+          <p> Cada peça é selecionada com atenção aos detalhes estéticos, oferecendo um toque de sofisticação à sua roupa de academia. Desde conjuntos de tops e leggings até shorts, a Li Closet oferece uma variedade de opções para atender ao seu estilo pessoal.</p>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip-info">
+          <img src="banner.jpg" alt="banner">
+        </div>
+      </div>
+      <div class="tip">
+        <img src="002.jpg" alt="Imagem da Dica 3">
+        <div class="tip-info">
+          <h2>Tecnologia de Tecido Avançada:</h2>
+          <p>As peças da Li Closet muitas vezes incorporam tecnologia de tecido avançada, como tecidos que absorvem a umidade, respiráveis ​​e de secagem rápida. Isso ajuda a manter você seco e confortável durante seus treinos mais intensos.</p>
+        </div>
+      </div>
+      <!-- Adicione mais dicas conforme necessário -->
+      <div class="tip">
+        <img src="003.jpg" alt="Imagem da Dica 4">
+        <div class="tip-info">
+          <h2>Designs Versáteis:</h2>
+          <p>Além de serem ideais para atividades físicas, muitas das roupas da Li Closet apresentam designs versáteis que podem transitar facilmente do treino para outras atividades do dia a dia. Isso proporciona praticidade e estilo em todas as ocasiões.</p>
+        </div>
+      </div>
+      <div class="tip">
+        
+        <div class="tip-info">
+        
+          <p>Em resumo, os produtos da moda fitness na Li Closet são uma fusão de estilo, funcionalidade e qualidade, projetados para elevar sua experiência de exercício e ajudá-lo a alcançar seus objetivos de fitness com confiança e estilo. <br>
+            <hr>
+            Essas características destacam o compromisso da Li Closet em oferecer produtos de alta qualidade e alinhados com as tendências da moda fitness, enquanto atende às necessidades e preferências de seus clientes.
+          </p>
+        </div>
+      </div>
+      <div class="contact-buttons">
+        
+        <a href="https://www.instagram.com/li_closet/" target="_blank">Instagram</a>
+      </div>
+    
+    
+    </div>
+</main>
+</body>
+</html>

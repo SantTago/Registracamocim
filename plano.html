@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="icon/icon.png" type="image/x-icon">
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Registra Camocim">
+    <meta name="keywords" content="Camocim, ceara, noticias, turismo, jericoacoara, passeios, Camocim online, policia 24 horas, Registra Camocim ">
+    <meta name="author" content="Tiago viana da cruz">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header {
+            background-color: #c00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 5px auto;
+            background-color: #222;
+            
+        }
+
+        article {
+            width: 55%;
+            margin-bottom: 20px;
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+            padding: 15px;
+            
+        }
+        article h1 {
+            font-family: var(--normal);
+            padding-top: 30px;
+        }
+        
+
+        article img {
+            width: 100%;
+            height: auto;
+        }
+
+        article div {
+            
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .read-more {
+            display: block;
+            color: #e60000;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .expanded {
+            max-height: none !important;
+        }
+
+        .ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /*---------------------------*/
+        .video-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+        .video-item {
+            scroll-snap-align: start;
+            width: 280px;
+            
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 476px;
+            border: none;
+            overflow: hidden;
+        }
+
+        /*--------------------------*/
+
+        .video {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Adicionado para centralizar verticalmente */
+            flex-wrap: wrap;
+            padding-bottom: 56%;
+            position: relative;
+        }
+        
+        .video > iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Alterado para 100% para ocupar a largura do contêiner pai */
+            height: 100%; /* Alterado para 100% para ocupar a altura do contêiner pai */
+            border-radius: 15px;
+        }
+        
+        /*---------------------*/
+
+        footer {
+            background-color: #e60000;
+            color: #fff;
+            text-align: center;
+            padding: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0px;
+            width: 100%;
+            border-bottom: 15px;
+        }
+
+
+    
+    
+
+    header > h1 {
+        text-align: center;
+        padding-top: 45px;
+        font-family: var(--destaque);
+        color: white;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.356);
+
+    }
+    .paragrafo {
+    text-align: center;
+    }
+
+    
+
+    @media (max-width: 650px) {
+        article {
+            width: 100%;
+        }
+        
+        article  h2{
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+        
+        }
+        article  p{
+            width: 100%;
+            font-size: 13px;
+        }
+        .video-item {
+            width: 100%;
+        } 
+        .instagram-container {
+            padding-bottom: 180%;
+        }
+        main {
+            padding: 1em;
+        }
+
+        .store, .motel {
+            width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
+            max-width: none;
+        }
+    }
+
+    nav {
+        text-align: center;
+        background-color: #444; /* Tom mais escuro para os blocos */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        display: flex; /* Adicionado o estilo flexível */
+        justify-content: center; /* Alinha os itens horizontalmente no centro */
+        align-items: center; /* Alinha os itens verticalmente no centro */
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 10px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+        background-color: #555;
+    }
+
+
+    /* Estilo para o botão de voltar */
+    .back-button {
+        max-width: 68px;
+        display: block;
+        justify-content: center;
+        margin: 1em;
+        padding: 0.5em;
+        text-align: center;
+        text-decoration: none;
+        background-color: #970000; /* Vermelho escuro */
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    /* Efeito de hover para o botão de voltar */
+    .back-button:hover {
+        background-color: #970000; /* Vermelho mais escuro no hover */
+    }
+
+    .voltar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Oculta a seção de Moteis inicialmente */
+    .motel {
+        display: none;
+        
+    }
+
+    /* Estilo para o menu de moteis */
+    .moteis-menu {
+        display: none;
+        position: absolute;
+        background-color: #444; /* Tom mais escuro para os blocos */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        padding: 1em;
+        margin-top: 5px;
+        left: 50%; /* Posiciona o menu no centro */
+        transform: translateX(-50%); /* Corrige a posição no centro */
+    }
+
+    /* Estilo para os itens do menu de moteis */
+    .moteis-menu a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 8px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    /* Efeito de hover para os itens do menu de moteis */
+    .moteis-menu a:hover {
+        background-color: #555;
+    }
+      
+   
+  
+    .logomarca {
+        padding: 9px;
+        padding-top: 4px;
+        max-width: 109px;
+        width: 107%;
+        text-align: center;
+        margin-bottom: -1px;
+        margin: 10px auto;
+    }
+      
+      .logomarca img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      @media only screen and (max-width: 490px) {
+        .logomarca {
+          padding: 9px;
+          max-width: 212px;
+          margin-bottom: -1px;
+          
+      }
+        .menu {
+          text-align: center;
+        }
+        header {
+          background-color: red;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+      }
+      }
+      #floating-btn {
+        display: none;
+        position: fixed;
+        bottom: 60px;
+        right: 20px;
+        background-color: rgb(158, 4, 4);
+        color: #fff;
+        padding: 7px;
+        border-radius: 25%;
+        cursor: pointer;
+        z-index: 1000;
+        
+    }
+
+    #content {
+        padding: 20px;
+        line-height: 1.6;
+    }
+    
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .pagination button {
+        margin: 0 5px;
+        padding: 8px 12px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        margin-bottom: 57px;
+    }
+    .pagination button.active {
+        background-color: red;
+        color: #fff;
+    }
+    .titulo{
+      text-align: center;
+    }
+
+    
+</style>
+<style>
+    .video-container {
+      display: none; /* Oculta o contêiner de vídeo por padrão */
+      margin-bottom: 20px;
+    }
+  
+    @media only screen and (max-width: 768px) {
+      .video-container {
+        display: block; /* Exibe o contêiner de vídeo para dispositivos móveis */
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+  
+      .video-container iframe {
+        width: 99%;
+        height: 578px;
+        border: none;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    
+
+    <header>
+
+        <div class="logomarca">
+          <img src="icon/logo da pagina.png" alt="logo da pagina">
+        </div>
+        
+      </header>
+
+  <nav>
+    <div class="voltar">
+        <a href="index.html" class="back-button" onclick="showSection('lojas')">Voltar</a>
+    </div>
+</nav>
+
+
+
+
+
+
+    <main>
+       
+        <style>
+            /* Paleta de cores */
+            :root {
+                --azul-bebe: #A7D8FF;
+                --azul-escuro: #004F7C;
+                --amarelo: #3ba0ff;
+                --branco: #FFFFFF;
+            }
+    
+    
+            h1 {
+                text-align: center;
+                margin-top: 30px;
+                color: azure;
+            }
+    
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 50px;
+            }
+    
+            .card {
+                width: 200px;
+                padding: 20px;
+                margin: 10px;
+                background-color: red;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                color: rgb(255, 255, 255);
+            }
+    
+            .card:hover {
+                background-color: #797979;
+                color: #272727;
+            }
+    
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .modal-content {
+                background-color: var(--branco);
+                padding: 20px;
+                border-radius: 8px;
+                text-align: center;
+                width: 300px;
+                color: brown;
+            }
+    
+            input[type="password"] {
+                width: 80%;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 5px;
+                border: 1px solid var(--azul-escuro);
+            }
+    
+            button {
+                padding: 10px 20px;
+                cursor: pointer;
+                background-color: var(--azul-escuro);
+                color: var(--branco);
+                border: none;
+                border-radius: 5px;
+            }
+    
+            button:hover {
+                background-color: var(--amarelo);
+            }
+    
+            .welcome-message, .loading-message {
+                font-size: 18px;
+                color: var(--azul-escuro);
+                margin-top: 20px;
+            }
+    
+            .loading {
+                display: none;
+                text-align: center;
+            }
+    
+            .loading span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin: 0 5px;
+                background-color: var(--azul-escuro);
+                border-radius: 50%;
+                animation: loadingAnimation 1s infinite alternate;
+            }
+    
+            .loading span:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+    
+            .loading span:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+    
+            @keyframes loadingAnimation {
+                0% {
+                    opacity: 0.2;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+    
+            .access-granted {
+                display: none;
+                font-size: 20px;
+                color: green;
+                margin-top: 20px;
+            }
+       
+        </style>
+   
+    
+        <h1>Profissionais</h1>
+        <div class="container">
+            <!-- Lista de profissionais -->
+            <div class="card" onclick="openLoginModal('Dra. Eulalia')">
+                <h3>Dra. Eulalia</h3>
+                <p>Fisioterapeuta Infantil</p>
+            </div>
+            <div class="card" onclick="openLoginModal('Dr. Pedro')">
+                <h3>Dr. Pedro</h3>
+                <p>Fonoaudiólogo</p>
+            </div>
+            <div class="card" onclick="openLoginModal('Dra. Raquel Siqueira')">
+                <h3>Dra. Raquel Siqueira</h3>
+                <p>Nutricionista Materno-Infantil</p>
+            </div>
+            <div class="card" onclick="openLoginModal('Jociklê Jácome')">
+                <h3>Jociklê Jácome</h3>
+                <p>Psicóloga Clínica</p>
+            </div>
+            <div class="card" onclick="openLoginModal('Clínica Centro Médico de Camocim')">
+                <h3>Clínica Centro Médico</h3>
+                <p>Centro Médico de Camocim</p>
+            </div>
+            <div class="card" onclick="openLoginModal('Psicocenter Clínica')">
+                <h3>Psicocenter Clínica</h3>
+                <p>Psicologia</p>
+            </div>
+            <div class="card" onclick="openLoginModal('Escola Cobrao')">
+                <h3>Escola Cobrao</h3>
+                <p>Educação</p>
+            </div>
+            <div class="card" onclick="openLoginModal('Andreia')">
+                <h3>Andreia</h3>
+                <p>Enfermeira (Furinho Humanizado)</p>
+            </div>
+            <div class="card" onclick="openLoginModal('Renata')">
+                <h3>Renata</h3>
+                <p>Psicóloga de Relacionamentos</p>
+            </div>
+        </div>
+    
+        <!-- Modal de login -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle">Login</h2>
+                <p>Bem-vindo! Digite a senha para acessar a área de <span id="modalProfessionalName"></span></p>
+                <input type="password" id="passwordInput" placeholder="Senha">
+                <button onclick="validateLogin()">Entrar</button>
+                <p id="welcomeMessage" class="welcome-message"></p>
+                <div class="loading">
+                    <span></span><span></span><span></span>
+                </div>
+                <p id="accessGranted" class="access-granted">Acesso liberado!</p>
+            </div>
+        </div>
+    
+        <script>
+            // Função para abrir a modal de login com o nome do profissional
+            function openLoginModal(professionalName) {
+                const modal = document.getElementById('loginModal');
+                const modalTitle = document.getElementById('modalTitle');
+                const modalProfessionalName = document.getElementById('modalProfessionalName');
+                const welcomeMessage = document.getElementById('welcomeMessage');
+                const loadingMessage = document.querySelector('.loading');
+                const accessGranted = document.getElementById('accessGranted');
+                const passwordInput = document.getElementById('passwordInput');
+    
+                modal.style.display = "flex";
+                modalProfessionalName.innerText = professionalName;
+                modalTitle.innerText = 'Login para ' + professionalName;
+                welcomeMessage.innerText = '';
+                accessGranted.style.display = 'none';
+                loadingMessage.style.display = 'none';
+                passwordInput.value = ''; // Limpar o campo de senha
+            }
+    
+            // Função para validar o login
+            function validateLogin() {
+                const password = document.getElementById('passwordInput').value;
+                const professionalName = document.getElementById('modalProfessionalName').innerText;
+                const welcomeMessage = document.getElementById('welcomeMessage');
+                const loadingMessage = document.querySelector('.loading');
+                const accessGranted = document.getElementById('accessGranted');
+    
+                const correctPasswords = {
+                    'Dra. Eulalia': '1234',
+                    'Dr. Pedro': '1234',
+                    'Dra. Raquel Siqueira': '1234',
+                    'Jociklê Jácome': '1234',
+                    'Clínica Centro Médico de Camocim': '1234',
+                    'Psicocenter Clínica': '1234',
+                    'Escola Cobrao': '1234',
+                    'Andreia': '1234',
+                    'Renata': '1234',
+                };
+    
+                // Mostrar animação de carregamento
+                loadingMessage.style.display = 'block';
+    
+                setTimeout(() => {
+                    if (password === correctPasswords[professionalName]) {
+                        welcomeMessage.innerText = 'Bem-vindo, ' + professionalName + '!';
+                        loadingMessage.style.display = 'none';
+                        accessGranted.style.display = 'block';
+                        setTimeout(() => {
+                            // Redirecionar para outra página após login bem-sucedido
+                            window.location.href = 'dra_raquel.html'; // Substitua pelo link real
+                        }, 3000);
+                    } else {
+                        welcomeMessage.innerText = 'Senha incorreta! Tente novamente.';
+                        loadingMessage.style.display = 'none';
+                    }
+                }, 5000); // Tempo de animação de carregamento (1,5 segundos)
+            }
+    
+            // Fechar a modal quando clicar fora dela
+            window.onclick = function(event) {
+                const modal = document.getElementById('loginModal');
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </main>
+
+
+    <!-- Botão flutuante -->
+    <div id="floating-btn" onclick="scrollToTop()">
+        &#9650; <!-- Triângulo para cima (pode ser substituído por um ícone ou texto) -->
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var floatingBtn = document.getElementById('floating-btn');
+
+            // Verifica se a largura da tela é menor que 768 pixels (dispositivo móvel)
+            if (window.innerWidth < 768) {
+                // Verifica se a posição de rolagem é maior que 200 pixels do topo
+                if (window.scrollY > 200) {
+                    floatingBtn.style.display = 'block';
+                } else {
+                    floatingBtn.style.display = 'none';
+                }
+            } else {
+                floatingBtn.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+
+
+    
+
+    <script>
+        function toggleContent(button) {
+            const content = button.parentElement;
+            const fullText = content.querySelector(".full-text");
+
+            if (content.classList.contains("expanded")) {
+                content.classList.remove("expanded");
+                fullText.style.display = "none";
+                button.innerText = "Mostrar Mais";
+            } else {
+                content.classList.add("expanded");
+                fullText.style.display = "block";
+                button.innerText = "Mostrar Menos";
+            }
+        }
+    </script>
+
+    <script>
+        function toggleMenu() {
+          var menu = document.getElementById("menu");
+          menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+          menu.style.opacity = (menu.style.opacity === "1") ? "0" : "1";
+          menu.style.transform = (menu.style.transform === "translateY(0px)") ? "translateY(-20px)" : "translateY(0px)";
+        }
+      </script>
+
+      
+
+      <script>
+        function changePage(pagePath) {
+            // Lógica para redirecionar para a página com o caminho especificado
+            console.log("Redirecionando para a página: " + pagePath);
+            // Substitua essa linha com a lógica real para redirecionar para a página desejada
+            window.location.href = pagePath;
+        }
+      </script>
+
+      <footer>
+        <p>&copy; 2025 Area Restrita</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative; 
+      
+    }
+    header {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    .profile-img {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-img img {
+      width: 150px;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex; /* Exibir produtos lado a lado */
+      flex-wrap: wrap; /* Permitir que os produtos quebrem linha conforme necessário */
+      justify-content: space-between; /* Espaço igual entre os produtos */
+    }
+    .product {
+      width: calc(50% - 10px); /* Definir largura de cada produto */
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%; /* Imagem ocupa todo o espaço disponível */
+      height: auto;
+      cursor: pointer; /* Alterar o cursor ao passar por cima da imagem */
+    }
+    .product-info {
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center; /* Centralizar as informações dos produtos */
+    }
+    .product-info h2 {
+      margin-top: 0;
+    }
+    .contact-buttons {
+      position: fixed; /* Torna os botões flutuantes */
+      bottom: 20px; /* Distância do fundo */
+      right: 20px; /* Distância da direita */
+      text-align: center;
+      display: flex; /* Para os botões ficarem lado a lado */
+      justify-content: space-between; /* Distribuir o espaço entre os botões */
+      width: 200px; /* Largura dos botões */
+    }
+    .contact-buttons a {
+      display: inline-block;
+      background-color: #c79800;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 0; /* Espaçamento vertical dentro do botão */
+      margin: 10px 0; /* Espaçamento vertical entre os botões */
+      border-radius: 5px;
+      width: 45%; /* Largura dos botões */
+      transition: background-color 0.3s ease;
+    }
+    .contact-buttons a:hover {
+      background-color: #ffd857;
+    }
+    .back-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back-button a {
+      display: inline-block;
+      background-color: #c79800;
+      color: #000000;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .back-button a:hover {
+      background-color: #ffd857;
+    }
+   
+    @media only screen and (max-width: 600px) {
+      .product {
+        width: 100%; /* Full width for products on smaller screens */
+        padding-top: 10px;
+        
+      }
+      .product-info {
+        text-align: center; /* Centralizar as informações dos produtos em telas menores */
+      }
+      .contact-buttons {
+        width: 100%; /* Full width for contact buttons on smaller screens */
+        bottom: 0; /* Align the buttons to the bottom */
+        left: 0; /* Align the buttons to the left */
+        text-align: center;
+        justify-content: center; /* Centralizar os botões */
+      }
+      .contact-buttons a {
+        width: 100%; /* Largura total para botões em telas menores */
+         margin: 20px;
+      }
+      .para{
+        margin: auto;
+        text-align: justify;
+        padding: 15px;
+        max-width: 600px;
+    }
+    }
+
+    /* Estilo para as miniaturas */
+    .thumbnails {
+      margin-top: 10px;
+      white-space: nowrap; /* Impede que as miniaturas quebrem */
+      overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+      text-align: center; /* Centraliza as miniaturas */
+    }
+    .thumbnails img {
+      max-width: 50px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .titu{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        color: #000000;
+    }
+    .para{
+      margin: auto;
+      text-align: justify;
+      padding: 15px;
+      max-width: 800px;
+      font-size: 16px;
+  }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="profile-img">
+      <img src="Cavalcante_Brands/perfil.jpg" alt="Imagem do Perfil">
+    </div>
+  
+    <div class="back-button">
+      <a href="../roupas.html">Voltar</a>
+    </div>
+  </header>
+
+  <h2 class="titu">Moda Masculina</h2>
+  <p class="para">Se você busca qualidade e variedade em moda masculina, a Loja do Cavalcante é o seu destino certo! Aqui, não é só uma questão de roupa, é uma experiência completa. Nossas peças são escolhidas a dedo para garantir o máximo em estilo, conforto e durabilidade. Dos elegantes ternos aos acessórios mais refinados, cada item na nossa loja é uma declaração de bom gosto e sofisticação. E a variedade? Ah, meu caro, temos opções para todos os gostos e ocasiões! Não importa o seu estilo, tenho certeza de que você encontrará algo que te encante na Loja do Cavalcante. Então, meu amigo, venha nos visitar e deixe-se encantar pela nossa seleção impecável de moda masculina. Estamos te esperando de braços abertos!</p>    
+  <hr>
+    <div class="container">
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa1" href="Cavalcante_Brands/produto2/3.jpg">
+          <img src="Cavalcante_Brands/produto2/3.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+          <a class="thumbnail fancybox" data-fancybox="gallery-roupa1" href="Cavalcante_Brands/produto2/2.jpg"><img src="Cavalcante_Brands/produto2/2.jpg" alt="Thumbnail 1"></a>
+          <a class="thumbnail fancybox" data-fancybox="gallery-roupa1" href="Cavalcante_Brands/produto2/1.jpg"><img src="Cavalcante_Brands/produto2/1.jpg" alt="Thumbnail 2"></a>
+        </div>
+        <div class="product-info">
+          <h2>Blusa BOSS </h2>
+          <p>Branca</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa2" href="Cavalcante_Brands/produto1/1.jpg">
+          <img src="Cavalcante_Brands/produto1/1.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+          <a class="thumbnail fancybox" data-fancybox="gallery-roupa2" href="Cavalcante_Brands/produto1/2.jpg"><img src="Cavalcante_Brands/produto1/2.jpg" alt="Thumbnail 1"></a>
+        </div>
+        <div class="product-info">
+          <h2>Blusa BOSS </h2>
+          <p>Azul</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa3" href="Cavalcante_Brands/produto3/1.jpg">
+          <img src="Cavalcante_Brands/produto3/2.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+          <a class="thumbnail fancybox" data-fancybox="gallery-roupa3" href="Cavalcante_Brands/produto3/2.jpg"><img src="Cavalcante_Brands/produto3/2.jpg" alt="Thumbnail 1"></a>
+        </div>
+        <div class="product-info">
+          <h2>Blusa BOSS </h2>
+          Preta
+        </div>
+      </div>
+
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa4" href="Cavalcante_Brands/produto4/1.jpg">
+          <img src="Cavalcante_Brands/produto4/1.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+          <a class="thumbnail fancybox" data-fancybox="gallery-roupa4" href="Cavalcante_Brands/produto4/2.jpg"><img src="Cavalcante_Brands/produto4/2.jpg" alt="Thumbnail 1"></a>
+        </div>
+        <div class="product-info">
+          <h2>Blusa Armani Ea7 </h2>
+          <p>Branca</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa5" href="Cavalcante_Brands/produto5/1.jpg">
+          <img src="Cavalcante_Brands/produto5/1.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+          <a class="thumbnail fancybox" data-fancybox="gallery-roupa5" href="Cavalcante_Brands/produto5/2.jpg"><img src="Cavalcante_Brands/produto5/2.jpg" alt="Thumbnail 1"></a>
+        </div>
+        <div class="product-info">
+          <h2>Blusa do Ursinho </h2>
+          <p>Azul</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa6" href="Cavalcante_Brands/produto6/1.jpg">
+          <img src="Cavalcante_Brands/produto6/1.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+        </div>
+        <div class="product-info">
+          <h2>Blusa Gucci </h2>
+          <p>Vermelha</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa7" href="Cavalcante_Brands/produto7/1.jpg">
+          <img src="Cavalcante_Brands/produto7/1.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+          <a class="thumbnail fancybox" data-fancybox="gallery-roupa7" href="Cavalcante_Brands/produto7/2.jpg"><img src="Cavalcante_Brands/produto7/2.jpg" alt="Thumbnail 1"></a>
+        </div>
+        <div class="product-info">
+          <h2>Blusa Prada </h2>
+          <p>Branca</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa8" href="Cavalcante_Brands/produto8/1.jpg">
+          <img src="Cavalcante_Brands/produto8/1.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+        </div>
+        <div class="product-info">
+          <h2>Blusa Hurley </h2>
+          <p>Branca</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa9" href="Cavalcante_Brands/produto9/1.jpg">
+          <img src="Cavalcante_Brands/produto9/1.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+        </div>
+        <div class="product-info">
+          <h2>Blusa Boss </h2>
+          <p>Azul</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <a class="fancybox" data-fancybox="gallery-roupa10" href="Cavalcante_Brands/produto10/1.jpg">
+          <img src="Cavalcante_Brands/produto10/1.jpg" alt="Produto 1">
+        </a>
+        <div class="thumbnails">
+        </div>
+        <div class="product-info">
+          <h2>Blusa Boss </h2>
+          <p>Preta</p>
+        </div>
+      </div>
+
+    </div>
+
+<!------------------------------------------------------------>
+    <style>
+    .instagram-container {
+      position: relative;
+      margin: auto;
+      max-width: 600px; /* Defina o valor máximo desejado para a largura do contêiner */
+      width: 100%;
+      padding-bottom: 75%; /* Ajuste isso conforme necessário para o aspecto desejado */
+      overflow: hidden;
+  }
+
+  .instagram-media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  @media (max-width: 650px) {
+    
+    .video-item {
+        width: 100%;
+    } 
+    .instagram-container {
+        padding-bottom: 180%;
+    }
+   
+}
+
+
+    </style>
+
+    <div class="instagram-container">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C0ou98vrYeq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="13"></blockquote>
+      <script async src="https://www.instagram.com/embed.js"></script>
+  </div>
+<!------------------------------------------------------------>
+
+
+    <style>
+        @media only screen and (max-width: 600px) {
+            .container {
+              padding: 0 10px; /* Reduzindo o espaço nas bordas para telas menores */
+            }
+            .contact-buttons {
+              position: static; /* Removendo a posição fixa para telas menores */
+              width: auto; /* Largura automática para os botões */
+              margin-top: 20px; /* Margem superior para os botões */
+              flex-direction: column; /* Colocando os botões um abaixo do outro */
+              align-items: center; /* Centralizando os botões */
+            }
+            .contact-buttons a {
+              width: 100%; /* Largura total para os botões */
+              margin: 5px 0; /* Espaçamento vertical entre os botões */
+            }
+        }
+    </style>
+
+
+      <div class="contact-buttons">
+        <a href="https://api.whatsapp.com/send/?phone=5555889993441538&text=" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/cavalcantebrands/" target="_blank">Instagram</a>
+        
+      </div>
+    
+      <!-- Conteúdo relacionado a "Cuidades com as peças" -->
+      <div id="cuidades-com-as-pecas">
+        <!-- Seu conteúdo aqui -->
+      </div>
+
+  <script>
+    // Função para inicializar o Fancybox
+    $(document).ready(function() {
+      $(".fancybox").fancybox({
+        loop: true // Ativa o looping entre as imagens
+      });
+    });
+  </script>
+</body>
+</html>

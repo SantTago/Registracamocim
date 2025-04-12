@@ -154,10 +154,9 @@
       }
       
       .logomarca img {
-        max-width: 50%;
+        max-width: 100%;
         height: auto;
-        margin-bottom: 62px;
-        padding: 3px;
+        margin-bottom: 73px;
       }
       
       @media only screen and (max-width: 490px) {
@@ -505,17 +504,20 @@
 
 
 
- 
-<!---------------------------------------------------------------------->   
-<nav id="menu">
-  
+  <header>
 
-  
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-  <ul>
+
     <div class="logomarca">
       <img  id="logomarca-flutuante" src="https://i.ibb.co/TR4cdPy/logo-da-pagina.png" alt="logo-da-pagina">
     </div>
+
+
+    
+  </header>
+<!---------------------------------------------------------------------->
+<nav id="menu">
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <ul>
     <li><a href="#Home">Home</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#Planos">Planos</a></li>
@@ -846,7 +848,7 @@
   
   </style>
 -->
-    <!------------------------------
+    <!------------------------------->
     
    
    
@@ -857,7 +859,7 @@
       <div id="loading-progress"></div>
     </div>
   </div>
-  <!-- Conteúdo da sua página aqui 
+  <!-- Conteúdo da sua página aqui -->
   <div id="content">
     <p></p>
   </div>
@@ -891,7 +893,7 @@
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     
-------------------------------->
+    <!------------------------------->
     
     <script>
       let slideIndex = 1;
@@ -929,6 +931,7 @@
     </script>
 
     </div>
+    <h2 class="empresas">Home</h2>
 
     
     <!--------------------------------------------------->
@@ -953,7 +956,7 @@
 
       .imagem-topo {
         position: relative;
-        background-image: url('img/01.jpg');
+        background-image: url('img/carroussel3.png');
         background-size: cover;
         background-position: center;
         color: white;
@@ -1104,7 +1107,7 @@
         .container5 {
             max-width: 1100px;
             margin: 0 auto;
-          
+            padding: 20px;
         }
         .planos {
             display: grid;
@@ -1362,311 +1365,72 @@
   }
 </script>
 
-<!---------------------------------------------------------------------------------------------
 <div class="body1">
 
+  <div class="planos5" id="Planos">
+    <h1>Nossos Planos de Social Media</h1>
+</div>
 
-  <div class="container5">
+<div class="container5">
+  <div class="planos">
 
-    <h2 class="subtitulo">Planos Iniciantes</h2>
-    <div class="planos">
       <div class="plano">
-        <h2>Pacote Básico</h2>
-        <ul class="benefits">
-          <li>✅ 3 posts semanais</li>
-          <li>✅ 3 stories semanais</li>
-          <li>❌ Carrosséis não inclusos</li>
-        </ul>
-        <p class="preco">R$ 200,00</p>
+          <h2>Pacote Básico</h2>
+          <ul class="benefits">
+              <li><i class="fas fa-check"></i> 3 posts semanais</li>
+              <li><i class="fas fa-check"></i> 3 stories semanais</li>
+              <li><i class="fas fa-times"></i> Carrosséis não inclusos</li>
+          </ul>
+          <p class="preco">R$ 200,00</p>
+          <!--<button id="button1" class="btn" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Adquirir Agora</button>-->
       </div>
 
       <div class="plano">
-        <h2>Pacote Júnior</h2>
-        <ul class="benefits">
-          <li>✅ 3 posts semanais</li>
-          <li>✅ 3 stories semanais</li>
-          <li>✅ 1 carrossel incluído (substitui um post)</li>
-        </ul>
-        <p class="preco">R$ 250,00</p>
+          <h2>Pacote Júnior</h2>
+          <ul class="benefits">
+              <li><i class="fas fa-check"></i> 3 posts semanais</li>
+              <li><i class="fas fa-check"></i> 3 stories semanais</li>
+              <li><i class="fas fa-check"></i> 1 carrossel incluído (substitui um post)</li>
+          </ul>
+          <p class="preco">R$ 250,00</p>
+          <!--<button id="button1" class="btn" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Adquirir Agora</button>-->
       </div>
 
       <div class="plano">
-        <h2>Plano Master</h2>
-        <ul class="benefits">
-          <li>✅ 4 posts semanais</li>
-          <li>✅ 4 stories semanais</li>
-          <li>✅ 2 carrosséis inclusos (substituem dois posts)</li>
-          <li>✅ Descrições personalizadas</li>
-        </ul>
-        <p class="preco">R$ 350,00</p>
+          <h2>Plano Master</h2>
+          <ul class="benefits">
+              <li><i class="fas fa-check"></i> 4 posts semanais</li>
+              <li><i class="fas fa-check"></i> 4 stories semanais</li>
+              <li><i class="fas fa-check"></i> 2 carrosséis inclusos (substituem dois posts)</li>
+              <li><i class="fas fa-check"></i> Descrições personalizadas</li>
+          </ul>
+          <p class="preco">R$ 350,00</p>
+          <!--<button id="button1" class="btn" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Adquirir Agora</button>-->
       </div>
 
       <div class="plano">
-        <h2>Plano Prêmio</h2>
-        <ul class="benefits">
-          <li>✅ 5 posts semanais</li>
-          <li>✅ 5 stories semanais</li>
-          <li>✅ 2 carrosséis inclusos (substituem dois posts)</li>
-          <li>✅ Descrições personalizadas</li>
-          <li>✅ Criação e publicação automática</li>
-        </ul>
-        <p class="preco">R$ 450,00</p>
-      </div>
-    </div>
-
-    <h2 class="subtitulo">Planos Master</h2>
-    <div class="planos">
-      <div class="plano">
-        <h2>Pacote Júnior+</h2>
-        <ul class="benefits">
-          <li>✅ 3 posts semanais</li>
-          <li>✅ 3 stories semanais</li>
-          <li>✅ 1 carrossel incluído (substitui um post)</li>
-          <li>✅ Gravação e edição de vídeo</li>
-          <li>✅ 1 post animado semanal</li>
-        </ul>
-        <p class="preco">R$ 650,00</p>
+          <h2>Plano Prêmio</h2>
+          <ul class="benefits">
+              <li><i class="fas fa-check"></i> 5 posts semanais</li>
+              <li><i class="fas fa-check"></i> 5 stories semanais</li>
+              <li><i class="fas fa-check"></i> 2 carrosséis inclusos (substituem dois posts)</li>
+              <li><i class="fas fa-check"></i> Descrições personalizadas</li>
+              <li><i class="fas fa-check"></i> Criação e publicação automática</li>
+          </ul>
+          <p class="preco">R$ 450,00</p>
+          <!--<button id="button1" class="btn" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Adquirir Agora</button>-->
       </div>
 
-      <div class="plano">
-        <h2>Plano Master+</h2>
-        <ul class="benefits">
-          <li>✅ 4 posts semanais</li>
-          <li>✅ 4 stories semanais</li>
-          <li>✅ 2 carrosséis inclusos (substituem dois posts)</li>
-          <li>✅ Descrições personalizadas</li>
-          <li>✅ 2 Gravação e edição de vídeo (Mês)</li>
-          <li>✅ 2 posts animados semanais</li>
-        </ul>
-        <p class="preco">R$ 850,00</p>
-      </div>
-
-      <div class="plano">
-        <h2>Plano Prêmio+</h2>
-        <ul class="benefits">
-          <li>✅ 5 posts semanais</li>
-          <li>✅ 5 stories semanais</li>
-          <li>✅ 2 carrosséis inclusos (substituem dois posts)</li>
-          <li>✅ Descrições personalizadas</li>
-          <li>✅ Criação e publicação automática</li>
-          <li>✅ 4 Gravação e edição de vídeo (Mês)</li>
-          <li>✅ 3 posts animados semanais</li>
-          <li>✅ Tráfego pago</li>
-        </ul>
-        <p class="preco">R$ 1050,00</p>
-      </div>
-    </div>
   </div>
-<!----------------------------------------------------------------------------------------------
 
- <style>
-    .subtitulo {
-        padding: 50px;
-        color: #6495ED;
-    }
-    .plan-title {
-        color: #6495ED;
-    }
-    .plan-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-    }
-    .plan-table th {
-     
-        border-bottom: 1px solid #ddd;
-        text-align: center;
-    }
-    .plan-table td {
-      padding: 10px;  
-      border-bottom: 1px solid #ddd;
-      text-align: center;
-    }
-    .plan-table th {
-        background-color: #6495ED;
-        color: white;
-    }
-    .plan-input {
-        width: 50px;
-        text-align: center;
-        color: #000000;
-    }
-    .plan-input::-webkit-inner-spin-button, 
-    .plan-input::-webkit-outer-spin-button {
-        height: 30px;
-        width: 30px;
-        background-color: #6495ED;
-        border-radius: 5px;
-        border: none;
-    }
-    .plan-total {
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-top: 10px;
-    }
-    .plan-button {
-        background-color: #6495ED;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 15px;
-    }
-    .plan-info {
-        font-size: 0.9em;
-        color: #555;
-        margin-top: 10px;
-    }
-</style>
 
-<body class="custom-plan-container">
-  <div class="plan-box">
-      <h2 class="plan-title">Monte seu Plano Personalizado</h2>
-      <table class="plan-table">
-          <tr>
-              <th>Item</th>
-              <th>Quantidade</th>
-              <th>Frequência</th>
-              <th>Preço Unitário</th>
-          </tr>
-          <tr>
-              <td>Post Simples</td>
-              <td><input type="number" class="plan-input" id="quantPostSimples" value="0" min="0" onchange="calcularPreco()"></td>
-              <td id="freqPostSimples"> por semana</td>
-              <td>R$ 50,00</td>
-          </tr>
-          <tr>
-              <td>Post Simples + Stories</td>
-              <td><input type="number" class="plan-input" id="quantPostSimplesStories" value="0" min="0" onchange="calcularPreco()"></td>
-              <td id="freqPostSimplesStories"> por semana</td>
-              <td>R$ 62,50</td>
-          </tr>
-          <tr>
-              <td>Carrossel</td>
-              <td><input type="number" class="plan-input" id="quantCarrossel" value="0" min="0" onchange="calcularPreco()"></td>
-              <td id="freqCarrossel"> por semana</td>
-              <td>R$ 80,00</td>
-          </tr>
-          <tr>
-              <td>Post Animado</td>
-              <td><input type="number" class="plan-input" id="quantPostAnimado" value="0" min="0" onchange="calcularPreco()"></td>
-              <td id="freqPostAnimado"> por semana</td>
-              <td>R$ 120,00</td>
-          </tr>
-          <tr>
-              <td>Gravação e Edição de Vídeo</td>
-              <td><input type="number" class="plan-input" id="quantVideo" value="0" min="0" onchange="calcularPreco()"></td>
-              <td id="freqVideo"> por mês</td>
-              <td>R$ 65,00</td>
-          </tr>
-          <tr>
-              <td>Descrição Personalizada</td>
-              <td><input type="number" class="plan-input" id="quantDescricao" value="0" min="0" onchange="calcularPreco()"></td>
-              <td id="freqDescricao"> por semana</td>
-              <td>R$ 40,00</td>
-          </tr>
-          <tr>
-              <td>Tráfego Pago</td>
-              <td><input type="number" class="plan-input" id="quantTrafego" value="0" min="0" onchange="calcularPreco()"></td>
-              <td id="freqTrafego"> por mês</td>
-              <td>R$ 300,00</td>
-          </tr>
-          <tr>
-              <td>Criação de Conteúdo</td>
-              <td><input type="number" class="plan-input" id="quantCriacaoConteudo" value="0" min="0" onchange="calcularPreco()"></td>
-              <td id="freqCriacaoConteudo"> por mês</td>
-              <td>R$ 150,00</td>
-          </tr>
-          <tr>
-              <td>Publicação Automática</td>
-              <td><input type="number" class="plan-input" id="quantPublicacao" value="0" min="0" onchange="calcularPreco()"></td>
-              <td id="freqPublicacao"> por mês</td>
-              <td>R$ 100,00</td>
-          </tr>
-      </table>
-      <p class="plan-info">Cada item corresponde à frequência especificada durante o período selecionado.</p>
-      <p class="plan-total">Total: R$ <span id="totalPreco">0,00</span></p>
-      <button class="plan-button" onclick="finalizarPlano()">Finalizar Plano</button>
-      <div id="comanda" style="display: none; margin-top: 20px;">
-          <h3>Resumo do Pedido</h3>
-          <table class="plan-table">
-              <tr>
-                  <th>Item</th>
-                  <th>Quantidade</th>
-                  <th>Frequência</th>
-                  <th>Preço Unitário</th>
-                  <th>Total</th>
-              </tr>
-              <tbody id="resumoPedido"></tbody>
-          </table>
-          <p class="plan-total">Total: R$ <span id="totalComanda">0,00</span></p>
-          
-          <button class="plan-button" onclick="enviarWhatsApp()">Enviar para o WhatsApp</button>
-      </div>
-      
-      <script>
-          function finalizarPlano() {
-              let total = 0;
-              let itens = [
-                  { id: "quantPostSimples", nome: "Post Simples", preco: 50, freq: "por semana" },
-                  { id: "quantPostSimplesStories", nome: "Post Simples + Stories", preco: 62.50, freq: "por semana" },
-                  { id: "quantCarrossel", nome: "Carrossel", preco: 80, freq: "por semana" },
-                  { id: "quantPostAnimado", nome: "Post Animado", preco: 120, freq: "por semana" },
-                  { id: "quantVideo", nome: "Gravação e Edição de Vídeo", preco: 65, freq: "por mês" },
-                  { id: "quantDescricao", nome: "Descrição Personalizada", preco: 40, freq: "por semana" },
-                  { id: "quantTrafego", nome: "Tráfego Pago", preco: 300, freq: "por mês" },
-                  { id: "quantCriacaoConteudo", nome: "Criação de Conteúdo", preco: 150, freq: "por mês" },
-                  { id: "quantPublicacao", nome: "Publicação Automática", preco: 100, freq: "por mês" }
-              ];
-              
-              let tabelaResumo = document.getElementById("resumoPedido");
-              tabelaResumo.innerHTML = "";
-      
-              itens.forEach(item => {
-                  let quantidade = document.getElementById(item.id).value;
-                  if (quantidade > 0) {
-                      let precoTotalItem = quantidade * item.preco;
-                      total += precoTotalItem;
-                      let row = `<tr>
-                          <td>${item.nome}</td>
-                          <td>${quantidade}</td>
-                          <td>${item.freq}</td>
-                          <td>R$ ${item.preco.toFixed(2)}</td>
-                          <td>R$ ${precoTotalItem.toFixed(2)}</td>
-                      </tr>`;
-                      tabelaResumo.innerHTML += row;
-                  }
-              });
-              
-              document.getElementById("totalComanda").innerText = total.toFixed(2);
-              document.getElementById("comanda").style.display = "block";
-          }
-          
-          function enviarWhatsApp() {
-              let numeroWhatsApp = "+558893464285"; // Substitua pelo seu número
-              let mensagem = "Segue minha comanda:\n";
-              document.querySelectorAll("#resumoPedido tr").forEach(row => {
-                  let colunas = row.querySelectorAll("td");
-                  if (colunas.length > 0) {
-                      mensagem += `\n- ${colunas[0].innerText}: ${colunas[1].innerText} ${colunas[2].innerText} - R$ ${colunas[4].innerText}`;
-                  }
-              });
-              mensagem += `\n\nTotal: R$ ${document.getElementById("totalComanda").innerText}`;
-              
-              let link = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
-              window.open(link, "_blank");
-          }
-      </script>
--------------------------------------------------------------------------------------------------------->
-<!--
   <div class="restricted-area">
      <button class="btn btn-restricted" onclick="openConfirmationModal()"><i class="fas fa-lock"></i> Área Restrita</button>
      <p>Área restrita apenas para contratantes.</p>
 
   </div>
 </div>
--->
+
 <!-- Botão flutuante do WhatsApp -->
 <a href="https://wa.me/88993464285" class="whatsapp-float" target="_blank">
   <i class="fab fa-whatsapp"></i>
@@ -1993,165 +1757,15 @@ function closeModal() {
 
 
 
-  <!--------------------------------------------------------------->
+<!--------------------------------------------------------------->
 
-  <!-- SECTION CLIENTES -->
-  <section id="clientes">
-    <div class="container boxBt02 box" id="Trabalhos">
-        <h2>O que já fizemos</h2>
-        <h3>Trabalhamos com os mais diferentes nichos de mercado</h3>
+<!-- SECTION CLIENTES -->
+<section id="clientes">
+  <div class="container boxBt02 box" id="Trabalhos">
+      <h2>O que já fizemos</h2>
+      <h3>Trabalhamos com os mais diferentes nichos de mercado</h3>
 
-        <!--------------------------------------------------------------->
-
-        <style>
-          
-          .portfolio-container {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-          }
-          .client-folder {
-              width: 100%;
-              margin-bottom: 30px;
-              text-align: center;
-          }
-          .client-title {
-              font-size: 28px;
-              margin-bottom: 10px;
-              text-align: center;
-              color: #00ffce;
-          }
-          .carousel-container {
-              position: relative;
-              max-width: 95%;
-              margin: auto;
-              overflow: hidden;
-          }
-          .carousel {
-              display: flex;
-              overflow-x: auto;
-              scroll-snap-type: x mandatory;
-              gap: 10px;
-              padding: 10px;
-              scrollbar-width: none;
-              scroll-behavior: smooth;
-          }
-          .carousel::-webkit-scrollbar {
-              display: none;
-          }
-          .carousel img {
-              height: 300px; /* Defina a altura desejada */
-              width: auto; /* Mantém a proporção original */
-              object-fit: cover; /* Ajusta a exibição sem distorcer */
-              display: block;
-              margin: 0 auto;
-          
-
-          }
-          @media (min-width: 768px) {
-            .carousel img {
-                  width: calc(25% - 10px);
-              }
-            }
-      
-    
-          .carousel img:hover {
-              transform: scale(1.05);
-          }
-          .lightbox {
-              display: none;
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: rgba(0, 0, 0, 0.8);
-              justify-content: center;
-              align-items: center;
-          }
-          .lightbox img {
-              max-width: 80%;
-              
-              border-radius: 10px;
-          }
-          .lightbox.active {
-              display: flex;
-          }
-          .counter {
-              font-size: 18px;
-              margin-top: 5px;
-          }
-          #total-counter {
-              font-size: 24px;
-              text-align: center;
-              margin-bottom: 20px;
-          }
-      </style>
-
-      <h1 style="text-align: center;">Meu Portfólio</h1>
-      <h2 id="total-counter">Total de Artes: 0</h2>
-      <div id="portfolio" class="portfolio-container"></div>
-      <div id="lightbox" class="lightbox" onclick="this.classList.remove('active')">
-          <img id="lightbox-img" src="" alt="Imagem Ampliada">
-      </div>
-
-      <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              const portfolio = document.getElementById("portfolio");
-              const totalCounter = document.getElementById("total-counter");
-              let totalArts = 0;
-
-              const clients = [
-                  "@eulaliaangelim", "@Jociklejacome", "@raquelsiqueira", "@centromedico", 
-                  "@psi.renataleão", "@Psicocenter", "@cobrão_centro", "@furinho_byandreia", 
-                  "@escolamagiadosaber", "@Zehostilio96", "@ph_fono"
-              ];
-              
-              clients.forEach(client => {
-                  const clientSection = document.createElement("div");
-                  clientSection.classList.add("client-folder");
-                  clientSection.innerHTML = `<h2 class="client-title">${client}</h2>`;
-                  
-                  const carouselContainer = document.createElement("div");
-                  carouselContainer.classList.add("carousel-container");
-                  
-                  const carousel = document.createElement("div");
-                  carousel.classList.add("carousel");
-                  
-                  let imageCount = 0;
-                  for (let i = 1; i <= 800; i++) {
-                      let img = new Image();
-                      img.src = `imagens/${client}/imagem${i}.jpg`;
-                      img.onload = function() {
-                          let newImg = document.createElement("img");
-                          newImg.src = this.src;
-                          newImg.alt = `Imagem ${i} de ${client}`;
-                          newImg.onclick = function() {
-                              document.getElementById("lightbox-img").src = this.src;
-                              document.getElementById("lightbox").classList.add("active");
-                          };
-                          carousel.appendChild(newImg);
-                          imageCount++;
-                          counter.textContent = `Contador de Artes: ${imageCount}`;
-                          totalArts++;
-                          totalCounter.textContent = `Total de Artes: ${totalArts}`;
-                      };
-                  }
-                  
-                  const counter = document.createElement("p");
-                  counter.classList.add("counter");
-                  counter.textContent = `Contador de Artes: ${imageCount}`;
-                  
-                  carouselContainer.appendChild(carousel);
-                  clientSection.appendChild(carouselContainer);
-                  clientSection.appendChild(counter);
-                  portfolio.appendChild(clientSection);
-              });
-          });
-      </script>
-      <!--------------------------------------------------------------
-
-      <!-- Menu Horizontal com Scroll Suave 
+      <!-- Menu Horizontal com Scroll Suave -->
       <div class="menu-horizontal">
           <button class="btn btn-sm" data-category="imobiliarias">Imobiliárias</button>
           <button class="btn btn-sm" data-category="bares">Bares</button>
@@ -2162,7 +1776,7 @@ function closeModal() {
           <button class="btn btn-sm" data-category="lojas">Lojas</button>
       </div>
 
-      <!-- Carrossel de Imagens 
+      <!-- Carrossel de Imagens -->
       <div class="carousel-container">
           <div class="carousel" id="image-carousel"></div>
           <div class="carousel-controls">
@@ -2171,7 +1785,7 @@ function closeModal() {
           </div>
       </div>
 
-      <!-- Estilos -
+      <!-- Estilos -->
       <style>
           /* Menu Horizontal */
           .menu-horizontal {
@@ -2280,7 +1894,7 @@ function closeModal() {
   </div>
 </section>
 
-<!-- Script 
+<!-- Script -->
 <script>
   const imageCarousel = document.getElementById('image-carousel');
   const categories = {
@@ -2362,7 +1976,7 @@ function closeModal() {
       }
   }, 3000);
 </script>
--->
+
 <!-------------------------------------------------------------------->
 <!-- Artigo sobre a importância de ter um parceiro de mídias sociais -->
 <section class="article-section">
@@ -2450,7 +2064,7 @@ function closeModal() {
 
 <!-------------------------------------------------------------------->
 <!-- Footer -->
-<footer class="">
+<footer class="text-center">
 <div class="container">
   <div class="">
     <h3>Siga-nos nas Mídias Sociais</h3>

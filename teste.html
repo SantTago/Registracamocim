@@ -3,107 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@eulaliaangelim</title>
+    <title>Registra Camocim - Ranking de Clientes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* Estilos globais */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .carousel-container {
-            max-width: 95%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .carousel {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            padding: 10px;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        .carousel img {
-            height: 200px;
-            width: auto;
-            object-fit: cover;
+
+        header {
+            background-color: #16a085;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        main {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #34495e;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* Grid de Clientes */
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .client-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
-            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            border-top: 5px solid #16a085;
         }
-        .carousel img:hover {
+
+        .client-card:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
         }
-        .lightbox {
+
+        .client-card h3 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        .client-card p {
+            margin: 0;
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .client-card .icon {
+            font-size: 60px;
+            color: #48c9b0;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .client-card:hover .icon {
+            color: #16a085;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 50px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .badge-1month {
+            background-color: #1abc9c;
+        }
+
+        .badge-6months {
+            background-color: #3498db;
+        }
+
+        .badge-12months {
+            background-color: #9b59b6;
+        }
+
+        .badge-24months {
+            background-color: #e67e22;
+        }
+
+        /* Ex-Parceiros */
+        .ex-partners {
+            margin-top: 40px;
+        }
+
+        .ex-partners .client-card {
+            background-color: #ecf0f1;
+            border-top: 5px solid #95a5a6;
+            color: #7f8c8d;
+            cursor: default;
+        }
+
+        .ex-partners .client-card h3, .ex-partners .client-card p {
+            color: #95a5a6;
+        }
+
+        .ex-partners .client-card:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Estilo da tabela */
+        .seal-table {
+            margin-top: 40px;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .seal-table th, .seal-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .seal-table th {
+            background-color: #34495e;
+            color: #fff;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        .seal-table td {
+            font-size: 14px;
+            color: #2c3e50;
+            transition: background-color 0.3s ease;
+        }
+
+        .seal-table tr:hover td {
+            background-color: #ecf0f1;
+        }
+
+        /* Pop-up */
+        .popup {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.6);
             justify-content: center;
             align-items: center;
+            transition: all 0.3s ease;
         }
-        .lightbox img {
-            max-width: 80%;
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            width: 90%;
+            max-width: 500px;
         }
-        .lightbox.active {
-            display: flex;
-        }
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
+
+        .popup .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
             font-size: 18px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+            color: #2c3e50;
+            cursor: pointer;
         }
-        .back-button:hover {
-            background-color: #0056b3;
+
+        .popup .close-popup:hover {
+            color: #16a085;
+        }
+
+        /* Animação do pop-up */
+        .popup.show {
+            display: flex;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Ícones de Selo */
+        .seal-icon {
+            font-size: 24px;
+            color: #3498db;
+        }
+
+        .seal-1month .seal-icon {
+            color: #1abc9c;
+        }
+
+        .seal-6months .seal-icon {
+            color: #3498db;
+        }
+
+        .seal-12months .seal-icon {
+            color: #9b59b6;
+        }
+
+        .seal-24months .seal-icon {
+            color: #e67e22;
         }
     </style>
 </head>
 <body>
-    <h1>@eulaliaangelim</h1>
-    <h2 id="image-counter">Total de Artes: 0</h2>
 
-    <div class="carousel-container">
-        <div id="carousel" class="carousel"></div>
+<header>
+    <h1>Registra Camocim - Ranking de Clientes</h1>
+</header>
+
+<main>
+    <h2>Clientes com Parcerias Ativas</h2>
+
+    <div class="client-grid">
+        <!-- Cliente 1 -->
+        <div class="client-card" onclick="openPopup('cliente1')">
+            <i class="fas fa-user icon"></i>
+            <h3>@cliente1</h3>
+            <p>Profissão: Advogado</p>
+            <p>Cidade: Camocim</p>
+            <p>Posts: 12</p>
+            <span class="badge badge-12months">12 Meses</span>
+        </div>
+
+        <!-- Cliente 2 -->
+        <div class="client-card" onclick="openPopup('cliente2')">
+            <i class="fas fa-user icon"></i>
+            <h3>@cliente2</h3>
+            <p>Profissão: Médico</p>
+            <p>Cidade: Fortaleza</p>
+            <p>Posts: 10</p>
+            <span class="badge badge-6months">6 Meses</span>
+        </div>
+
+        <!-- Cliente 3 -->
+        <div class="client-card" onclick="openPopup('cliente3')">
+            <i class="fas fa-user icon"></i>
+            <h3>@cliente3</h3>
+            <p>Profissão: Empresário</p>
+            <p>Cidade: Sobral</p>
+            <p>Posts: 15</p>
+            <span class="badge badge-24months">24 Meses</span>
+        </div>
     </div>
 
-    <div id="lightbox" class="lightbox" onclick="this.classList.remove('active')">
-        <img id="lightbox-img" src="" alt="Imagem Ampliada">
+    <h2>Clientes com Parcerias Encerradas</h2>
+
+    <div class="client-grid ex-partners">
+        <!-- Ex-cliente 1 -->
+        <div class="client-card">
+            <i class="fas fa-user icon"></i>
+            <h3>@excliente1</h3>
+            <p>Profissão: Contador</p>
+            <p>Cidade: Camocim</p>
+            <p>Fim dos Trabalhos</p>
+        </div>
+
+        <!-- Ex-cliente 2 -->
+        <div class="client-card">
+            <i class="fas fa-user icon"></i>
+            <h3>@excliente2</h3>
+            <p>Profissão: Arquiteto</p>
+            <p>Cidade: Sobral</p>
+            <p>Fim dos Trabalhos</p>
+        </div>
     </div>
 
-    <a href="index.html" class="back-button">Voltar</a>
+    <!-- Tabela de Ranking -->
+    <h2>Tabela de Ranking e Descontos</h2>
+    <table class="seal-table">
+        <thead>
+            <tr>
+                <th>Período de Parceria</th>
+                <th>Percentual de Desconto</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="seal-1month">
+                <td>1 Mês</td>
+                <td>5%</td>
+                <td><i class="fas fa-info-circle seal-icon" onclick="openPopup('ranking1')"></i></td>
+            </tr>
+            <tr class="seal-6months">
+                <td>6 Meses</td>
+                <td>10%</td>
+                <td><i class="fas fa-info-circle seal-icon" onclick="openPopup('ranking2')"></i></td>
+            </tr>
+            <tr class="seal-12months">
+                <td>12 Meses</td>
+                <td>15%</td>
+                <td><i class="fas fa-info-circle seal-icon" onclick="openPopup('ranking3')"></i></td>
+            </tr>
+            <tr class="seal-24months">
+                <td>24 Meses</td>
+                <td>20%</td>
+                <td><i class="fas fa-info-circle seal-icon" onclick="openPopup('ranking4')"></i></td>
+            </tr>
+        </tbody>
+    </table>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const carousel = document.getElementById("carousel");
-            const imageCounter = document.getElementById("image-counter");
-            let imageCount = 0;
-            const clientName = "eulaliaangelim"; // Apenas altere o nome do cliente aqui
+    <!-- Pop-ups de Clientes e Ranking -->
+    <!-- Detalhes dos Clientes -->
+    <div class="popup" id="popup-cliente1">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup('cliente1')">&times;</span>
+            <h2>Detalhes do Cliente @cliente1</h2>
+            <p>Profissão: Advogado</p>
+            <p>Cidade: Camocim</p>
+            <p>Posts realizados: 12</p>
+            <p>Parceria de 12 meses</p>
+        </div>
+    </div>
 
-            for (let i = 1; i <= 50; i++) {
-                let img = new Image();
-                img.src = `imagens/${clientName}/imagem${i}.webp`;
-                img.loading = "lazy";
+    <div class="popup" id="popup-cliente2">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup('cliente2')">&times;</span>
+            <h2>Detalhes do Cliente @cliente2</h2>
+            <p>Profissão: Médico</p>
+            <p>Cidade: Fortaleza</p>
+            <p>Posts realizados: 10</p>
+            <p>Parceria de 6 meses</p>
+        </div>
+    </div>
 
-                img.onload = function() {
-                    let newImg = document.createElement("img");
-                    newImg.src = this.src;
-                    newImg.alt = `Imagem ${i} de ${clientName}`;
-                    newImg.onclick = function() {
-                        document.getElementById("lightbox-img").src = this.src;
-                        document.getElementById("lightbox").classList.add("active");
-                    };
-                    carousel.appendChild(newImg);
-                    imageCount++;
-                    imageCounter.textContent = `Total de Artes: ${imageCount}`;
-                };
-            }
-        });
-    </script>
+    <div class="popup" id="popup-cliente3">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup('cliente3')">&times;</span>
+            <h2>Detalhes do Cliente @cliente3</h2>
+            <p>Profissão: Empresário</p>
+            <p>Cidade: Sobral</p>
+            <p>Posts realizados: 15</p>
+            <p>Parceria de 24 meses</p>
+        </div>
+    </div>
+
+    <!-- Detalhes de Ranking -->
+    <div class="popup" id="popup-ranking1">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup('ranking1')">&times;</span>
+            <h2>Desconto para 3 Mês</h2>
+            <p>Parceria com 5% de desconto em novos contratos.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-ranking2">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup('ranking2')">&times;</span>
+            <h2>Desconto para 6 Meses</h2>
+            <p>Parceria com 10% de desconto em novos contratos.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-ranking3">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup('ranking3')">&times;</span>
+            <h2>Desconto para 12 Meses</h2>
+            <p>Parceria com 15% de desconto em novos contratos.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-ranking4">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup('ranking4')">&times;</span>
+            <h2>Desconto para 24 Meses</h2>
+            <p>Parceria com 20% de desconto em novos contratos.</p>
+        </div>
+    </div>
+
+</main>
+
+<script>
+    // Função para abrir pop-up
+    function openPopup(clientId) {
+        document.getElementById('popup-' + clientId).classList.add('show');
+    }
+
+    // Função para fechar pop-up
+    function closePopup(clientId) {
+        document.getElementById('popup-' + clientId).classList.remove('show');
+    }
+</script>
+
 </body>
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registra Camocim</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      animation: changeColor 10s infinite; /* Adicionando a animação de mudança de cor */
+    }
+
+    .construction-image {
+        width: 60%;
+        max-width: 424px;
+        /* margin-bottom: 20px; */
+    }
+
+    .description {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+      text-shadow: none; /* Removendo o sombreamento de texto */
+    }
+
+    .back-button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px; /* Adicionando margem ao botão */
+    }
+
+    .back-button:hover {
+      background-color: #45a049;
+    }
+
+    .instagram-handle-button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 10px; /* Adicionando margem ao botão */
+    }
+
+    .instagram-handle-button:hover {
+      text-decoration: underline; /* Adicionando sublinhado ao passar o mouse */
+    }
+
+    @keyframes changeColor {
+      0% { background-color: #f0f0f0; }
+      10% { background-color: #b60000; }
+      20% { background-color: #02be02; }
+      30% { background-color: #0000b3; }
+      40% { background-color: #bebe00; }
+      50% { background-color: #b600b6; }
+      60% { background-color: #00a8a8f6; }
+      70% { background-color: #800080; }
+      80% { background-color: #008080; }
+      90% { background-color: #800000; }
+      100% { background-color: #008000; }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://www.sanfrancisco2.com.br/images/paginaEmConstrucao.png" alt="Construction" class="construction-image">
+  <div class="description">
+    <p>Esta página está em construção. Siga-nos para ficar por dentro de todas as novidades!</p>
+    <div>
+        <img src="../../icon/sdsdsdsas.jpg" alt="Sua Foto de Perfil" style="width: 100px; height: 100px; border-radius: 50%;">
+      </div>
+
+    <!-- Utilizando um botão para o @registracamocim -->
+    <a href="https://www.instagram.com/registracamocim/" target="_blank" class="instagram-handle-button">@registracamocim</a>
+    
+  </div>
+  <button class="back-button" onclick="history.back()">Voltar</button>
+</body>
+</html>

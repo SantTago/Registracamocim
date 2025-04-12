@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia Fabio Vasconcelos</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <style>
+    /* Estilos CSS para tornar a página mais bonita e responsiva */
+    body {
+        background-color: #3a3939;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative; /* Importante para o posicionamento dos botões flutuantes */
+    }
+    header {
+      background-image: url('https://pratiquefitness.com.br/blog/wp-content/uploads/2023/08/Como-mensurar-os-resultados-da-academia-de-forma-sensata-1.jpg'); /* Adicionando a imagem de fundo */
+      background-color: #000000;
+      color: #ffbf00;
+      padding: 20px;
+      text-align: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+    .profile-img {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-img img {
+      width: 150px;
+      border-radius: 50%;
+      border: 5px solid #8A3B96;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .product {
+      width: calc(50% - 15px); /* 50% width for each product with 15px spacing */
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centralizar o conteúdo verticalmente */
+      align-items: center; /* Centralizar o conteúdo horizontalmente */
+    }
+    .product img {
+      max-width: 103%;
+      height: 313px;
+      object-fit: cover;
+      padding: 10px;
+    }
+    .product-info {
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center; /* Centralizar as informações dos produtos */
+      /* Adicionando sombra dourada */
+      box-shadow: 1px 1px 0 #8A3B96,
+                  2px 2px 0 #8A3B96,
+                  3px 3px 0 #8A3B96;
+    }
+    .product-info h2 {
+      margin-top: 0;
+    }
+    .contact-buttons {
+      position: fixed; /* Torna os botões flutuantes */
+      bottom: 20px; /* Distância do fundo */
+      right: 20px; /* Distância da direita */
+      text-align: center;
+      display: flex; /* Para os botões ficarem lado a lado */
+      justify-content: space-between; /* Distribuir o espaço entre os botões */
+      width: 200px; /* Largura dos botões */
+    }
+    .contact-buttons a {
+      display: inline-block;
+      background-color: #8A3B96; /* Amarelo ouro */
+      color: #ffbf00; /* Texto preto */
+      text-decoration: none;
+      padding: 10px 0; /* Espaçamento vertical dentro do botão */
+      margin: 10px 0; /* Espaçamento vertical entre os botões */
+      border-radius: 5px;
+      width: 45%; /* Largura dos botões */
+      transition: background-color 0.3s ease;
+      color: #ffbf00
+    }
+    .contact-buttons a:hover {
+      background-color: #ffbf00; /* Amarelo ouro mais escuro ao passar o mouse */
+      color: #8A3B96;
+    }
+    .back-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back-button a {
+      display: inline-block;
+      background-color: #8A3B96;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      color: #ffbf00;
+    }
+    .back-button a:hover {
+      background-color: #ffbf00;
+      color: #8A3B96    ;
+    }
+   
+    @media only screen and (max-width: 600px) {
+      .product {
+        width: 100%; /* Full width for products on smaller screens */
+      }
+      .product-info {
+        text-align: center; /* Centralizar as informações dos produtos em telas menores */
+      }
+      .contact-buttons {
+        width: 100%; /* Full width for contact buttons on smaller screens */
+        bottom: 0; /* Align the buttons to the bottom */
+        left: 0; /* Align the buttons to the left */
+        text-align: center;
+        justify-content: center; /* Centralizar os botões */
+      }
+      .contact-buttons a {
+        width: 100%; /* Largura total para botões em telas menores */
+         margin: 20px;
+      }
+      section{
+        flex-direction: column;
+      }
+      
+      
+    }
+    .floating-button {
+        position: fixed;
+        top: 24px;
+        right: -3px;
+        background-color: #8A3B96;
+        color: #ffffff;
+        border: none;
+        width: 78px;
+        height: 35px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.3s ease;
+        text-align: center;
+        line-height: 35px;
+        text-decoration: none;
+        color: #ffbf00;
+    }
+      
+      .floating-button:hover {
+        background-color: #ffbf00;
+        color: #8A3B96;
+     
+      }
+      section{
+        display: flex;
+      }
+
+      
+  </style>
+  
+</head>
+<body>
+   
+
+  <header>
+    <div class="profile-img">
+      <img src="fabio/perfil.jpg" alt="Imagem do Perfil">
+    </div>
+    <div class="back-button">
+      <a href="../../academias.html">Voltar</a>
+    </div>
+  </header>
+  <div class="container">
+    <section>
+        <div class="product">
+          <img src="fabio/postes/1.jpg" alt="Produto 1">
+          <p style=" color: #ffffff"><strong style="color: #ffbf00;">- <strong>Profissionalismo e Qualidade de Ensino:</strong></p>
+          <p style="text-align: justify; color: #f9f9f9;">A academia é reconhecida por sua equipe altamente qualificada de instrutores e treinadores. <br>
+            <br>
+            Eles não apenas têm um profundo conhecimento técnico, mas também são dedicados a ajudar os alunos a atingir seus objetivos com segurança e eficácia.</p>
+
+        </div>
+    </section>
+  </div>
+ <!------------------------------------------------------------>
+ <hr class="colored">
+ <section class="slider">
+    <div class="product">
+      <img loading="lazy" src="fabio/postes/2.jpg" alt="roupa">
+    </div>
+    <div class="product">
+      <img loading="lazy" src="fabio/postes/3.jpg" alt="roupa">
+    </div>
+    <div class="product">
+      <img loading="lazy" src="fabio/postes/4.jpg" alt="roupa">
+    </div>
+    <div class="product">
+      <img loading="lazy" src="fabio/postes/5.jpg" alt="roupa">
+    </div>
+    <div class="product">
+      <img loading="lazy" src="fabio/postes/6.jpg" alt="roupa">
+    </div>
+  </section>
+  <hr class="colored">
+<!----------------------------------------------------->
+<div class="container">
+    <section>
+        <div class="product">
+          <img src="fabio/postes/7.jpg" alt="Produto 1">
+          <p style=" color: #ffffff"><strong style="color: #ffbf00;">- <strong>Compromisso com a Saúde e Bem-Estar: </strong></p>
+          <p style="text-align: justify; color: #f9f9f9;">Além do treinamento físico, a academia também valoriza a saúde mental e emocional dos alunos. <br>
+            <br>
+            Eles oferecem workshops, palestras e serviços complementares, como orientação nutricional e aconselhamento psicológico, para garantir que os membros tenham suporte holístico em sua jornada de fitness.</p>
+
+        </div>
+    </section>
+  </div>
+<!----------------------------------->
+
+<div class="container">
+  <section>
+      <div class="product">
+        <img src="fabio/postes/8.jpg" alt="Produto 1">
+        <p style=" color: #ffffff"><strong style="color: #ffbf00;">- <strong>Aumento da Autoconfiança e Autoestima: </strong></p>
+        <p style="text-align: justify; color: #f9f9f9;">O progresso alcançado na academia, seja em termos de força, resistência ou aparência física, pode significar uma melhora significativa na autoconfiança e autoestima. <br>
+          <br>
+          Ver resultados tangíveis do seu esforço e dedicação pode aumentar a sensação de realização pessoal e confiança em si mesmo, refletindo positivamente em outras áreas da vida.
+
+        </p>
+
+      </div>
+  </section>
+</div>
+<!----------------------------------->
+<hr class="colored">
+<section class="slider">
+   <div class="product">
+     <img loading="lazy" src="fabio/postes/10.jpg" alt="roupa">
+   </div>
+   <div class="product">
+     <img loading="lazy" src="fabio/postes/11.jpg" alt="roupa">
+   </div>
+   <div class="product">
+     <img loading="lazy" src="fabio/postes/12.jpg" alt="roupa">
+   </div>
+   <div class="product">
+     <img loading="lazy" src="fabio/postes/13.jpg" alt="roupa">
+   </div>
+   <div class="product">
+     <img loading="lazy" src="fabio/postes/14.jpg" alt="roupa">
+   </div>
+   <div class="product">
+    <img loading="lazy" src="fabio/postes/15.jpg" alt="roupa">
+  </div>
+ </section>
+ <hr class="colored">
+ <p style=" text-align: center; color: #ffffff"><strong style="color: #ffbf00;">- <strong>Socialização e Senso de Comunidade:  </strong></p>
+
+ <p style="margin: 10px; text-align: center; color: #f9f9f9;">
+ A academia proporciona oportunidades para socialização e construção de relacionamentos. Ao frequentar a academia regularmente, você tem a chance de conhecer pessoas com interesses semelhantes e estabelecer novas amizades. <br>
+  <br>
+  Isso cria um senso de comunidade e pertencimento, o que pode ser motivador e inspirador em sua jornada de fitness.
+</p>
+ <hr class="colored">
+<!--------------------------------->
+  <style>
+
+    hr.colored {
+        border: none; /* Remove a borda padrão */
+        height: 2px; /* Define a altura da linha */
+        background-color:#ffbf00; /* Define a cor de fundo da linha */
+      }
+    .instagram-container {
+      position: relative;
+      margin: auto;
+      max-width: 600px; /* Defina o valor máximo desejado para a largura do contêiner */
+      width: 100%;
+      padding-bottom: 75%; /* Ajuste isso conforme necessário para o aspecto desejado */
+      overflow: hidden;
+  }
+
+  .instagram-media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  @media (max-width: 650px) {
+    
+    .video-item {
+        width: 100%;
+    } 
+    .instagram-container {
+        padding-bottom: 180%;
+    }
+   
+}
+
+
+    </style>
+
+    <div class="instagram-container">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C32bjjcrM4L/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="13"></blockquote>
+      <script async src="https://www.instagram.com/embed.js"></script>
+  </div>
+
+  <div class="container">
+    <section>
+        <div class="product">
+          <img src="fabio/postes/16.jpg" alt="Produto 1">
+          <p style=" color: #ffffff"><strong style="color: #ffbf00;">- <strong>Transforme sua Vida na Academia Fábio Vasconcelos!</strong></p>
+          <p style="padding-bottom: 20px; text-align: justify; color: #f9f9f9; ">🌟 Em busca de uma vida mais saudável e ativa? Convidamos você a se juntar à família da Academia Fábio Vasconcelos! Aqui, oferecemos mais do que apenas equipamentos de última geração e treinos personalizados. Na nossa academia, você encontrará uma comunidade acolhedora e motivadora, pronta para apoiá-lo em sua jornada de fitness. <br>
+          <br>
+          Com uma equipe de instrutores altamente qualificados e uma variedade de modalidades, desde musculação até aulas de grupo empolgantes, há algo para todos os gostos e níveis de condicionamento físico. Além disso, nosso compromisso com a sua saúde vai além do treinamento físico, oferecendo orientação nutricional e serviços complementares para garantir seu bem-estar geral. <br>
+          <br>
+          Venha fazer parte da Academia Fábio Vasconcelos e descubra o que é possível alcançar quando você se compromete com sua saúde e felicidade! 💪🏋️‍♀️
+  
+          </p>
+  
+        </div>
+    </section>
+  </div>
+  <!----------------------------------->
+
+
+  <!------------------------------------------------------------>
+
+  <!-- Botões de contato flutuantes -->
+  <div class="contact-buttons">
+    <a href="https://www.instagram.com/academiafabiovasconcelos/reels/" target="_blank">Instagram</a>
+  </div>
+
+  <!-- Janela modal para a calculadora de IMC -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Calculadora de IMC</h2>
+      <form id="imc-form">
+        <label for="height">Altura (cm):</label>
+        <input type="number" id="height" name="height" required><br><br>
+        <label for="weight">Peso (kg):</label>
+        <input type="number" id="weight" name="weight" required><br><br>
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <style>
+    /* Estilos para a janela modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #imc-form {
+      text-align: center;
+    }
+
+    #result {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    // Fechar janela modal ao clicar no botão "Fechar"
+    document.getElementsByClassName('close')[0].addEventListener('click', function() {
+      document.getElementById('modal').style.display = 'none';
+    });
+
+    // Calcular IMC
+    document.getElementById('imc-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var height = parseInt(document.getElementById('height').value);
+      var weight = parseInt(document.getElementById('weight').value);
+      var bmi = weight / ((height / 100) * (height / 100));
+      var result = '';
+      if (bmi < 18.5) {
+        result = 'Abaixo do peso';
+      } else if (bmi >= 18.5 && bmi < 24.9) {
+        result = 'Peso normal';
+      } else if (bmi >= 25 && bmi < 29.9) {
+        result = 'Sobrepeso';
+      } else if (bmi >= 30 && bmi < 34.9) {
+        result = 'Obesidade Grau I';
+      } else if (bmi >= 35 && bmi < 39.9) {
+        result = 'Obesidade Grau II';
+      } else {
+        result = 'Obesidade Grau III';
+      }
+      document.getElementById('result').innerHTML = 'Seu IMC é: ' + bmi.toFixed(2) + '<br>' + 'Classificação: ' + result;
+    });
+  </script>
+  <a href="#" id="dicas-button" class="floating-button">IMC</a>
+
+  <!----------------------------------------------------->
+
+
+  <style>
+    .product {
+        margin-top: 0px;
+        flex: 1 0 calc(50% - 20px);
+        box-sizing: border-box;
+        text-align: center;
+
+      }
+      
+  </style>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            slidesToShow: 4, // Mostrar 4 produtos por vez
+            slidesToScroll: 1,
+            prevArrow: '',
+            nextArrow: '',
+            responsive: [
+                {
+                    breakpoint: 600, // Mudar para um slide por vez em dispositivos menores
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        }); 
+    });
+
+    // Abrir janela modal ao clicar no botão "Dicas"
+    document.getElementById('dicas-button').addEventListener('click', function() {
+      document.getElementById('modal').style.display = 'block';
+    });
+
+    // Fechar janela modal ao clicar fora dela
+    window.onclick = function(event) {
+      var modal = document.getElementById('modal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+
+  <!------------------------------------------------------------>
+</body>
+</html>

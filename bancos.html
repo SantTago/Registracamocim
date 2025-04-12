@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registra Camocim</title>
+  <link rel="stylesheet" href="estilo/style.css">
+  <link rel="shortcut icon" href="icon/icon.png" type="image/x-icon">
+  <!-- Meta Tags para SEO -->
+  <meta name="description" content="Registra Camocim">
+  <meta name="keywords" content="Camocim, ceara, noticias, turismo, jericoacoara, passeios, Camocim online, policia 24 horas, Registra Camocim ">
+  <meta name="author" content="Tiago viana da cruz">
+  <style>
+    .menu{
+      display: flex;
+      text-align: left;
+      justify-content: center;
+      padding-left: 8px;
+      padding-top: 50px;
+      background-color: #0077FF;
+  }
+
+  header {
+    background-color: #0077FF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+  
+}
+
+  .logomarca {
+    padding: 9px;
+    padding-top: 4px;
+    max-width: 109px;
+    width: 107%;
+    text-align: center;
+    margin-bottom: -95px;
+}
+  
+  .logomarca img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media only screen and (max-width: 490px) {
+    .logomarca {
+      padding: 9px;
+      max-width: 212px;
+      margin-bottom: -59px;
+      
+  }
+    .menu {
+      text-align: center;
+      
+    }
+    header {
+      background-color: #0077FF;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      display: flex;
+      /* justify-items: center; */
+      /* flex-wrap: wrap; */
+      flex-direction: column-reverse;
+      align-items: center;
+  }
+  }
+  
+  </style>
+
+</head>
+<body>
+  <header>
+
+   
+
+    <div class="logomarca">
+      <img src="https://i.ibb.co/TR4cdPy/logo-da-pagina.png" alt="logo-da-pagina">
+    </div>
+    
+  </header>
+
+  <div class="menu">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Serviços/moto-taxi.html">serviços</a>
+      <a href="https://forms.gle/p1bZo5Lfj3NJAe1X8" target="_blank" >Cadastrar</a>
+      
+    </nav>
+  </div>
+
+
+<!-----------------  hover do lojas-------------------------------------->
+<style>
+  .mobile-only {
+    display: none;
+    background-color: var(--cor1);
+    color: #fff;
+    padding-bottom: 10px; 
+  font-size: 16px;
+    border: none;
+    border-radius: 0px 5px 0px 0px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    box-shadow: -15px 15px 20px 18px #ffffff;
+    font-weight: 600;
+   
+}
+
+button:hover {
+  background-color: #00ff6a;
+  color: white;
+  transition: 0.1s;
+  box-shadow: 0px 0px 15px rgb(0, 238, 255);
+}
+
+  .mobile-only {
+    display: none;
+  }
+
+  .icon2 {
+    display: none; /* Inicialmente oculta */
+  }
+
+  @media only screen and (max-width: 600px) {
+    .mobile-only {
+      display: block;
+      max-width: 100px;
+      padding: 10px 20px;
+  }
+}
+
+  @media only screen and (min-width: 601px) {
+    .icon2 {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var lojasBtn = document.getElementById("lojasBtn");
+    var icon2 = document.querySelector(".icon2");
+    var searchResults = document.getElementById("search-results");
+  
+    lojasBtn.addEventListener("click", function () {
+      // Alternar a visibilidade da classe "icon2" ao clicar no botão "Lojas"
+      if (icon2.style.display === "none" || icon2.style.display === "") {
+        icon2.style.display = "block";
+      } else {
+        icon2.style.display = "none";
+      }
+    });
+  
+    function handleResize() {
+      var isMobile = window.innerWidth <= 600;
+  
+      // Exibe ou oculta o botão "Lojas" com base na largura da tela
+      lojasBtn.style.display = isMobile ? "block" : "none";
+  
+      // Ajusta a visibilidade dos resultados da pesquisa com base na largura da tela
+      searchResults.style.display = isMobile ? "block" : "block";
+  
+      // Se a tela for maior que 600px, exibe a div "icon2"
+      icon2.style.display = window.innerWidth > 600 ? "block" : "none";
+    }
+  
+    // Adiciona um ouvinte para lidar com alterações no tamanho da janela
+    window.addEventListener("resize", handleResize);
+  
+    // Inicializa o estado quando a página é carregada
+    handleResize();
+  });
+  
+</script>
+
+<button id="lojasBtn" class="mobile-only">Lojas</button>
+
+
+<div id="search-results">
+  <!-- Conteúdo inicial da div search-results -->
+</div>
+    
+    
+    
+<div class="icon2">
+  <div class="icon">
+    <div class="hoteis-cor">
+      <abbr title="Hotel"><a href="hoteis.html"><img src="https://i.ibb.co/5csDH46/hotel.png" alt="hotel"></a></abbr>
+    </div>
+
+    <div class="passeio-cor">
+      <abbr title="passeios"><a href="passeios.html"><img src="icon/turismo.png" alt="gpasseios"></a></abbr>
+    </div>
+
+    <div class="academia-cor">
+      <abbr title="passeios"><a href="academias.html"><img src="icon/academia.png" alt="gpasseios"></a></abbr>
+    </div>
+    
+    <div class="beleza-cor1">
+      <abbr class="beleza-icon" title="Moda Feminina"><a href="beleza.html"><img src="https://i.ibb.co/GtZGHN3/beleza.png" alt="beleza"></a>
+      </abbr>
+  </div>
+  
+  <div class="roupas-cor">
+      <abbr title="Moda Mascolino"><a href="roupas.html"><img src="https://i.ibb.co/2t4qc02/roupa.png" alt="roupa"></a></abbr>
+    </div>
+    <div class="gasolina-cor">
+      <abbr title="Postos de Gasolina"><a href="gasolina.html"><img src="https://i.ibb.co/kGSMYZS/gasolina.png" alt="gasolina"></a></abbr>
+    </div>
+
+    
+  
+    <div class="mercadinho-cor">
+      <abbr title="Super Mercados"><a href="mercado.html"><img src="https://i.ibb.co/vQZVPf6/mercado.png" alt="mercado"></a></abbr>
+    </div >
+    <div class="grafica-cor">
+      <abbr title="Graficas"><a href="grafica.html"><img src="https://i.ibb.co/YB1nkJB/grafica.png" alt="grafica"></a></abbr>
+    </div >
+    <div class="construçao-cor">
+      <abbr title="Construção"><a href="construçao.html"><img src="https://i.ibb.co/tLM1TSm/constru-ao.png" alt="constru-ao"></a></abbr>
+    </div >
+    <div class="prefeitura-cor">
+      <abbr title="festa"><a href="Festa.html"><img src="icon/festa.png" alt="festa"></a></abbr>alt="prefeitura"></a></abbr>
+    </div >
+    <div class="restaurante-cor">
+      <abbr title="restaurantes"><a href="restaurante.html"><img src="https://i.ibb.co/pbSc3bz/restaurante.png" alt="restaurante"></a></abbr>
+    </div >
+  
+    <div class="sorveteria-cor">
+      <abbr title="Confeitaria"><a href="confeitaria.html"><img src="https://i.ibb.co/SNS15Tj/sorveteria.png" alt="sorveteria"></a></abbr>
+    </div >
+
+    <div class="padaria-cor">
+      <abbr title="Padaria"><a href="padaria.html"><img src="https://i.ibb.co/Ct7T6Wh/padaria.png" alt="padaria"></a></abbr>
+    </div >
+    
+    <div class="farmacia-cor">
+      <abbr title="farmacias"><a href="farmacia.html"><img src="https://i.ibb.co/YTZ2NGc/farmacia.png" alt="farmacia"></a></abbr>
+    </div >
+    <div class="banco-cor">
+        <abbr title="Bancos"><a href="bancos.html"><img src="https://i.ibb.co/gD1z4kr/banco.png" alt="banco"></a></abbr>
+    </div >
+    <div class="adulto-cor">
+      <abbr title="Sex Shop"><a href="sex-shop.html"><img src="https://i.ibb.co/VvnCCWy/18.png" alt="18" ></a></abbr>
+  </div >
+</div>
+  
+    
+
+
+    <style>
+
+      .empresas{
+        text-align: center;
+        color: #ffffff;
+        padding: 1px;
+        font-family: var(--destaque);
+        font-size: 1em;
+        background-color: var(--cor1);
+        margin: 0px auto 0px auto;
+        max-width: 100%;
+      }
+    
+    </style>
+  </div>
+    <h2 class="empresas">Bancos</h2>
+
+
+  <div class="bancos-bloco">
+    <a href="">
+      <div>
+        <a href="banco/bradesco.html"><abbr title="bradesco"><img loading="lazy" src="banco/bradesco/bra.webp" alt="bradesco"></abbr></a>
+      </div>
+    </a>
+
+
+    <a href="">
+      <div>
+        <a href="banco/banco do brasil.html"><abbr title="banco do brasil"><img loading="lazy" src="banco/banco do brasil/brasil.webp" alt="banco do brasil"></abbr></a>
+      </div>
+    </a>
+
+    <a href="">
+      <div>
+        <a href="banco/"><abbr title="Santander"><img loading="lazy" src="banco/santander/santander-img.webp" alt="banco do brasil"></abbr></a>
+      </div>
+    </a>
+    
+    <a href="">
+      <div>
+        <a href="banco/caixa economica.html"><abbr title="Caixa"><img loading="lazy" src="banco/caixa economica/caixa-img.webp" alt="banco do brasil"></abbr></a>
+      </div>
+    </a>
+
+
+
+  <!----------------------------------------->
+
+  <footer>
+    <p>&copy; 2024 Desenvolvidor Nativo-Ce.</p>
+</footer>
+
+
+</body>
+</html>

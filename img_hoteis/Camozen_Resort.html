@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pousada Village Sonhos</title>
+  <style>
+    /* Estilos CSS para tornar a página mais bonita e responsiva */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative; /* Importante para o posicionamento dos botões flutuantes */
+      background-color: #ffffff; /* Azul claro */
+    }
+
+    header {
+      position: relative;
+      background-color: #1b4d42; /* Azul claro */
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden; /* Para esconder as partes das imagens que ultrapassam o header */
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 150px; /* Altura da onda */
+      background-image: url('https://via.placeholder.com/150'); /* Adicione a imagem da onda aqui */
+      background-size: 100% 100%;
+    }
+
+    .palm-leaf {
+      position: absolute;
+      top: 20px; /* Ajuste a posição vertical conforme necessário */
+      right: 20px; /* Ajuste a posição horizontal conforme necessário */
+      width: 100px; /* Ajuste a largura conforme necessário */
+      height: auto;
+      background-image: url('https://via.placeholder.com/150'); /* Adicione a imagem da folha de coqueiro aqui */
+      background-size: contain;
+    }
+
+    .profile-img {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-img img {
+      width: 150px;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .product {
+      width: calc(50% - 15px); /* 50% width for each product with 15px spacing */
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centralizar o conteúdo verticalmente */
+      align-items: center; /* Centralizar o conteúdo horizontalmente */
+    }
+
+    .product img {
+      width: 100%;
+      height: 234px;
+      object-fit: cover;
+      padding-top: 20px;
+  }
+
+    .product-info {
+      background-color: #ffffff; /* Branco */
+      padding: 20px;
+      text-align: center; /* Centralizar as informações dos produtos */
+    }
+
+    .product-info h2 {
+      margin-top: 0;
+    }
+
+    .contact-buttons {
+      position: fixed; /* Torna os botões flutuantes */
+      bottom: 20px; /* Distância do fundo */
+      right: 20px; /* Distância da direita */
+      text-align: center;
+      display: flex; /* Para os botões ficarem lado a lado */
+      justify-content: space-between; /* Distribuir o espaço entre os botões */
+      width: 200px; /* Largura dos botões */
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      background-color: #143D34; /* Azul claro */
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 0; /* Espaçamento vertical dentro do botão */
+      margin: 10px 0; /* Espaçamento vertical entre os botões */
+      border-radius: 5px;
+      width: 45%; /* Largura dos botões */
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-buttons a:hover {
+      background-color: #39b69b; /* Azul claro mais claro ao passar o mouse */
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background-color: #143D34; /* Azul claro */
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #39b69b; /* Azul claro mais claro ao passar o mouse */
+    }
+    .product-info {
+      text-align: center; /* Centralizar as informações dos produtos em telas menores */
+      text-align: justify;
+    }
+    @media only screen and (max-width: 600px) {
+      .product {
+        width: 100%; /* Full width for products on smaller screens */
+      }
+      .product-info {
+        text-align: center; /* Centralizar as informações dos produtos em telas menores */
+        text-align: justify;
+      }
+      .contact-buttons {
+        width: 100%; /* Full width for contact buttons on smaller screens */
+        bottom: 0; /* Align the buttons to the bottom */
+        left: 0; /* Align the buttons to the left */
+        text-align: center;
+        justify-content: center; /* Centralizar os botões */
+      }
+      .contact-buttons a {
+        width: 100%; /* Largura total para botões em telas menores */
+         margin: 20px;
+      }
+
+    }
+
+    .floating-button {
+      position: fixed;
+      top: 26px;
+      right: -2px;
+      background-color: #143D34;
+      color: #ffffff;
+      border: none;
+      width: 45px;
+      height: 35px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px rgba(116, 199, 255, 0.5);
+      transition: background-color 0.3s ease;
+      text-align: center;
+      line-height: 35px;
+      text-decoration: none;
+    }
+
+    .floating-button:hover {
+        background-color: #39b69b; /* Azul claro mais claro ao passar o mouse */
+ 
+    }
+
+    .image-placeholder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 200px; /* Altura desejada do espaço reservado */
+      background-color: #f0f0f0; /* Cor de fundo do espaço reservado */
+      color: #666; /* Cor do texto do espaço reservado */
+    }
+  </style>
+</head>
+<body>
+
+
+<header>
+  <div class="profile-img">
+    <img src="https://i.ibb.co/269QDf2/perfil.jpg" alt="perfil">
+  </div>
+
+  <div class="back-button">
+    <a href="../hoteis.html">Voltar</a>
+  </div>
+</header>
+<div class="container">
+  <div class="product">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipM3bPH5llUoczb1xaOye-LL490fuLIjSzrTmuNH=s680-w680-h510" alt="Produto 1">
+    <div class="product-info">  
+ 
+      <p>
+        A piscina do Hotel Camozen Resort é um verdadeiro paraíso de tranquilidade e beleza. Com águas cristalinas, cercada por jardins tropicais e vistas deslumbrantes, proporciona momentos inesquecíveis de relaxamento para os hóspedes. Seja para um mergulho refrescante ou para apreciar o pôr do sol, cada instante nesta piscina é uma experiência de deleite e conforto."</p>
+    </div>
+  </div>
+  
+  <div class="product">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/410161105.jpg?k=39fbaed99eab03dedcdac0420f28bb34d7957e57f27604a0f3141cac0da32b27&o=&hp=1" alt="Produto 1">
+    <div class="product-info">  
+ 
+      <p>
+        A área interna do Hotel Camozen Resort oferece um ambiente acolhedor e relaxante, onde os hóspedes podem desfrutar de momentos de descanso e contemplação. Com redes estrategicamente posicionadas, é o lugar perfeito para se entregar ao prazer de balançar suavemente enquanto se envolve na atmosfera tranquila do resort. Rodeado por uma decoração elegante e aconchegante, este espaço convida os visitantes a relaxarem, lerem um livro ou simplesmente apreciarem a calma que permeia o ambiente. É um refúgio ideal para aqueles que buscam renovar as energias e se reconectar consigo mesmos durante a estadia no Camozen Resort.</p>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipPKTfjj8Bszwdu__565m9mIISLuVzUzLcy3LL9I=s680-w680-h510" alt="Produto 1">
+    <div class="product-info">  
+ 
+      <p>
+        Localizado a poucos passos do Hotel Camozen Resort, encontra-se uma deslumbrante extensão de areias douradas e águas cristalinas que convidam os hóspedes a explorarem a beleza natural da costa. Esta praia paradisíaca oferece o cenário perfeito para momentos inesquecíveis à beira-mar. Seja para um tranquilo passeio matinal ao nascer do sol, para mergulhar nas refrescantes águas azul-turquesa ou para simplesmente relaxar sob o calor do sol tropical, cada visita a esta praia é uma experiência revigorante para os sentidos. Com sua localização conveniente junto ao hotel, os hóspedes podem desfrutar da combinação perfeita de conforto e natureza, criando memórias preciosas durante sua estadia no Camozen Resort. </p>
+    </div>
+  </div>
+  
+  <div class="product">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipMMGp1wA-J83sgmGItKnw4U1llGxkVXzFAZD4FL=s680-w680-h510" alt="Produto 1">
+    <div class="product-info">  
+ 
+      <p>
+        Os quartos do Hotel Camozen Resort oferecem uma experiência de hospedagem verdadeiramente luxuosa e confortável, com uma característica especial: varandas privativas separadas. Cada quarto é um santuário de elegância e comodidade, projetado para proporcionar aos hóspedes um refúgio tranquilo durante sua estadia. As varandas separadas acrescentam um toque de exclusividade, permitindo que os visitantes desfrutem de momentos de privacidade e contemplação ao ar livre. Seja admirando a paisagem deslumbrante, apreciando uma refeição ao ar livre ou simplesmente relaxando com uma bebida refrescante, estas varandas são o complemento perfeito para uma estadia verdadeiramente memorável no Camozen Resort. Combinando o conforto dos interiores requintados com a beleza dos espaços ao ar livre, os quartos com varandas separadas garantem uma experiência única de hospedagem para todos os hóspedes</p>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://www.camozen.com/wp-content/uploads/2023/01/Camozen-155.jpg" alt="Produto 1">
+    <div class="product-info">  
+ 
+      <p>           
+        A área externa do Hotel Camozen Resort é um convite ao relaxamento e à renovação das energias. Com uma atmosfera serena e envolvente, este espaço é meticulosamente projetado para oferecer aos hóspedes momentos de descanso e tranquilidade. As áreas de relaxamento são compostas por confortáveis espreguiçadeiras e gazebos sombreados, ideais para desfrutar do clima tropical enquanto se entrega ao prazer de simplesmente não fazer nada. Seja saboreando uma bebida gelada ao lado da piscina, entregando-se a uma massagem revigorante ao ar livre ou simplesmente contemplando a paisagem exuberante que cerca o resort, cada momento nesta área externa é uma oportunidade para se reconectar consigo mesmo e com a natureza. É o lugar perfeito para os hóspedes recarregarem as energias e criarem memórias inesquecíveis durante sua estadia no Camozen Resort.</p>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/410162750.jpg?k=ef1d14125f3b5de29a2e8d2cfb12ef42e9fab520138bf07146782d881ffa444c&o=&hp=1" alt="Produto 1">
+    <div class="product-info">  
+ 
+      <p>           
+        O café da manhã no Hotel Camozen Resort é uma experiência deliciosa e farta, com uma variedade de opções que atendem a todos os gostos. Desde frutas frescas até pães recém-assados e pratos quentes preparados na hora, os hóspedes desfrutam de uma refeição matinal memorável em um ambiente acolhedor e elegante. É o começo perfeito para um dia de aventuras ou relaxamento à beira-mar.</p>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipM4V33Ckt9U3kS0xhSMQnlPcgMB_oPm5CD7KdQD=s680-w680-h510 " alt="Produto 1">
+    <div class="product-info">  
+ 
+      <p>           
+        O pôr do sol no Hotel Camozen Resort é um espetáculo deslumbrante que encanta os hóspedes todas as noites. Com vistas panorâmicas incríveis, que se estendem até onde os olhos podem ver, cada entardecer é uma pintura viva no céu. As cores vibrantes do sol se misturam com as nuances suaves do horizonte, criando uma cena de tirar o fôlego que parece saída de um cartão postal. Os hóspedes podem desfrutar deste espetáculo natural a partir de pontos estratégicos do resort, seja das varandas privativas dos quartos, da área da piscina ou das praias adjacentes. É um momento mágico que convida à reflexão e à gratidão pela beleza incomparável da natureza, tornando a estadia no Hotel Camozen Resort ainda mais memorável.</p>
+    </div>
+  </div>
+  
+   
+ 
+  
+ 
+</div>
+<!-- Botões de contato flutuantes -->
+<div class="contact-buttons">
+  <a href="https://api.whatsapp.com/send/?phone=5588993784342&text=" target="_blank">WhatsApp</a>
+  <a href="https://www.instagram.com/camozenbrazil/" target="_blank">Instagram</a>
+  
+</div>
+
+<a href="../confeitaria/contruçao/contruçao.html" class="floating-button">Ir</a>
+</body>
+</html>

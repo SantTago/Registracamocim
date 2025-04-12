@@ -1,2 +1,0 @@
-# Registracamocim
-Social Midia

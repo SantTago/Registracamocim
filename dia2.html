@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registra Camocim</title>
+    <link rel="icon" href="caminho/para/seu-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="index/IA-img.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="shortcut icon" href="icon/icon.png" type="image/x-icon">
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Registra Camocim">
+    <meta name="keywords" content="Camocim, ceara, noticias, turismo, jericoacoara, passeios, Camocim online, policia 24 horas, Registra Camocim ">
+    <meta name="author" content="Tiago viana da cruz">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <style>
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0077ff;
+        box-shadow: 0px 0px 15px black;
+        
+      }
+      
+      header {
+        background-color: #0077FF;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+      
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+        box-sizing: border-box;
+        
+        margin: 0 auto;
+      }
+      
+      .product {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        margin-top: 0px;
+        flex: 1 0 calc(50% - 20px);
+        box-sizing: border-box;
+        text-align: center;
+        padding: 10px;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+      }
+      
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 50%;
+      }
+      
+      .slick-next {
+        right: 4px;
+      }
+      
+      .slick-prev {
+        left: 4px;
+      }
+      
+      .perfil {
+        max-width: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: auto;
+        flex-wrap: wrap;
+      }
+      
+      .logomarca {
+        padding-top: 5px;
+        max-width: 100px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: -55px;
+      }
+      
+      .logomarca img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      @media only screen and (max-width: 490px) {
+        .logomarca {
+          padding: 9px;
+          max-width: 212px;
+          margin-bottom: -20px;
+          
+      }
+        .menu {
+          text-align: center;
+        }
+        header {
+          background-color: #0077FF;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+          display: flex;
+          /* justify-items: center; */
+          /* flex-wrap: wrap; */
+          flex-direction: column-reverse;
+          align-items: center;
+      }
+      }
+     
+
+
+
+.empresas{
+  text-align: center;
+  color: #ffffff;
+  padding: 1px;
+  font-family: var(--destaque);
+  font-size: 1em;
+  background-color: var(--cor1);
+  margin: 0px auto 0px auto;
+  max-width: 948px;
+}
+
+:root {
+  --cor1: #042940;
+  --cor2: #005C53;
+  --cor3: #9FC131;
+  --cor4: #DBF227;
+  --cor5: #D6D58E;
+  --cor6: #0077ff;
+  --cor7: #8bd6f1;
+  --cor8: #00425c;
+
+
+  --normal: "Qureah", Verdana, Helvetica,sans-serif ;
+  --principal: 'GABRWFFR', Verdana, Helvetica,sans-serif ;
+  --destaque: 'KGRedHands', Verdana, Helvetica,sans-serif ;
+}
+  
+      #search-results a {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+  
+      #search-results a:hover {
+        background-color: #0056b3;
+        color: #fff;
+      }
+      @media only screen and (max-width: 890px) {
+        /* Adiciona estilos específicos para telas maiores (por exemplo, PCs) */
+        #search-container {
+          display: flex;
+          justify-content: end;
+          flex-wrap: nowrap;
+          text-align: center;
+          margin: -1px auto 0px auto;
+          background-color: var();
+        }
+      
+        /* Adiciona estilo para exibir os resultados da pesquisa em telas menores que 600px */
+        #search-results {
+          display: block !important;
+        }
+      
+        /* Esconde a div "icon2" em telas menores que 600px */
+        .icon2 {
+          display: none;
+        }
+      
+        /* Ajusta o estilo do botão "Lojas" em telas menores que 600px */
+        .mobile-only {
+          display: block;
+        }
+      }
+      
+        #search-box {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+  
+        #search-button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        #search-results a {
+          text-decoration: none;
+          color: white;
+          padding: 0px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        
+
+        
+
+    
+
+    .menu{
+      display: flex;
+      text-align: left;
+      justify-content: center;
+      padding-left: 8px;
+      padding-top: 9px;
+  }
+
+  main {
+    max-width: 950px;
+    background-color: white;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination button {
+    max-width: 43px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 24px;
+}
+.pagination button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+
+button {
+  width: 100%;
+  height: 37px;
+  background-color: #3463db59;
+  color: #4400ff;
+  border: none;
+  border-radius: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #00ff6a;
+  color: white;
+  transition: 0.1s;
+  box-shadow: 0px 0px 15px rgb(0, 238, 255);
+}
+
+
+#to-news-btn {
+  right: -7px;
+  top: 20px;
+  z-index: 1000;
+  transform: scale(0); /* Inicia com escala zero para a animação */
+}
+
+#content {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+#empresas{
+  text-align: center;
+  color: #ffffff;
+  font-family: var(--destaque);
+  font-size: 13px;
+  background-color: var(--cor1);
+  margin: 0px auto 0px auto;
+  max-width: 948px;
+  margin: 10px;
+}
+#Botao {
+  
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #150061;
+  text-decoration: none;
+}
+#Botao:hover{
+  color: #ff8800;
+}
+
+  </style>
+  </head>
+<body>
+
+  <header>
+
+   
+
+    <div class="logomarca">
+      <img src="https://i.ibb.co/TR4cdPy/logo-da-pagina.png" alt="logo-da-pagina">
+    </div>
+    
+  </header>
+
+     <!-------------------------------------------------------------------->
+  <style>
+    #popup {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #000000c2;
+      border: 1px solid #ffffff;
+      z-index: 999;
+    }
+    
+    #popup-buttons {
+      margin-top: 10px;
+    }
+    
+    .close-btn {
+      margin-left: 10px;
+    }
+  </style>
+
+
+  
+
+<div id="popup">
+  <img id="popup-image" alt="Imagem popup">
+  <p id="challenge" style="color: #ffffff;">IA-IMG -> Imagens do mundo inteiro! </p>
+  <div id="popup-buttons">
+    <button onclick="generateImage()">Ver Nova Imagem</button>
+    <button id="auto-mode-btn-popup" onclick="toggleAutoMode()">Auto</button>
+    <button onclick="stopAutoMode()">Stop</button>
+    <button class="close-btn" onclick="closePopup()">Fechar</button>
+  </div>
+</div>
+
+<script>
+  var autoMode = false;
+  var autoInterval;
+  var displayedImages = [];
+
+  function showPopup() {
+    var popup = document.getElementById('popup');
+    var popupImage = document.getElementById('popup-image');
+    var challengeText = document.getElementById('challenge');
+
+    var imageUrl;
+    do {
+      imageUrl = 'https://picsum.photos/500/300?random=' + Math.random();
+    } while (displayedImages.includes(imageUrl));
+
+    displayedImages.push(imageUrl);
+
+    popupImage.src = imageUrl;
+    challengeText.innerHTML = 'IA-IMG -> Imagens do mundo inteiro!';
+    popup.style.display = 'flex';
+  }
+
+  function closePopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'none';
+    stopAutoMode();
+  }
+
+  function generateImage() {
+    showPopup();
+  }
+
+  function toggleAutoMode() {
+    autoMode = !autoMode;
+    var autoModeBtn = document.getElementById('auto-mode-btn-popup');
+
+    if (autoMode) {
+      autoInterval = setInterval(generateImage, 3000);
+      autoModeBtn.classList.add('active');
+    } else {
+      clearInterval(autoInterval);
+      autoModeBtn.classList.remove('active');
+    }
+  }
+
+  function stopAutoMode() {
+    autoMode = false;
+    clearInterval(autoInterval);
+    document.getElementById('auto-mode-btn-popup').classList.remove('active');
+  }
+</script>
+<!-------------------------------------------------------------------->
+
+
+
+  <div class="menu">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Serviços/moto-taxi.html">serviços</a>
+      <a href="https://forms.gle/p1bZo5Lfj3NJAe1X8" target="_blank" >Cadastrar</a>
+
+
+      
+    </nav>
+  </div>
+
+  <
+<!-----------------  hover do lojas-------------------------------------->
+<style>
+  .mobile-only {
+    display: none;
+    background-color: var(--cor1);
+    color: #fff;
+    padding-bottom: 10px; 
+  font-size: 16px;
+    border: none;
+    border-radius: 0px 5px 0px 0px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    box-shadow: -15px 15px 20px 18px #ffffff;
+    font-weight: 600;
+   
+}
+
+button:hover {
+  background-color: #00ff6a;
+  color: white;
+  transition: 0.1s;
+  box-shadow: 0px 0px 15px rgb(0, 238, 255);
+}
+
+  .mobile-only {
+    display: none;
+  }
+
+  .icon2 {
+    display: none; /* Inicialmente oculta */
+  }
+
+  @media only screen and (max-width: 600px) {
+    .mobile-only {
+      display: block;
+      max-width: 100px;
+      padding: 10px 20px;
+  }
+}
+
+  @media only screen and (min-width: 601px) {
+    .icon2 {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var lojasBtn = document.getElementById("lojasBtn");
+    var icon2 = document.querySelector(".icon2");
+    var searchResults = document.getElementById("search-results");
+  
+    lojasBtn.addEventListener("click", function () {
+      // Alternar a visibilidade da classe "icon2" ao clicar no botão "Lojas"
+      if (icon2.style.display === "none" || icon2.style.display === "") {
+        icon2.style.display = "block";
+      } else {
+        icon2.style.display = "none";
+      }
+    });
+  
+    function handleResize() {
+      var isMobile = window.innerWidth <= 600;
+  
+      // Exibe ou oculta o botão "Lojas" com base na largura da tela
+      lojasBtn.style.display = isMobile ? "block" : "none";
+  
+      // Ajusta a visibilidade dos resultados da pesquisa com base na largura da tela
+      searchResults.style.display = isMobile ? "block" : "block";
+  
+      // Se a tela for maior que 600px, exibe a div "icon2"
+      icon2.style.display = window.innerWidth > 600 ? "block" : "none";
+    }
+  
+    // Adiciona um ouvinte para lidar com alterações no tamanho da janela
+    window.addEventListener("resize", handleResize);
+  
+    // Inicializa o estado quando a página é carregada
+    handleResize();
+  });
+  
+</script>
+
+<button id="lojasBtn" class="mobile-only">Lojas</button>
+
+<div id="search-results">
+  <!-- Conteúdo inicial da div search-results -->
+</div>
+
+
+
+<div class="icon2">
+  <div class="icon">
+    <div class="hoteis-cor">
+      <abbr title="Hotel"><a href="hoteis.html"><img src="https://i.ibb.co/5csDH46/hotel.png" alt="hotel"></a></abbr>
+    </div>
+
+    <div class="passeio-cor">
+      <abbr title="passeios"><a href="passeios.html"><img src="icon/turismo.png" alt="gpasseios"></a></abbr>
+    </div>
+
+    <div class="academia-cor">
+      <abbr title="passeios"><a href="academias.html"><img src="icon/academia.png" alt="gpasseios"></a></abbr>
+    </div>
+    
+    <div class="beleza-cor1">
+      <abbr class="beleza-icon" title="Moda Feminina"><a href="beleza.html"><img src="https://i.ibb.co/GtZGHN3/beleza.png" alt="beleza"></a>
+      </abbr>
+  </div>
+  
+  <div class="roupas-cor">
+      <abbr title="Moda Mascolino"><a href="roupas.html"><img src="https://i.ibb.co/2t4qc02/roupa.png" alt="roupa"></a></abbr>
+    </div>
+    <div class="gasolina-cor">
+      <abbr title="Postos de Gasolina"><a href="gasolina.html"><img src="https://i.ibb.co/kGSMYZS/gasolina.png" alt="gasolina"></a></abbr>
+    </div>
+
+    
+  
+    <div class="mercadinho-cor">
+      <abbr title="Super Mercados"><a href="mercado.html"><img src="https://i.ibb.co/vQZVPf6/mercado.png" alt="mercado"></a></abbr>
+    </div >
+    <div class="grafica-cor">
+      <abbr title="Graficas"><a href="grafica.html"><img src="https://i.ibb.co/YB1nkJB/grafica.png" alt="grafica"></a></abbr>
+    </div >
+    <div class="construçao-cor">
+      <abbr title="Construção"><a href="construçao.html"><img src="https://i.ibb.co/tLM1TSm/constru-ao.png" alt="constru-ao"></a></abbr>
+    </div >
+    <div class="prefeitura-cor">
+      <abbr title="festa"><a href="Festa.html"><img src="icon/festa.png" alt="festa"></a></abbr></a></abbr>
+    </div >
+    <div class="restaurante-cor">
+      <abbr title="restaurantes"><a href="restaurante.html"><img src="https://i.ibb.co/pbSc3bz/restaurante.png" alt="restaurante"></a></abbr>
+    </div >
+  
+    <div class="sorveteria-cor">
+      <abbr title="Confeitaria"><a href="confeitaria.html"><img src="https://i.ibb.co/SNS15Tj/sorveteria.png" alt="sorveteria"></a></abbr>
+    </div >
+
+    <div class="padaria-cor">
+      <abbr title="Padaria"><a href="padaria.html"><img src="https://i.ibb.co/Ct7T6Wh/padaria.png" alt="padaria"></a></abbr>
+    </div >
+    
+    <div class="farmacia-cor">
+      <abbr title="farmacias"><a href="farmacia.html"><img src="https://i.ibb.co/YTZ2NGc/farmacia.png" alt="farmacia"></a></abbr>
+    </div >
+    <div class="banco-cor">
+        <abbr title="Bancos"><a href="bancos.html"><img src="https://i.ibb.co/gD1z4kr/banco.png" alt="banco"></a></abbr>
+    </div >
+    <div class="adulto-cor">
+      <abbr title="Sex Shop"><a href="sex-shop.html"><img src="https://i.ibb.co/VvnCCWy/18.png" alt="18" ></a></abbr>
+  </div >
+</div>
+  
+  <style>
+    .icon2 {
+      display: block; /* Ícone visível por padrão */
+    }
+
+    @media only screen and (max-width: 600px) {
+      .icon2 {
+        display: none; /* Oculta o ícone em telas menores que 600 pixels */
+      }
+    }
+    
+    #preços{
+      margin: auto;
+      font-size: larger;
+    }
+
+    .conteudo{
+      max-width:100vw ;
+      padding: 15px;
+    }
+    
+  </style>
+
+    <!------------------------------->
+    
+   
+    
+  </div>
+
+  <div class="slideshow-container">
+      
+    <div class="mySlides">
+      <img src="https://i.ibb.co/0YXrTwM/banner-lojinha.jpg" alt="banner-lojinha">
+    </div>
+    
+    <div class="mySlides">
+      <img src="https://i.ibb.co/NsYWZ4Q/banner-1.jpg" alt="banner-1">
+    </div>
+
+    <div class="mySlides">
+      <img src="https://i.ibb.co/7v4pDDz/banner-2.jpg" alt="banner-2">
+    </div>
+    
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+    
+    <!------------------------------->
+    
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      autoSlide(); // Inicia o slideshow automático
+    
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+    
+      function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+    
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+    
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+    
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+    
+        slides[slideIndex - 1].style.display = "block";
+      }
+    
+      function autoSlide() {
+        setInterval(function() {
+          plusSlides(1);
+        }, 4000); // Avança para o próximo slide a cada 2 segundos
+      }
+    </script>
+
+    </div>
+    <h2 class="empresas">Home</h2>
+
+    
+    <!--------------------------------------------------->
+    
+
+  <main>
+
+    
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div class="perfil-bloco">
+      <div>
+        <img src="https://i.ibb.co/K94jxGC/banner.jpg" alt="banner-burno-1">
+      </div>
+    </div>
+    <section class="slider">
+
+      <div class="product">
+        <img src="padarias/gomes de melo/1.jpg" alt="003">
+      </div>
+      <div class="product">
+        <img src="padarias/gomes de melo/2.jpg" alt="005">
+      </div>
+      <div class="product">
+        <img src="padarias/gomes de melo/3.jpg" alt="002">
+      </div>
+      <div class="product">
+        <img src="padarias/gomes de melo/4.jpg" alt="004">
+      </div>
+      <div class="product">
+        <img src="padarias/gomes de melo/5.jpg" alt="001">
+      </div>
+      
+
+    </section>  
+
+    <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #fd3b3b;">Gomes de Melo</h1>
+    <p class="conteudo">Padaria Gomes de Melo é um verdadeiro refúgio para os amantes de pães frescos, doces irresistíveis e um ambiente acolhedor. Mais do que uma simples padaria, é também uma confeitaria que encanta os paladares mais exigentes. Com uma variedade de produtos feitos com ingredientes selecionados e receitas tradicionais, a Padaria Gomes de Melo conquista seus clientes pela qualidade e pelo sabor incomparável. Seja para um café da manhã rápido, um lanche reconfortante ou para celebrar momentos especiais com um doce delicioso, esta é a escolha perfeita para os apreciadores da boa gastronomia.</p> 
+
+    <a id="empresas" href="padarias/gomes de melo.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+    <!--------------------------------------------------->
+
+
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div class="perfil-bloco">
+      <div>
+        <img src="https://i.ibb.co/wg11jVc/banner-burno-1.jpg" alt="banner-burno-1">
+      </div>
+    </div>
+    <section class="slider">
+
+      <div class="product">
+        <img src="https://i.ibb.co/j3kxGhq/003.jpg" alt="003">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/0Mr7xpR/005.jpg" alt="005">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/pW1pSmN/002.jpg" alt="002">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/nBsyXtS/004.jpg" alt="004">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/4KQDgR0/001.jpg" alt="001">
+      </div>
+      
+
+    </section>  
+
+    <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #3b89fd;">Bruno Buggy</h1>
+    <p class="conteudo">Descubra a emoção de explorar Jericoacoara de uma maneira única com Bruno Buggy! Nossa agência oferece passeios incríveis pelas deslumbrantes dunas e praias desta joia do litoral cearense. Com nossa equipe experiente e veículos seguros, você irá vivenciar momentos inesquecíveis enquanto visitamos os pontos turísticos mais belos e pitorescos da região. Prepare-se para aventuras emocionantes e paisagens de tirar o fôlego com Bruno Buggy!</p> 
+
+    <a id="empresas" href="passeios/bruno/bruno passeios.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+    <!--------------------------------------------------->
+
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div class="perfil-bloco">
+      <div>
+        <img loading="lazy" src="https://i.ibb.co/W6HXbrX/banner-batista.jpg" alt="image png">
+      </div>
+    </div>
+    <section class="slider">
+
+      <div class="product">
+        <img src="https://i.ibb.co/tsPgN3G/005.webp" alt="01">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/WG4HYyf/004.webp" alt="002">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/0FPM31w/003.webp" alt="003">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/P1DwPW8/006.webp" alt="004">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/MBFr9n0/001.webp" alt="005">
+      </div>
+
+    </section>  
+
+    <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #3b89fd;">Batista Contruçôes</h1>
+    <p class="conteudo">Bastista Construções, estamos aqui para ajudar você a realizar seus projetos de construção. Somos sua loja local de confiança, oferecendo uma variedade de materiais de alta qualidade e um atendimento personalizado. Seja para uma pequena reforma ou um grande projeto, estamos prontos para te ajudar. Venha nos visitar e vamos construir juntos!</p> 
+
+    <a id="empresas" href="construçao/Batista construções.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+    <!--------------------------------------------------->
+
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div class="perfil-bloco">
+      <div>
+        <img loading="lazy" src="https://i.ibb.co/M5HHhf1/banner.webp" alt="image png">
+      </div>
+    </div>
+    <section class="slider">
+
+      <div class="product">
+        <img src="https://i.ibb.co/2MyS3fK/01.jpg" alt="01">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/jvWx34y/002.jpg" alt="002">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/gVdPjWX/003.jpg" alt="003">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/f2CyZTY/004.jpg" alt="004">
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/BgLR17j/005.jpg" alt="005">
+      </div>
+
+    </section>  
+
+    <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #fd3b5b;">Fran Bolos</h1>
+    <p class="conteudo">Fran Bolos é uma verdadeira artista da confeitaria em nossa cidade. Seus bolos não apenas encantam os olhos, mas também deleitam os paladares mais exigentes. Com sua habilidade excepcional e dedicação incansável, ela transforma ingredientes simples em obras de arte comestíveis. Cada criação sua é uma celebração de sabor e criatividade. Fran Bolos não apenas assa bolos, ela cria memórias doces que perduram por toda uma vida.</p> 
+
+    <a id="empresas" href="confeitaria/Fran Bolos.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+    <!--------------------------------------------------->
+
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div class="perfil-bloco">
+      <div>
+        <img loading="lazy" src="https://i.ibb.co/t331m5R/banner.webp" alt="image png">
+      </div>
+    </div>
+    <section class="slider">
+
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/z201skF/001.webp" alt="image png">
+    
+    
+      </div>
+
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/zs73HFV/002.webp" alt="image png">
+      </div>
+      
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/z2mcQW3/003.webp" alt="image png">
+    
+    
+      </div>
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/44vsP3B/004.webp" alt="image png">
+    
+    
+      </div>
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/2Zc4Ywc/005.webp" alt="image png">
+    
+    
+      </div>
+
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/TRrRLFn/006.webp" alt="restaurante">
+    
+    
+      </div>
+    </section>  
+    <h1 class="conteudo" id="cor" style="color: #ffee00; background-color: #000000;">Idealize</h1>
+    <p class="conteudo">Idealize, uma empresa local focada em produtos personalizados, como copos e canecas. Nosso diferencial está na atenção à personalização, oferecendo uma ampla gama de opções de design e materiais para atender às necessidades exclusivas de cada cliente. Comprometemo-nos com a qualidade, utilizando técnicas modernas de impressão e materiais duráveis. Nosso objetivo é garantir a satisfação do cliente, proporcionando momentos especiais e memoráveis através de nossos produtos personalizados. Estamos orgulhosos de ser uma parte valiosa da comunidade, contribuindo para eventos e ocasiões especiais com nossos produtos únicos.</p> 
+
+    <a id="empresas" href="grafica/Idealize.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+    <!--------------------------------------------------->
+
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div class="perfil-bloco">
+      <div>
+        <img loading="lazy" src="padarias/cafeteria_romeuejulieta/banner.webp" alt="image png">
+      </div>
+    </div>
+    <section class="slider">
+
+      <div class="product">
+        <img loading="lazy" src="padarias/cafeteria_romeuejulieta/001.webp" alt="image png">
+    
+    
+      </div>
+
+      <div class="product">
+        <img loading="lazy" src="padarias/cafeteria_romeuejulieta/002.webp" alt="image png">
+      </div>
+      
+      <div class="product">
+        <img loading="lazy" src="padarias/cafeteria_romeuejulieta/003.webp" alt="image png">
+    
+    
+      </div>
+      <div class="product">
+        <img loading="lazy" src="padarias/cafeteria_romeuejulieta/004.webp" alt="image png">
+    
+    
+      </div>
+      <div class="product">
+        <img loading="lazy" src="padarias/cafeteria_romeuejulieta/005.webp" alt="image png">
+    
+    
+      </div>
+
+      <div class="product">
+        <img loading="lazy" src="padarias/cafeteria_romeuejulieta/006.webp" alt="restaurante">
+    
+    
+      </div>
+    </section>  
+    <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #0d2e00;">Romeu e Julieta</h1>
+    <p class="conteudo">Padaria Romeu e Julieta, onde o aroma fresco do café recém-passado enche o ar. Localizada no coração da cidade, nossa padaria é o destino favorito dos amantes de cafés e doces. Com uma variedade de cafés especiais, bolos deliciosos e doces irresistíveis, cada visita é uma experiência para os sentidos. Deixe-se seduzir pela combinação perfeita de tradição e sabor na Padaria Romeu e Julieta.</p> 
+
+    <a id="empresas" href="padarias/cafeteria_romeuejulieta.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+
+    <!--------------------------------------------------->
+
+
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div class="perfil-bloco">
+      <div>
+        <img loading="lazy" src="https://i.ibb.co/CMdGqXb/banner.webp" alt="image png">
+      </div>
+    </div>
+    <section class="slider">
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/pndVvk6/001.webp" alt="roupa">
+      </div>
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/8YTCCQ2/002.webp" alt="roupa">
+      </div>
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/LCSpGTD/003.webp" alt="roupa">
+      </div>
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/cJK97kq/004.webp" alt="roupa">
+      </div>
+      <div class="product">
+        <img loading="lazy" src="https://i.ibb.co/fMTrXsP/005.webp" alt="roupa">
+      </div>
+    </section>
+
+    <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #06005e;">Rainha da Economia </h1>
+    <p class="conteudo">Rainha da Economia, seu supermercado completo no coração da cidade. Com uma ampla variedade de produtos de alta qualidade e preços competitivos, somos o destino preferido dos moradores locais em busca de economia e conveniência. Desde alimentos frescos até produtos de limpeza e itens de cuidados pessoais, nossa missão é oferecer uma experiência de compras superior que atenda a todas as suas necessidades. Venha nos visitar e descubra por que somos a escolha número um para suas compras do dia a dia</p>
+
+    <a id="empresas" href="mercados/rainha.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+ 
+  <!--------------------------------------------------->
+
+      <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+      <div class="perfil-bloco">
+        <div>
+          <img src="https://i.ibb.co/xzVXYjP/banner.jpg" alt="banner">
+        </div>
+      </div>
+      <section class="slider">
+        <div class="product">
+          <img src="https://i.ibb.co/d0gDRG6/Sem-t-tulo-1.jpg" alt="Sem-t-tulo-1">
+        </div>
+        <div class="product">
+          <img src="https://i.ibb.co/JqXGmty/2.jpg" alt="2">
+        </div>
+        <div class="product">
+          <img src="https://i.ibb.co/ZVWcnZt/3.jpg" alt="3">
+        </div>
+        <div class="product">
+          <img src="https://i.ibb.co/StypdPg/5.jpg" alt="5">
+        </div>
+        <div class="product">
+          <img src="https://i.ibb.co/0tHCSwh/4.jpg" alt="4">
+        </div>
+      </section>
+
+      <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #0056b3;">Gráfica Viana </h1>
+      <p class="conteudo">Nossas sacolas personalizadas com a logo da sua loja são mais do que simples recipientes - são embaixadoras da sua marca. Feitas de papel elegante ou plástico durável, elas destacam sua identidade e compromisso com a qualidade. Seja promovendo a sustentabilidade ou oferecendo praticidade, essas sacolas elevam a experiência de compra dos seus clientes e fortalecem o reconhecimento da sua marca onde quer que estejam.</p>
+
+      <a id="empresas" href="grafica/grafica-viana.html">
+        <h2  id="Botao">Saiba mais</h2>
+      </a>
+   
+     <!--------------------------------------------------->
+    
+     <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+     <div class="perfil-bloco">
+       <div>
+         <img loading="lazy" src="moda_mascolina/parfumimportadoss/banner.webp" alt="image png">
+       </div>
+     </div>
+     <section class="slider">
+       <div class="product">
+         <img loading="lazy" src="moda_mascolina/parfumimportadoss/001.webp" alt="roupa">
+       </div>
+       <div class="product">
+         <img loading="lazy" src="moda_mascolina/parfumimportadoss/002.webp" alt="roupa">
+       </div>
+       <div class="product">
+         <img loading="lazy" src="moda_mascolina/parfumimportadoss/003.webp" alt="roupa">
+       </div>
+       <div class="product">
+         <img loading="lazy" src="moda_mascolina/parfumimportadoss/004.webp" alt="roupa">
+       </div>
+       <div class="product">
+         <img loading="lazy" src="moda_mascolina/parfumimportadoss/005.webp" alt="roupa">
+       </div>
+     </section>
+
+     <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #000000;">Parfum Importados </h1>
+     <p class="conteudo">Parfum Importados é o destino definitivo para quem busca estilo, elegância e sofisticação. Com uma seleção cuidadosamente curada de roupas e acessórios, nossa loja oferece peças exclusivas que refletem as últimas tendências da moda internacional. Das últimas coleções de alta costura a acessórios únicos, cada item em nossa loja é escolhido para inspirar e elevar o guarda-roupa de nossos clientes. Descubra sua próxima peça favorita em Parfum Importados e adicione um toque de luxo ao seu estilo.</p>
+
+     <a id="empresas" href="moda_mascolina/parfumimportadoss.html">
+       <h2  id="Botao">Saiba mais</h2>
+     </a>
+
+      <!--------------------------------------------------->
+
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div class="perfil-bloco">
+      <div>
+       <img src="https://i.ibb.co/KLzfgQk/banner-2.webp" alt="rai">
+     </div>
+   </div>
+
+    <section class="slider">
+      <div class="product">
+        <img src="https://i.ibb.co/2NhNbxC/003.webp" alt="001">
+        
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/rpJFTjj/002.webp" alt="002">
+    
+      </div>
+
+      <div class="product">
+        <img src="https://i.ibb.co/GJDtQZs/004.webp" alt="003">
+ 
+      </div>
+
+      <div class="product">
+        <img src="https://i.ibb.co/hF3k2jj/001.webp" alt="004">
+  
+      </div>
+
+      <div class="product">
+        <img src="https://i.ibb.co/qFKBMBZ/005.webp" alt="005">
+      
+      </div>
+
+      <div class="product">
+        <img src="https://i.ibb.co/YcH1twH/006.webp" alt="006">
+     
+      </div>
+
+    </section>
+    <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #fa79ba;">Rai Alves </h1>
+      <p class="conteudo">Rai Alves, a confeitaria mais renomada de Camocim. Conhecida por seus bolos excepcionais e profissionalismo impecável, estamos aqui para tornar seus momentos especiais ainda mais doces e memoráveis. Cada bolo é uma obra-prima feita com paixão e dedicação, refletindo nossa busca pela perfeição em cada detalhe. De casamentos a aniversários, confie na Rai Alves para adoçar seus eventos mais importantes com sabor e estilo incomparáveis.</p>
+
+    <a id="empresas" href="confeitaria/ray-alves.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+
+  <!--------------------------------------------------->
+ 
+ 
+  <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+   <div  class="perfil-bloco">
+     <div>
+      <img src="https://i.ibb.co/m6Y5K86/banner-mateus.jpg" alt="banner-mateus">
+      
+     </div>
+   </div>
+   <section class="slider">
+    <div class="product">
+      <img src="https://i.ibb.co/FD8HBq9/21.jpg" alt="21">
+      <h2>Frango </h2>
+    
+    </div>
+    <div class="product">
+      <img src="https://i.ibb.co/Y7bzWc6/23.jpg" alt="23">
+      <h2>Café marata</h2>
+    
+    </div>
+  
+    <div class="product">
+      <img src="https://i.ibb.co/3NvgXW4/25.jpg" alt="25">
+      <h2> lassa</h2>
+    
+    </div>
+
+    <div class="product">
+      <img src="https://i.ibb.co/8xb3wcx/28.jpg" alt="28">
+      <h2>Delrio</h2>
+   
+    </div>
+    <div class="product">
+      <img src="https://i.ibb.co/SdpxfKN/27.jpg" alt="27">
+      <h2>ninho</h2>
+  
+    </div>
+    
+  </section>
+  <h1 class="conteudo" id="cor" style="color: #000000; background-color: #fcf377;">Mercearia O Mateus </h1>
+  <p class="conteudo">"Mercearia O Mateus, sua parada obrigatória no bairro Jardim das Oliveiras. Oferecemos produtos frescos e essenciais para a sua vida diária, com atendimento personalizado e um toque de hospitalidade local. Venha nos visitar e descubra o que torna a Mercearia O Mateus tão especial!"</p>
+
+   <a id="empresas" href="mercados/mateus.html">
+     <h2  id="Botao">Saiba mais</h2>
+   </a>
+
+   <!--------------------------------------------------->
+
+
+
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div  class="perfil-bloco">
+      <div>
+       <img src="https://i.ibb.co/T8dqWf6/banner-2.webp" alt="banner-2">
+      </div>
+    </div>
+    <section class="slider">
+
+      <div class="product">
+       <img src="https://i.ibb.co/gg37Pmn/001.webp" alt="001">
+      </div>
+      <div class="product">
+       <img src="https://i.ibb.co/rQLH75B/002.webp" alt="002">
+      </div>
+      <div class="product">
+       <img src="https://i.ibb.co/JdjVkKV/003.webp" alt="003">
+      </div>
+      <div class="product">
+       <img src="https://i.ibb.co/Ms8npZg/004.webp" alt="004">
+      </div>
+      <div class="product">
+       <img src="https://i.ibb.co/JFx3pQ0/005.webp" alt="005">
+      </div>
+      <div class="product">
+       <img src="https://i.ibb.co/3pv8spr/006.webp" alt="006">
+      </div>    
+    </section> 
+   </section>
+   <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #ff7300;">Constrular </h1>
+   <p class="conteudo">Contrular, sua loja para materiais de construção e para casa. Com tudo o que você precisa para construir e decorar, oferecemos qualidade e conveniência em um só lugar. Visite-nos hoje e descubra como podemos tornar seu projeto uma realidade!</p>
+
+    <a id="empresas" href="construçao/Constrular.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+
+    <!--------------------------------------------------->
+    
+    <h2 class="empresas">- - - - - - - - - - - - - -</h2>
+    <div  class="perfil-bloco">
+      <div>
+       <img src="https://i.ibb.co/9rTp7WJ/bannerr.webp" alt="bannerr">
+      </div>
+    </div>
+    <section class="slider">
+
+      <div class="product">
+       <img src="https://i.ibb.co/Ttyp53w/002.webp" alt="002">
+        
+        
+      </div>
+    
+      <div class="product">
+       <img src="https://i.ibb.co/S6WnC8z/001.webp" alt="001">
+        
+        
+      </div>
+    
+      <div class="product">
+       <img src="https://i.ibb.co/MM2Lxkw/003.webp" alt="003">
+        
+        
+      </div>
+    
+      <div class="product">
+       <img src="https://i.ibb.co/vH3XXfZ/004.webp" alt="004">
+              
+      </div>
+    </section> 
+   </section>
+   <h1 class="conteudo" id="cor" style="color: #ffffff; background-color: #fdc7e6;">Zuh doce arte  </h1>
+   <p class="conteudo">Zuh Doce Arte, onde a magia da confeitaria ganha vida. Cada bolo é uma obra-prima, meticulosamente criada para celebrar momentos especiais. De casamentos a aniversários, nossa paixão é transformar seus sonhos em doces realidades. Delicie-se com nossas criações e descubra a doçura em cada mordida.</p>
+
+    <a id="empresas" href="confeitaria/Zuila.html">
+      <h2  id="Botao">Saiba mais</h2>
+    </a>
+     <!--------------------------------------------------->
+
+   
+ 
+  </main>
+
+
+  <!-- Paginação -->
+  <div class="pagination">
+    <button onclick="changePage('index.html')">1</button>
+    <button onclick="changePage('dia2.html')">2</button>
+    
+    <!-- Adicione mais botões conforme necessário -->
+  </div>
+
+<script>
+  function changePage(pagePath) {
+      // Lógica para redirecionar para a página com o caminho especificado
+      console.log("Redirecionando para a página: " + pagePath);
+      // Substitua essa linha com a lógica real para redirecionar para a página desejada
+      window.location.href = pagePath;
+  }
+</script>
+
+ <script>
+   $(document).ready(function(){
+       $('.slider').slick({
+           slidesToShow: 4, // Mostrar 4 produtos por vez
+           slidesToScroll: 1,
+           prevArrow: '<button class="slick-prev">Anterior</button>',
+           nextArrow: '<button class="slick-next">Próximo</button>',
+           responsive: [
+               {
+                   breakpoint: 600, // Mudar para um slide por vez em dispositivos menores
+                   settings: {
+                       slidesToShow: 1
+                   }
+               }
+           ]
+       });
+   });
+ </script>
+
+
+
+<!------------------------------------------>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas</title>
+    <link rel="shortcut icon" href="icon/icon.png" type="image/x-icon">
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1d5d5;
+            box-shadow: 0px 0px 15px black;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 80%px;
+            height: 80%;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 10px;
+            margin-top: 0px;
+            padding: 15px;
+            flex: 1 0 calc(50% - 20px); /* Inicialmente, duas colunas por linha com margens de 10px */
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 50%;
+        }
+
+        .slick-next {
+            right: 4px;
+            
+        }
+
+        .slick-prev {
+            left: 4px;
+        }
+
+        element.style {
+            width: 303px;
+            height: 104%;
+        }
+
+        .perfil {
+            max-width: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin: auto;
+            flex-wrap: wrap;
+        
+        }
+
+        
+        @media only screen and (min-width: 303px) and (max-width: 600px) {
+            /* Entre 319px e 600px, três colunas por linha */
+            .product {
+                flex-basis: calc(33.3333% - 20px);
+
+                
+            }
+
+            img {
+              max-width: 100%;
+              height: auto;
+              width: 100%;
+              border: 1px solid #ddd;
+          }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="perfil">
+        <a href="usuarios.html"><img src="../icon/voltar.png" alt="voltar"></a>
+    </div>
+
+  <section class="slider">
+    <div class="product">
+      <img src="https://a-static.mlcdn.com.br/450x450/conjunto-feminino-cropped-short-estampado-roupas-femininas-bellucy-modas/bellucymodas/15932228564/8512739cb2a17334ae2f366e4be93f28.jpeg" alt="Roupa 1">
+      <h2>Roupa Elegante</h2>
+      <p>Descrição do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>R$ 99,99</p>
+      
+    </div>
+
+    <div class="product">
+      <img src="https://a-static.mlcdn.com.br/450x450/conjunto-feminino-cropped-short-estampado-roupas-femininas-0114-bellucy-modas/bellucyltda/0114-0002/1b29240c9a4bdd1eba97d49049718eda.jpeg" alt="Roupa 1">
+      <h2>Roupa Elegante</h2>
+      <p>Descrição do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>R$ 99,99</p>
+      
+    </div>
+
+    <div class="product">
+      <img src="https://i.pinimg.com/736x/89/16/86/891686e67c5b1a858b626ec4372e98dd.jpg" alt="Roupa 1">
+      <h2>Roupa Elegante</h2>
+      <p>Descrição do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>R$ 99,99</p>
+      
+    </div>
+
+    <div class="product">
+      <img src="https://images.tcdn.com.br/img/img_prod/628172/conjunto_feminino_blusa_e_short_moda_roupas_femininas_1385_2_20200427093831.jpg" alt="Roupa 1">
+      <h2>Roupa Elegante</h2>
+      <p>Descrição do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>R$ 99,99</p>
+      
+    </div>
+
+    <div class="product">
+      <img src="https://images.tcdn.com.br/img/img_prod/628172/conjunto_feminino_blusa_e_short_moda_roupas_femininas_1385_1_20200427093831.jpg" alt="Roupa 1">
+      <h2>Roupa Elegante</h2>
+      <p>Descrição do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>R$ 99,99</p>
+      
+    </div>
+
+    <div class="product">
+      <img src="https://cf.shopee.com.br/file/02ab9c24d94332e628d008dba56db474" alt="Roupa 1">
+      <h2>Roupa Elegante</h2>
+      <p>Descrição do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>R$ 99,99</p>
+      
+    </div>
+
+    <div class="product">
+        <img src="https://cf.shopee.com.br/file/02ab9c24d94332e628d008dba56db474" alt="Roupa 1">
+        <h2>Roupa Elegante</h2>
+        <p>Descrição do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>R$ 99,99</p>
+        
+      </div>
+  
+      <div class="product">
+        <img src="https://static.netshoes.com.br/produtos/conjunto-feminino-blusa-estampada-e-short-moda-roupas-femininas-36-ao-40/16/BHR-0144-016/BHR-0144-016_zoom1.jpg?ts=1626960231&ims=544x" alt="Roupa 1">
+        <h2>Roupa Elegante</h2>
+        <p>Descrição do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>R$ 99,99</p>
+      </div>
+
+   
+  </section>
+
+  
+
+
+  <!-- Adicione este script após a tag <body> -->
+<script>
+  $(document).ready(function(){
+      $('.slider').slick({
+          slidesToShow: 4, // Mostrar dois produtos por vez
+          slidesToScroll: 1,
+          prevArrow: '<button class="slick-prev">Anterior</button>',
+          nextArrow: '<button class="slick-next">Próximo</button>',
+          responsive: [
+              {
+                  breakpoint: 600, // Mudar para um slide por vez em dispositivos menores
+                  settings: {
+                      slidesToShow: 1
+                  }
+              }
+          ]
+      });
+  });
+</script>
+
+
+
+
+    <header>
+        <h1>Loja de Roupas</h1>
+    </header>
+
+    
+
+    
+
+</body>
+</html>
